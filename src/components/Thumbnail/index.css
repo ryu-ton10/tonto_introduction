@@ -1,0 +1,31 @@
+.thumbnail-image {
+  padding: 50px 0 50px 0;
+}
+
+.thumbnail-image p {
+  font-size: calc(25px + 2vmin);
+}
+
+/* ========= スマホサイズ =========== */
+@media (min-width: 280px) {
+  .thumbnail-image img {
+    max-width: 180px;
+    max-height: 180px
+  }
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 576px) {
+  .thumbnail-image img {
+    max-width: 240px;
+    max-height: 240px
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 768px) {
+  .thumbnail-image img {
+    max-width: 320px;
+    max-height: 320px
+  }
+}
