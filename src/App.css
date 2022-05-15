@@ -13,7 +13,7 @@
 /* ========= スマホサイズ =========== */
 @media (min-width: 280px) {
   .App .profile-title {
-    padding: 15px 0 0 0;
+    padding: 80px 0 0 0;
     font-size: 24pt;
     max-width: 50%;
   }
@@ -22,7 +22,7 @@
 /* ========= タブレットサイズ =========== */
 @media (min-width: 576px) {
   .App .profile-title {
-    padding: 20px 0 0 0;
+    padding: 100px 0 0 0;
     font-size: 30pt;
     max-width: 40%;
   }
@@ -31,7 +31,7 @@
 /* ========= PCサイズ =========== */
 @media (min-width: 768px) {
   .App .profile-title {
-    padding: 25px 0 0 0;
+    padding: 120px 0 0 0;
     font-size: 36pt;
     max-width: 30%;
   }
