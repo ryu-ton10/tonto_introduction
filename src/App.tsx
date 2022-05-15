@@ -1,5 +1,6 @@
 import React from 'react';
 import 'App.css';
+import 'antd/dist/antd.min.css';
 import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
