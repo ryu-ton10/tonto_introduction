@@ -6,7 +6,10 @@ function TitleBar() {
 
   return (
     <div className="title-bar">
-      とんとの秘密基地
+      <p>とんとの秘密基地</p>
+      <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
+      {/* スクロールを促すアニメーション */}
+      <p className="scroll"><span></span></p>
     </div>
   );
 }

@@ -7,4 +7,77 @@
   justify-content: center;
   font-size: calc(25px + 2vmin);
   color: white;
+  
+  /* バックグランドイメージを設定するため */
+  position: relative;
+}
+
+/* ========= スマホサイズ =========== */
+@media (min-width: 280px) {
+  .title-bar .background-image {
+    /* 背景画像の相対位置を設定 */
+    width: 120px;
+    position: absolute;
+    /* 左下に固定 */
+    bottom: 0;
+    left: 20px;
+  }
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 576px) {
+  .title-bar .background-image {
+    /* 背景画像の相対位置を設定 */
+    width: 120px;
+    position: absolute;
+    /* 左下に固定 */
+    bottom: 0;
+    left: 50px;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 768px) {
+  .title-bar .background-image {
+    /* 背景画像の相対位置を設定 */
+    width: 130px;
+    position: absolute;
+    /* 左下に固定 */
+    bottom: 0;
+    left: 150px;
+  }
+}
+
+/* スクロールを促すアイコン */
+.scroll {
+  padding-top: 50px;
+  color: white;
+}
+
+.scroll span {
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -30px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  animation: go-scroll 2s infinite;
+  box-sizing: border-box;
+}
+
+/* 矢印を下に動かすアニメーション */
+@keyframes go-scroll {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }
