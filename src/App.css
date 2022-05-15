@@ -2,37 +2,37 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App p {
+  margin: 0 0 0 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App .profile-title {
+  border-bottom: solid 8px #E89A8A;
+}
+
+/* ========= スマホサイズ =========== */
+@media (min-width: 280px) {
+  .App .profile-title {
+    padding: 15px 0 0 0;
+    font-size: 24pt;
+    max-width: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ========= タブレットサイズ =========== */
+@media (min-width: 576px) {
+  .App .profile-title {
+    padding: 20px 0 0 0;
+    font-size: 30pt;
+    max-width: 40%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 768px) {
+  .App .profile-title {
+    padding: 25px 0 0 0;
+    font-size: 36pt;
+    max-width: 30%;
   }
 }

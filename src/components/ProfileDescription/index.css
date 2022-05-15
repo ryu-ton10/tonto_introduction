@@ -1,0 +1,24 @@
+.profile-description {
+  padding: 0 10px 30px 20px;
+}
+
+/* ========= スマホサイズ =========== */
+@media (min-width: 280px) {
+  .profile-description p {
+    font-size: 12pt;
+  }
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 576px) {
+  .profile-description p {
+    font-size: 16pt;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 768px) {
+  .profile-description p {
+    font-size: 18pt;
+  }
+}
