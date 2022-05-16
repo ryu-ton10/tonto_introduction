@@ -5,6 +5,15 @@ import { Row, Col, Layout } from 'antd';
 import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
+import {
+  title,
+  name,
+  twitter_url,
+  description,
+  hobbies,
+  switch_code,
+  discord_id
+} from 'data/data';
 
 function App() {
 
@@ -12,17 +21,27 @@ function App() {
 
   return (
     <div className="App">
-      <TitleBar />
+      <TitleBar
+        title={title}
+      />
       <Row justify="center">
         <p className="profile-title">ABOUT ME</p>
       </Row>
       <Row>
         {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
         <Col xs={24} sm={24} md={24} lg={24} >
-          <Thumbnail />
+          <Thumbnail
+            name={name}
+            twitter_url={twitter_url}
+          />
         </Col>
         <Col xs={24} sm={24} md={24} lg={24} >
-          <ProfileDescription />
+          <ProfileDescription
+            description={description}
+            hobbies={hobbies}
+            switch_code={switch_code}
+            discord_id={discord_id}
+          />
         </Col>
         <Layout>
           <Footer style={{ textAlign: 'center' }}>

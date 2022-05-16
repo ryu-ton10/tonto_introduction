@@ -1,15 +1,29 @@
 import React from 'react';
 import './index.css';
 
+type Props = {
+  description: {
+    jp: string;
+    en: string;
+  }
+  hobbies: {
+    jp: string;
+    en: string;
+  }
+  switch_code: string;
+  discord_id: string;
+}
 
-function ProfileDescription() {
+function ProfileDescription(props: Props) {
+
+  const { description, hobbies, switch_code, discord_id } = props;
 
   return (
     <div className="profile-description">
-      <p>石川県でWebエンジニアをやっております。</p>
-      <p>MK8DX / ポケモン / Project DIVA / 太鼓の達人</p>
-      <p>SW: 0195-9221-0829</p>
-      <p>Discord: tonto#2290</p>
+      <p>{description.jp}</p>
+      <p>{hobbies.jp}</p>
+      <p>{switch_code}</p>
+      <p>{discord_id}</p>
     </div>
   );
 }
