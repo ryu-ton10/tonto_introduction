@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'App.css';
 import 'antd/dist/antd.min.css';
 import { Row, Col, Layout } from 'antd';
@@ -18,11 +18,20 @@ import {
 function App() {
 
   const { Footer } = Layout;
+  // 言語設定を保持するためのトップに位置するフック
+  // これを基に各子コンポーネントは言語表示を制御する
+  // 切り替えトグルは、TitleBar コンポーネントに持つ
+  const [language, setLanguage] = useState("jp")
+  const updateLanguageSetting = (langage: string) => {
+    setLanguage(langage);
+  }
 
   return (
     <div className="App">
       <TitleBar
         title={title}
+        hook={updateLanguageSetting}
+        language={language}
       />
       <Row justify="center">
         <p className="profile-title">ABOUT ME</p>
@@ -33,6 +42,7 @@ function App() {
           <Thumbnail
             name={name}
             twitter_url={twitter_url}
+            language={language}
           />
         </Col>
         <Col xs={24} sm={24} md={24} lg={24} >
@@ -41,6 +51,7 @@ function App() {
             hobbies={hobbies}
             switch_code={switch_code}
             discord_id={discord_id}
+            language={language}
           />
         </Col>
         <Layout>

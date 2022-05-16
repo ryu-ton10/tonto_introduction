@@ -9,11 +9,12 @@ type Props = {
     en: string;
   }
   twitter_url: string;
+  language: string;
 }
 
 function Thumbnail(props: Props) {
 
-  const { name, twitter_url } = props;
+  const { name, twitter_url, language } = props;
 
   return (
     <div className="thumbnail-image">
@@ -22,7 +23,7 @@ function Thumbnail(props: Props) {
         <img src={`${process.env.PUBLIC_URL}/thumbnail.jpeg`} alt="thumbnail" />
       </picture>
       <Row justify="center">
-        <p>{name.jp}</p>
+        <p>{language === "jp" ? name.jp : name.en}</p>
         <a href={twitter_url} rel="noopener noreferrer" target="_blank"><TwitterOutlined /></a>
       </Row>
     </div>

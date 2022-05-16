@@ -12,16 +12,17 @@ type Props = {
   }
   switch_code: string;
   discord_id: string;
+  language: string;
 }
 
 function ProfileDescription(props: Props) {
 
-  const { description, hobbies, switch_code, discord_id } = props;
+  const { description, hobbies, switch_code, discord_id, language } = props;
 
   return (
     <div className="profile-description">
-      <p>{description.jp}</p>
-      <p>{hobbies.jp}</p>
+      <p>{language === "jp" ? description.jp : description.en}</p>
+      <p>{language === "jp" ? hobbies.jp : hobbies.en}</p>
       <p>{switch_code}</p>
       <p>{discord_id}</p>
     </div>
