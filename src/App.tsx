@@ -5,6 +5,7 @@ import { Row, Col, Layout } from 'antd';
 import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
+import Contents from 'components/Contents'
 import {
   title,
   name,
@@ -52,12 +53,13 @@ function App() {
             language={language}
           />
         </Col>
-        <Layout>
-          <Footer style={{ textAlign: 'center' }}>
-            ©︎2022 <a href="https://twitter.com/home" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
-          </Footer>
-      </Layout>
       </Row>
+      <Contents />
+      <Layout>
+        <Footer style={{ textAlign: 'center' }}>
+          ©︎2022 <a href="https://twitter.com/home" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
+        </Footer>
+      </Layout>
     </div>
   );
 }
