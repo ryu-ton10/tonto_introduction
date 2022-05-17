@@ -2,23 +2,97 @@
   padding: 0 10px 30px 20px;
 }
 
-/* ========= スマホサイズ =========== */
+.name-and-sns {
+  display: flex;
+  align-items: center;
+}
+
+/* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
-  .profile-description p {
+  .name-and-sns p {
+    font-size: 24pt;
+  }
+
+  .name-and-sns .anticon-twitter {
+    font-size: 24pt;
+    padding-left: 10px;
+  }
+
+  .profile-description .profile-details p {
     font-size: 12pt;
   }
 }
 
-/* ========= タブレットサイズ =========== */
+/* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
-  .profile-description p {
+  .name-and-sns p {
+    font-size: 30pt;
+  }
+
+  .name-and-sns .anticon-twitter {
+    font-size: 30pt;
+    padding-left: 10px;
+  }
+
+  .profile-description .profile-details p {
     font-size: 16pt;
   }
 }
 
-/* ========= PCサイズ =========== */
+/* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .profile-description p {
+  .profile-description {
+    padding: 50px 10px 50px 20px;
+    text-align: left;
+  }
+
+  .name-and-sns {
+    padding: 0 0 20px 0;
+    justify-content: left;
+  }
+
+  .name-and-sns p {
+    font-size: 36pt;
+  }
+
+  .name-and-sns .anticon-twitter {
+    font-size: 36pt;
+    padding-left: 10px;
+  }
+
+  .profile-description .profile-details {
+    text-align: left;
+  }
+
+  .profile-description .profile-details p {
+    font-size: 15pt;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .profile-description {
+    padding: 50px 10px 50px 20px;
+  }
+
+  .name-and-sns {
+    padding: 0 0 20px 0;
+  }
+
+  .name-and-sns p {
+    font-size: 36pt;
+  }
+
+  .name-and-sns .anticon-twitter {
+    font-size: 36pt;
+    padding-left: 10px;
+  }
+
+  .profile-description .profile-details {
+    text-align: left;
+  }
+
+  .profile-description .profile-details p {
     font-size: 18pt;
   }
 }

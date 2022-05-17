@@ -1,51 +1,66 @@
-.thumbnail-image {
-  padding: 50px 0 20px 0;
-}
-
-.thumbnail-image p {
-  font-size: calc(25px + 2vmin);
-}
-
-.thumbnail-image a {
-  display: flex;
-  align-items: center;
-}
-
-/* ========= スマホサイズ =========== */
+/* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .thumbnail-image {
+    padding: 30px 0 10px 0;
+  }
+
   .thumbnail-image img {
     max-width: 180px;
     max-height: 180px
   }
-
-  .thumbnail-image .anticon-twitter {
-    font-size: 20pt;
-    padding-left: 10px;
-  }
 }
 
-/* ========= タブレットサイズ =========== */
+/* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .thumbnail-image {
+    padding: 30px 0 10px 0;
+  }
+
   .thumbnail-image img {
     max-width: 240px;
     max-height: 240px
   }
+}
 
-  .thumbnail-image .anticon-twitter {
-    font-size: 30pt;
-    padding-left: 15px;
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .thumbnail-image {
+    display: flex;
+    padding: 50px 10px 50px 0;
+    justify-content: right;
+  }
+
+
+  .thumbnail-image img {
+    max-width: 280px;
+    max-height: 280px
   }
 }
 
 /* ========= PCサイズ =========== */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  .thumbnail-image {
+    display: flex;
+    padding: 50px 20px 50px 0;
+    justify-content: right;
+  }
+
   .thumbnail-image img {
     max-width: 320px;
     max-height: 320px
   }
+}
 
-  .thumbnail-image .anticon-twitter {
-    font-size: 35pt;
-    padding-left: 20px;
+/* ========= PCサイズ_2 =========== */
+@media (min-width: 1120px) {
+  .thumbnail-image {
+    display: flex;
+    padding: 50px 30px 50px 0;
+    justify-content: right;
+  }
+
+  .thumbnail-image img {
+    max-width: 320px;
+    max-height: 320px
   }
 }
