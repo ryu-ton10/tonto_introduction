@@ -5,6 +5,7 @@ import { Row, Col, Layout } from 'antd';
 import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
+import Contents from 'components/Contents'
 import {
   title,
   name,
@@ -12,7 +13,8 @@ import {
   description,
   hobbies,
   switch_code,
-  discord_id
+  discord_id,
+  contents
 } from 'data/data';
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
       <Row justify="center">
         <p className="profile-title">ABOUT ME</p>
       </Row>
-      <Row>
+      <Row className="profiles">
         {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
         <Col xs={24} sm={24} md={11} lg={11} >
           <Thumbnail />
@@ -52,12 +54,13 @@ function App() {
             language={language}
           />
         </Col>
-        <Layout>
-          <Footer style={{ textAlign: 'center' }}>
-            ©︎2022 <a href="https://twitter.com/home" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
-          </Footer>
-      </Layout>
       </Row>
+      <Contents contents={contents} language={language} />
+      <Layout>
+        <Footer style={{ textAlign: 'center' }}>
+          ©︎2022 <a href="https://twitter.com/27ma4_ton10" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
+        </Footer>
+      </Layout>
     </div>
   );
 }
