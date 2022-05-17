@@ -38,7 +38,7 @@ function App() {
       <Row justify="center">
         <p className="profile-title">ABOUT ME</p>
       </Row>
-      <Row>
+      <Row className="profiles">
         {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
         <Col xs={24} sm={24} md={11} lg={11} >
           <Thumbnail />
