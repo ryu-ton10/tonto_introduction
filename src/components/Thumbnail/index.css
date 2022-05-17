@@ -2,25 +2,11 @@
   padding: 50px 0 20px 0;
 }
 
-.thumbnail-image p {
-  font-size: calc(25px + 2vmin);
-}
-
-.thumbnail-image a {
-  display: flex;
-  align-items: center;
-}
-
 /* ========= スマホサイズ =========== */
 @media (min-width: 280px) {
   .thumbnail-image img {
     max-width: 180px;
     max-height: 180px
-  }
-
-  .thumbnail-image .anticon-twitter {
-    font-size: 20pt;
-    padding-left: 10px;
   }
 }
 
@@ -30,11 +16,6 @@
     max-width: 240px;
     max-height: 240px
   }
-
-  .thumbnail-image .anticon-twitter {
-    font-size: 30pt;
-    padding-left: 15px;
-  }
 }
 
 /* ========= PCサイズ =========== */
@@ -42,10 +23,5 @@
   .thumbnail-image img {
     max-width: 320px;
     max-height: 320px
-  }
-
-  .thumbnail-image .anticon-twitter {
-    font-size: 35pt;
-    padding-left: 20px;
   }
 }
