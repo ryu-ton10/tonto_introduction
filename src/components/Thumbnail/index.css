@@ -25,8 +25,11 @@
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
   .thumbnail-image {
-    padding: 50px 0 50px 0;
+    display: flex;
+    padding: 50px 10px 50px 0;
+    justify-content: right;
   }
+
 
   .thumbnail-image img {
     max-width: 280px;
@@ -37,7 +40,23 @@
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
   .thumbnail-image {
-    padding: 50px 0 50px 0;
+    display: flex;
+    padding: 50px 20px 50px 0;
+    justify-content: right;
+  }
+
+  .thumbnail-image img {
+    max-width: 320px;
+    max-height: 320px
+  }
+}
+
+/* ========= PCサイズ_2 =========== */
+@media (min-width: 1120px) {
+  .thumbnail-image {
+    display: flex;
+    padding: 50px 30px 50px 0;
+    justify-content: right;
   }
 
   .thumbnail-image img {
