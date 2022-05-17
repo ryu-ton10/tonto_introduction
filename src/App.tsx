@@ -58,7 +58,7 @@ function App() {
       <Contents contents={contents} language={language} />
       <Layout>
         <Footer style={{ textAlign: 'center' }}>
-          ©︎2022 <a href="https://twitter.com/home" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
+          ©︎2022 <a href="https://twitter.com/27ma4_ton10" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
         </Footer>
       </Layout>
     </div>
