@@ -12,6 +12,14 @@
   justify-content: center;
 }
 
+.content .link-button {
+  background-color: white;
+  color: #E89A8A;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .content .content-title {
@@ -34,7 +42,7 @@
   }
 
   .content-description {
-    padding: 0 20px 0 20px;
+    padding: 0 20px 20px 20px;
   }
 
   .content-description .content-description-title {
@@ -45,6 +53,10 @@
   .content-description .content-description-detail {
     padding: 10px 0 10px 0;
     font-size: 11pt;
+  }
+
+  .link {
+    padding: 20px 0 20px 0;
   }
 }
 
@@ -70,7 +82,7 @@
   }
 
   .content-description {
-    padding: 0 80px 0 80px;
+    padding: 0 80px 50px 80px;
   }
 
   .content-description .content-description-title {
@@ -81,6 +93,10 @@
   .content-description .content-description-detail {
     padding: 10px 0 10px 0;
     font-size: 12pt;
+  }
+
+  .link {
+    padding: 20px 0 20px 0;
   }
 }
 

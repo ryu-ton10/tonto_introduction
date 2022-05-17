@@ -52,7 +52,7 @@ export const contents = [
       others: "/assets/si14_logo.png"
     },
     title: {
-      jp: "写真サークル 珪素光画ホームページ",
+      jp: "珪素光画ホームページ",
       en: "Si14 Official website"
     },
     description: {

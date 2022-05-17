@@ -51,7 +51,9 @@ function Contents(props: Props) {
               <div className="content-description">
                 <p className="content-description-title">{language === "jp" ? title.jp : title.en}</p>
                 <p className="content-description-detail">{language === "jp" ? description.jp : description.en}</p>
-                <a href={url} rel="noopener noreferrer" target="_blank">{url}</a>
+                <div className="link">
+                  <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
+                </div>
               </div>
             </Col>
           </Row>
