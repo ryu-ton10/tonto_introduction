@@ -12,8 +12,11 @@
   position: relative;
 }
 
-/* ========= スマホサイズ =========== */
+/* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .title-image {
+    max-width: 80%;
+  }
   .title-bar .background-image {
     /* 背景画像の相対位置を設定 */
     width: 120px;
@@ -24,8 +27,11 @@
   }
 }
 
-/* ========= タブレットサイズ =========== */
+/* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .title-image {
+    max-width: 80%;
+  }
   .title-bar .background-image {
     /* 背景画像の相対位置を設定 */
     width: 120px;
@@ -36,8 +42,12 @@
   }
 }
 
-/* ========= PCサイズ =========== */
+/* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
+  .title-image {
+    max-width: 70%;
+  }
+
   .title-bar .background-image {
     /* 背景画像の相対位置を設定 */
     width: 130px;
@@ -45,6 +55,13 @@
     /* 左下に固定 */
     bottom: 0;
     left: 150px;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .title-image {
+    max-width: 60%;
   }
 }
 
