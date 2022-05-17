@@ -38,11 +38,10 @@ function App() {
       </Row>
       <Row>
         {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
-        <Col xs={24} sm={24} md={24} lg={24} >
-          <Thumbnail
-          />
+        <Col xs={24} sm={24} md={10} lg={11} >
+          <Thumbnail />
         </Col>
-        <Col xs={24} sm={24} md={24} lg={24} >
+        <Col xs={24} sm={24} md={14} lg={13} >
           <ProfileDescription
             name={name}
             twitter_url={twitter_url}

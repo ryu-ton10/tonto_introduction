@@ -32,10 +32,12 @@ function ProfileDescription(props: Props) {
         <p>{language === "jp" ? name.jp : name.en}</p>
         <a href={twitter_url} rel="noopener noreferrer" target="_blank"><TwitterOutlined /></a>
       </Row>
-      <p className="profile-details">{language === "jp" ? description.jp : description.en}</p>
-      <p className="profile-details">{language === "jp" ? hobbies.jp : hobbies.en}</p>
-      <p className="profile-details">{switch_code}</p>
-      <p className="profile-details">{discord_id}</p>
+      <div className="profile-details">
+        <p>{language === "jp" ? description.jp : description.en}</p>
+        <p>{language === "jp" ? hobbies.jp : hobbies.en}</p>
+        <p>{switch_code}</p>
+        <p>{discord_id}</p>
+      </div>
     </div>
   );
 }

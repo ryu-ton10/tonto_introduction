@@ -1,25 +1,45 @@
-.thumbnail-image {
-  padding: 50px 0 20px 0;
-}
-
-/* ========= スマホサイズ =========== */
+/* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .thumbnail-image {
+    padding: 30px 0 10px 0;
+  }
+
   .thumbnail-image img {
     max-width: 180px;
     max-height: 180px
   }
 }
 
-/* ========= タブレットサイズ =========== */
+/* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .thumbnail-image {
+    padding: 30px 0 10px 0;
+  }
+
   .thumbnail-image img {
     max-width: 240px;
     max-height: 240px
   }
 }
 
-/* ========= PCサイズ =========== */
+/* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
+  .thumbnail-image {
+    padding: 50px 0 50px 0;
+  }
+
+  .thumbnail-image img {
+    max-width: 280px;
+    max-height: 280px
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .thumbnail-image {
+    padding: 50px 0 50px 0;
+  }
+
   .thumbnail-image img {
     max-width: 320px;
     max-height: 320px
