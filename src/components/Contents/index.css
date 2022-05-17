@@ -23,13 +23,13 @@
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .content .content-title {
-    padding: 20px 0 20px 0;
+    padding: 80px 0 20px 0;
   }
 
   .content .content-title p {
     border-bottom: solid 6px white;
     max-width: 40%;
-    font-size: 20pt;
+    font-size: 24pt;
   }
 
   .content-image {
@@ -63,13 +63,13 @@
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
   .content .content-title {
-    padding: 40px 0 30px 0;
+    padding: 100px 0 30px 0;
   }
 
   .content .content-title p {
     border-bottom: solid 6px white;
     max-width: 50%;
-    font-size: 36pt;
+    font-size: 30pt;
   }
 
   .content-image {
@@ -103,13 +103,13 @@
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
   .content .content-title {
-    padding: 50px 0 40px 0;
+    padding: 120px 0 40px 0;
   }
 
   .content .content-title p {
     border-bottom: solid 10px white;
     max-width: 50%;
-    font-size: 40pt;
+    font-size: 36pt;
   }
 
   .content-image {
@@ -142,13 +142,13 @@
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
   .content .content-title {
-    padding: 50px 0 40px 0;
+    padding: 120px 0 40px 0;
   }
 
   .content .content-title p {
     border-bottom: solid 10px white;
     max-width: 50%;
-    font-size: 40pt;
+    font-size: 36pt;
   }
 
   .content-image {
