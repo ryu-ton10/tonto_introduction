@@ -1,11 +1,5 @@
 import { nanoid } from 'nanoid';
 
-export const title = {
-  id: nanoid(),
-  jp: "とんとのひみつきち",
-  en: "Tonto's workspace"
-}
-
 export const name = {
   id: nanoid(),
   jp: "とんと",

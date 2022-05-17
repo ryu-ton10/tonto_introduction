@@ -3,17 +3,13 @@ import './index.css';
 import { Radio } from 'antd';
 
 type Props = {
-  title: {
-    jp: string;
-    en: string;
-  }
   hook: Function;
   language: string;
 }
 
 function TitleBar(props: Props) {
 
-  const { title, hook, language } = props;
+  const { hook, language } = props;
 
   return (
     <div className="title-bar">

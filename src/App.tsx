@@ -7,7 +7,6 @@ import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
 import {
-  title,
   name,
   twitter_url,
   description,
@@ -31,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <TitleBar
-        title={title}
         hook={updateLanguageSetting}
         language={language}
       />
