@@ -3,21 +3,17 @@ import './index.css';
 import { Radio } from 'antd';
 
 type Props = {
-  title: {
-    jp: string;
-    en: string;
-  }
   hook: Function;
   language: string;
 }
 
 function TitleBar(props: Props) {
 
-  const { title, hook, language } = props;
+  const { hook, language } = props;
 
   return (
     <div className="title-bar">
-      <p>{language === "jp" ? title.jp : title.en }</p>
+      <img className="title-image" src={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`} alt="background" />
       <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
       <div className="language-selection">
         {/* TODO: 言語を切り替えられるようにする */}
