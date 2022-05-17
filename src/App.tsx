@@ -13,7 +13,8 @@ import {
   description,
   hobbies,
   switch_code,
-  discord_id
+  discord_id,
+  contents
 } from 'data/data';
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
           />
         </Col>
       </Row>
-      <Contents />
+      <Contents contents={contents} language={language} />
       <Layout>
         <Footer style={{ textAlign: 'center' }}>
           ©︎2022 <a href="https://twitter.com/home" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a>
