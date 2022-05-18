@@ -12,8 +12,27 @@
   position: relative;
 }
 
+.language-selection {
+  display: flex;
+  align-items: center;
+}
+
+.language-selection button {
+  border-radius: 20px;
+  font-weight: bold;
+  border-width: 0.2em;
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .language-selection .language-selection-button {
+    padding: 20px 10px 20px 10px;
+  }
+
+  .language-selection .language-selection-button button {
+    font-size: 12pt;
+  }
+
   .title-image {
     max-width: 80%;
   }
@@ -29,6 +48,14 @@
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .language-selection .language-selection-button {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .language-selection .language-selection-button button {
+    font-size: 16pt;
+  }
+
   .title-image {
     max-width: 80%;
   }
@@ -44,6 +71,15 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
+  .language-selection .language-selection-button {
+    padding: 50px 50px 50px 50px;
+  }
+
+  .language-selection .language-selection-button button {
+    font-size: 20pt;
+    padding: 5px 20px 5px 20px;
+  }
+
   .title-image {
     max-width: 70%;
   }

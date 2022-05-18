@@ -47,11 +47,11 @@ export const contents = [
     },
     title: {
       jp: "珪素光画ホームページ",
-      en: "Si14 Official website"
+      en: "Si14 Photo website"
     },
     description: {
       jp: "写真サークル 珪素光画の公式ホームページです。サークルメンバーが撮った写真や、メンバーのプロフィール、過去に作成した同人誌などを紹介しています。",
-      en: "An official website of Si14. Si14 is a photo club. On the website, you can see a photos which tooked by members. Not only that but also members profile and books can see from this website."
+      en: "An official website of Si14 Photo. Si14 Photo is a photo club. On the website, you can see not only a photos which tooked by members but also members profile and books"
     },
     url: "https://keiso-kouga.netlify.app/",
   },
