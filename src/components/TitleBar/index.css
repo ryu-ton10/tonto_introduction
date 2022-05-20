@@ -8,13 +8,12 @@
   font-size: calc(25px + 2vmin);
   color: white;
   
-  /* バックグランドイメージを設定するため */
+  /* 背景画像や言語設定ボタンの位置を調節するため */
   position: relative;
 }
 
 .language-selection {
   display: flex;
-  align-items: center;
 }
 
 .language-selection button {
@@ -25,8 +24,15 @@
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .language-selection {
+    /* 言語設定ボタンの相対位置を設定 */
+    position: absolute;
+    /* 右上に固定 */
+    top: 0;
+    right: 10px;
+  }
   .language-selection .language-selection-button {
-    padding: 20px 10px 20px 10px;
+    padding: 0 10px 0 10px;
   }
 
   .language-selection .language-selection-button button {
@@ -71,13 +77,9 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .language-selection .language-selection-button {
-    padding: 50px 50px 50px 50px;
-  }
-
   .language-selection .language-selection-button button {
     font-size: 20pt;
-    padding: 5px 20px 5px 20px;
+    padding: 0 10px 0 10px;
   }
 
   .title-image {
@@ -91,13 +93,6 @@
     /* 左下に固定 */
     bottom: 0;
     left: 150px;
-  }
-}
-
-/* ========= PCサイズ =========== */
-@media (min-width: 992px) {
-  .title-image {
-    max-width: 60%;
   }
 }
 

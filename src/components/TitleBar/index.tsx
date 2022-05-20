@@ -25,16 +25,19 @@ function TitleBar(props: Props) {
   };
   return (
     <div className="title-bar">
-      <img className="title-image" src={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`} alt="background" />
-      <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
       <div className="language-selection">
         <div className="language-selection-button">
-          <button type="button" onClick={() => hook("jp")} style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}>日本語</button>
+          <button type="button" onClick={() => hook("jp")} style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}>JP</button>
         </div>
         <div className="language-selection-button">
-          <button type="button" onClick={() => hook("en")} style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}>English</button>
+          <button type="button" onClick={() => hook("en")} style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}>EN</button>
         </div>
       </div>
+      <picture>
+        <source type="image/webp" srcSet={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.webp` : `${process.env.PUBLIC_URL}/assets/title_en.webp`} ></source>
+        <img className="title-image" src={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`} alt="background" />
+      </picture>
+      <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
       {/* スクロールを促すアニメーション */}
       <p className="scroll"><span></span></p>
     </div>
