@@ -96,13 +96,6 @@
   }
 }
 
-/* ========= PCサイズ =========== */
-@media (min-width: 992px) {
-  .title-image {
-    max-width: 60%;
-  }
-}
-
 /* スクロールを促すアイコン */
 .scroll {
   padding-top: 50px;
