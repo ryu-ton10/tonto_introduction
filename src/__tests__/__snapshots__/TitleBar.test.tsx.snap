@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`タイトル画面が表示されていること 1`] = `
+<div
+  className="title-bar"
+>
+  <div
+    className="language-selection"
+  >
+    <div
+      className="language-selection-button"
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#E8C1B8",
+            "borderColor": "white",
+            "color": "white",
+          }
+        }
+        type="button"
+      >
+        JP
+      </button>
+    </div>
+    <div
+      className="language-selection-button"
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "white",
+            "color": "#E89A8A",
+          }
+        }
+        type="button"
+      >
+        EN
+      </button>
+    </div>
+  </div>
+  <picture>
+    <source
+      srcSet="/assets/title_jp.webp"
+      type="image/webp"
+    />
+    <img
+      alt="background"
+      className="title-image"
+      src="/assets/title_jp.png"
+    />
+  </picture>
+  <img
+    alt="background"
+    className="background-image"
+    src="/hutaba_background.jpg"
+  />
+  <p
+    className="scroll"
+  >
+    <span />
+  </p>
+</div>
+`;
