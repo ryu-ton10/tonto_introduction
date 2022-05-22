@@ -27,10 +27,24 @@ function TitleBar(props: Props) {
     <div className="title-bar">
       <div className="language-selection">
         <div className="language-selection-button">
-          <button type="button" onClick={() => hook("jp")} style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}>JP</button>
+          <button
+            type="button"
+            onClick={() => hook("jp")}
+            style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}
+            data-testid="jp-toggle"
+          >
+            JP
+          </button>
         </div>
         <div className="language-selection-button">
-          <button type="button" onClick={() => hook("en")} style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}>EN</button>
+          <button
+            type="button"
+            onClick={() => hook("en")}
+            style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}
+            data-testid="en-toggle"
+          >
+            EN
+          </button>
         </div>
       </div>
       <picture>

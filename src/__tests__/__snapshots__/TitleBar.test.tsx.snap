@@ -11,6 +11,7 @@ exports[`タイトル画面が表示されていること 1`] = `
       className="language-selection-button"
     >
       <button
+        data-testid="jp-toggle"
         onClick={[Function]}
         style={
           Object {
@@ -28,6 +29,7 @@ exports[`タイトル画面が表示されていること 1`] = `
       className="language-selection-button"
     >
       <button
+        data-testid="en-toggle"
         onClick={[Function]}
         style={
           Object {
