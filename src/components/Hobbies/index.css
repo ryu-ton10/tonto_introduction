@@ -4,9 +4,6 @@
   justify-content: center;
 }
 
-.hobby {
-}
-
 .hobby-icon {
   color: #a9a9a9;
 }
@@ -22,6 +19,10 @@
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .hobby {
+    padding: 0 20px 40px 20px;
+  }
+
   .hobbies {
     padding: 0 20px 100px 20px;
   }
@@ -36,12 +37,15 @@
 
   .hobby-description {
     font-size: 10pt;
-    padding: 0 20px 20px 20px;
   }
 }
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .hobby {
+    padding: 0 20px 20px 20px;
+  }
+
   .hobby-icon {
     padding-top: 10px;
   }
@@ -53,14 +57,27 @@
 
   .hobby-description {
     font-size: 10pt;
-    padding: 0 20px 20px 20px;
   }
 }
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
+  .hobby {
+    padding: 0 50px 20px 50px;
+  }
+
   .hobby-description {
     font-size: 12pt;
-    padding: 0 50px 20px 50px;
+  }
+}
+
+/* ========= PCサイズ_2 =========== */
+@media (min-width: 1120px) {
+  .hobby {
+    padding: 0 80px 40px 80px;
+  }
+
+  .hobby-description {
+    font-size: 12pt;
   }
 }
