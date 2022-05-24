@@ -13,10 +13,6 @@ type Props = {
     jp: string;
     en: string;
   }
-  hobbies: {
-    jp: string;
-    en: string;
-  }
   switch_code: string;
   discord_id: string;
   language: string;
@@ -24,7 +20,7 @@ type Props = {
 
 function ProfileDescription(props: Props) {
 
-  const { name, twitter_url, description, hobbies, switch_code, discord_id, language } = props;
+  const { name, twitter_url, description, switch_code, discord_id, language } = props;
 
   return (
     <div className="profile-description">
@@ -34,7 +30,6 @@ function ProfileDescription(props: Props) {
       </Row>
       <div className="profile-details">
         <p>{language === "jp" ? description.jp : description.en}</p>
-        <p>{language === "jp" ? hobbies.jp : hobbies.en}</p>
         <p>{switch_code}</p>
         <p>{discord_id}</p>
       </div>

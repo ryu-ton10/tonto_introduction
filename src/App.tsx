@@ -6,11 +6,11 @@ import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
+import Hobbies from 'components/Hobbies';
 import {
   name,
   twitter_url,
   description,
-  hobbies,
   switch_code,
   discord_id,
   contents
@@ -46,13 +46,13 @@ function App() {
             name={name}
             twitter_url={twitter_url}
             description={description}
-            hobbies={hobbies}
             switch_code={switch_code}
             discord_id={discord_id}
             language={language}
           />
         </Col>
       </Row>
+      <Hobbies />
       <Contents contents={contents} language={language} />
       <Layout>
         <Footer style={{ textAlign: 'center' }}>
