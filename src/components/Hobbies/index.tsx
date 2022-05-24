@@ -10,30 +10,30 @@ function Hobbies() {
       <Row>
         <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
           <div className="hobby-icon"><GiConsoleController size="8em" /></div>
-          <div className="hobby-title">マリオカート8DX</div>
+          <div className="hobby-title"><p>マリオカート8DX</p></div>
           <div className="hobby-description">
-            主にデイジー姫を使って野良を走っております。ハイラルサーキット、ヨッシーサーキット、ねじれマンションなどが得意です。
+            <p>主にデイジー姫を使って野良を走っております。ハイラルサーキット、ヨッシーサーキット、ねじれマンションなどが得意です。</p>
           </div>
         </Col>
         <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
           <div className="hobby-icon"><GiBattleGear size="8em" /></div>
-          <div className="hobby-title">ポケモン</div>
+          <div className="hobby-title"><p>ポケモン</p></div>
           <div className="hobby-description">
-            ポケモンというコンテンツそのものが好きです。特に剣盾シリーズではオンラインマッチを楽しんでいます。好きなポケモンは サーナイト、ザングース、バクフーン です。
+            <p>ポケモンというコンテンツそのものが好きです。特に剣盾シリーズではオンラインマッチを楽しんでいます。好きなポケモンは サーナイト、ザングース、バクフーン です。</p>
           </div>
         </Col>
         <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
           <div className="hobby-icon"><MdLibraryMusic size="8em" /></div>
-          <div className="hobby-title">EUROBEAT</div>
+          <div className="hobby-title"><p>EUROBEAT</p></div>
           <div className="hobby-description">
-            作業をする時やドライブの BGM はいつもユーロビートを聴いています。学生の頃に何度もリピートしていたので、これを聴くとどこか懐かしい気分になれます。
+            <p>作業をする時やドライブの BGM はいつもユーロビートを聴いています。学生の頃に何度もリピートしていたので、これを聴くとどこか懐かしい気分になれます。</p>
           </div>
         </Col>
         <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
           <div className="hobby-icon"><MdLocalCafe size="8em" /></div>
-          <div className="hobby-title">コーヒー</div>
+          <div className="hobby-title"><p>コーヒー</p></div>
           <div className="hobby-description">
-            ハンドドリップコーヒーが大好きです。特にブラジルやコスタリカ、ペルーやグアテマラから輸入された豆が好きで、家には必ず 300g ほどストックがあります。
+            <p>ハンドドリップコーヒーが大好きです。特にブラジルやコスタリカ、ペルーやグアテマラから輸入された豆が好きで、家には必ず 300g ほどストックがあります。</p>
           </div>
         </Col>
       </Row>
