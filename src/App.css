@@ -13,10 +13,6 @@
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
-  .App .profiles {
-    padding-bottom: 20px;
-  }
-
   .App .profile-title {
     padding: 80px 0 0 0;
     font-size: 24pt;
@@ -26,10 +22,6 @@
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
-  .App .profiles {
-    padding-bottom: 50px;
-  }
-
   .App .profile-title {
     padding: 100px 0 0 0;
     font-size: 30pt;
@@ -39,10 +31,6 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .App .profiles {
-    padding-bottom: 60px;
-  }
-
   .App .profile-title {
     padding: 120px 0 0 0;
     font-size: 36pt;
