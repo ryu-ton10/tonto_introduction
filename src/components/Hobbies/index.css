@@ -1,0 +1,66 @@
+.hobbies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby {
+}
+
+.hobby-icon {
+  color: #a9a9a9;
+}
+
+.hobby-title {
+  color: #E99A8A;
+  font-weight: bold;
+}
+
+.hobby-description {
+  color: #E99A8A;
+}
+
+/* ========= スマホサイズ_1 =========== */
+@media (min-width: 280px) {
+  .hobbies {
+    padding: 0 20px 100px 20px;
+  }
+  .hobby-icon {
+    padding-top: 10px;
+  }
+
+  .hobby-title {
+    font-size: 16pt;
+    padding-bottom: 20px;
+  }
+
+  .hobby-description {
+    font-size: 10pt;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+/* ========= スマホサイズ_2 =========== */
+@media (min-width: 576px) {
+  .hobby-icon {
+    padding-top: 10px;
+  }
+
+  .hobby-title {
+    font-size: 16pt;
+    padding-bottom: 20px;
+  }
+
+  .hobby-description {
+    font-size: 10pt;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .hobby-description {
+    font-size: 12pt;
+    padding: 0 50px 20px 50px;
+  }
+}

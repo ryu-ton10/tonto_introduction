@@ -6,6 +6,7 @@ import TitleBar from 'components/TitleBar'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
+import Hobbies from 'components/Hobbies';
 import {
   name,
   twitter_url,
@@ -53,6 +54,7 @@ function App() {
           />
         </Col>
       </Row>
+      <Hobbies />
       <Contents contents={contents} language={language} />
       <Layout>
         <Footer style={{ textAlign: 'center' }}>
