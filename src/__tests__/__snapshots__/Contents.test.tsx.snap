@@ -12,62 +12,9 @@ exports[`コンテンツ群が表示されていること 1`] = `
     </p>
   </div>
   <div
-    className="ant-row"
-    role="row"
-    style={Object {}}
+    data-testid="row"
   >
-    <div
-      className="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-8 ant-col-lg-10"
-      role="cell"
-      style={Object {}}
-    >
-      <div
-        className="content-image"
-      >
-        <picture>
-          <source
-            srcSet="sample_webp_image.webp"
-            type="image/webp"
-          />
-          <img
-            alt="thumbnail"
-            src="sample_png_image.png"
-          />
-        </picture>
-      </div>
-    </div>
-    <div
-      className="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-16 ant-col-lg-14"
-      role="cell"
-      style={Object {}}
-    >
-      <div
-        className="content-description"
-      >
-        <p
-          className="content-description-title"
-        >
-          sample english title
-        </p>
-        <p
-          className="content-description-detail"
-        >
-          sample english description
-        </p>
-        <div
-          className="link"
-        >
-          <a
-            className="link-button"
-            href="http://hoge.fuga"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go website
-          </a>
-        </div>
-      </div>
-    </div>
+    Row
   </div>
 </div>
 `;
