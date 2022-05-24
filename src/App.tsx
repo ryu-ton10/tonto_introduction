@@ -11,7 +11,6 @@ import {
   name,
   twitter_url,
   description,
-  hobbies,
   switch_code,
   discord_id,
   contents
@@ -47,7 +46,6 @@ function App() {
             name={name}
             twitter_url={twitter_url}
             description={description}
-            hobbies={hobbies}
             switch_code={switch_code}
             discord_id={discord_id}
             language={language}

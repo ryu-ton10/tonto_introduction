@@ -14,11 +14,6 @@ export const description = {
   en: "I'm a web application developer who live in Japan :)"
 }
 
-export const hobbies = {
-  jp: "MK8D / ポケモン / Project DIVA / 太鼓の達人",
-  en: "MK8D / Pokemon / EUROBEAT"
-}
-
 export const switch_code =  "SW: 0195-9221-0829"
 export const discord_id = "Discord: tonto#2290"
 
