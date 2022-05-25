@@ -14,13 +14,12 @@ type Props = {
     en: string;
   }
   switch_code: string;
-  discord_id: string;
   language: string;
 }
 
 function ProfileDescription(props: Props) {
 
-  const { name, twitter_url, description, switch_code, discord_id, language } = props;
+  const { name, twitter_url, description, switch_code, language } = props;
 
   return (
     <div className="profile-description">
@@ -31,7 +30,6 @@ function ProfileDescription(props: Props) {
       <div className="profile-details">
         <p>{language === "jp" ? description.jp : description.en}</p>
         <p>{switch_code}</p>
-        <p>{discord_id}</p>
       </div>
       <div className="name-card-link">
         <a className="name-card-button" href="/assets/name_card.jpg" rel="noopener noreferrer" target="_blank">{language === "jp" ? "名刺を表示" : "Show name card"}</a>
