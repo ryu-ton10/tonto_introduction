@@ -12,7 +12,6 @@ import {
   twitter_url,
   description,
   switch_code,
-  discord_id,
   hobbies,
   contents
 } from 'data/data';
@@ -48,7 +47,6 @@ function App() {
             twitter_url={twitter_url}
             description={description}
             switch_code={switch_code}
-            discord_id={discord_id}
             language={language}
           />
         </Col>

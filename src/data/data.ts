@@ -15,7 +15,6 @@ export const description = {
 }
 
 export const switch_code =  "SW: 0195-9221-0829"
-export const discord_id = "Discord: tonto#2290"
 
 export const hobbies = {
   mk8d: {
