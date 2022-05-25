@@ -13,6 +13,7 @@ import {
   description,
   switch_code,
   discord_id,
+  hobbies,
   contents
 } from 'data/data';
 
@@ -52,7 +53,7 @@ function App() {
           />
         </Col>
       </Row>
-      <Hobbies />
+      <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Layout>
         <Footer style={{ textAlign: 'center' }}>
