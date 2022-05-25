@@ -8,6 +8,13 @@
   align-items: center;
 }
 
+.name-card-button {
+  color: white;
+  background-color: #E89A8A;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .name-and-sns p {
@@ -21,6 +28,14 @@
 
   .profile-description .profile-details p {
     font-size: 12pt;
+  }
+
+  .name-card-link {
+    margin-top: 30px;
+  }
+
+  .name-card-button {
+    font-size: 16pt;
   }
 }
 

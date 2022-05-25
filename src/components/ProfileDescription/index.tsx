@@ -33,6 +33,9 @@ function ProfileDescription(props: Props) {
         <p>{switch_code}</p>
         <p>{discord_id}</p>
       </div>
+      <div className="name-card-link">
+        <a className="name-card-button" href="/assets/name_card.jpg" rel="noopener noreferrer" target="_blank">{language === "jp" ? "名刺を表示" : "Show name card"}</a>
+      </div>
     </div>
   );
 }
