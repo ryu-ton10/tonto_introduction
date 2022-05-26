@@ -16,8 +16,9 @@ export const description = {
 
 export const switch_code =  "SW: 0195-9221-0829"
 
-export const hobbies = {
-  mk8d: {
+export const hobbies = [
+  {
+    id: nanoid(),
     title: {
       jp: "マリオカート8DX",
       en: "MarioKart8DX"
@@ -27,7 +28,8 @@ export const hobbies = {
       en: "I'm big fan of Daisy. I always run with Daisy. My favorite courses are Hyrule Circuit, GCN Yoshi Circuit and Twisted Mansion."
     }
   },
-  pokemon: {
+  {
+    id: nanoid(),
     title: {
       jp: "ポケモン",
       en: "Pokemon"
@@ -37,7 +39,8 @@ export const hobbies = {
       en: "I'm often at online battle with Sword and Shield. My favorite pokemons are Sirnight, Zangoose and Typhiosion."
     }
   },
-  eurobeat: {
+  {
+    id: nanoid(),
     title: {
       jp: "EUROBEAT",
       en: "Listening EUROBEAT"
@@ -47,7 +50,8 @@ export const hobbies = {
       en: "I prefer to listen EUROBEAT when driving or programming. There is a goog memory from when I was a student because I often listen there."
     }
   },
-  coffee: {
+  {
+    id: nanoid(),
     title: {
       jp: "コーヒー",
       en: "Dripping coffee"
@@ -57,7 +61,7 @@ export const hobbies = {
       en: "I really love coffee. Especially, coffee beans of Brazil, Costa Rica, Peru and Guatemala are my favorite."
     }
   }
-}
+]
 
 export const contents = [
   {
