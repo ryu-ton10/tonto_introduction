@@ -81,3 +81,17 @@
     font-size: 12pt;
   }
 }
+
+/* ========= PCサイズ_3 =========== */
+@media (min-width: 1500px) {
+  .hobbies {
+    padding: 0 100px 0 100px;
+  }
+  .hobby {
+    padding: 0 150px 40px 150px;
+  }
+
+  .hobby-description {
+    font-size: 12pt;
+  }
+}
