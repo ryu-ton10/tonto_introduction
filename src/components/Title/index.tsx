@@ -6,7 +6,7 @@ type Props = {
   language: string;
 }
 
-function TitleBar(props: Props) {
+function Title(props: Props) {
 
   const { hook, language } = props;
 
@@ -56,4 +56,4 @@ function TitleBar(props: Props) {
   );
 }
 
-export default TitleBar;
+export default Title;
