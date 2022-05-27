@@ -14,6 +14,8 @@
 
 .language-selection {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language-selection button {
@@ -30,18 +32,19 @@
     /* 右上に固定 */
     top: 0;
     right: 10px;
-  }
-  .language-selection .language-selection-button {
-    padding: 0 10px 0 10px;
+    padding-top: 20px;
   }
 
-  .language-selection .language-selection-button button {
+  .language-selection button {
     font-size: 12pt;
+    margin: 0 10px 0 10px;
+    max-height: 50px;
   }
 
   .title-image {
     max-width: 80%;
   }
+
   .title-bar .background-image {
     /* 背景画像の相対位置を設定 */
     width: 120px;
@@ -54,11 +57,7 @@
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
-  .language-selection .language-selection-button {
-    padding: 20px 20px 20px 20px;
-  }
-
-  .language-selection .language-selection-button button {
+  .language-selection button {
     font-size: 16pt;
   }
 
@@ -77,9 +76,8 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .language-selection .language-selection-button button {
-    font-size: 20pt;
-    padding: 0 10px 0 10px;
+  .language-selection button {
+    font-size: 18pt;
   }
 
   .title-image {
