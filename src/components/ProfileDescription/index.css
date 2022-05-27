@@ -8,9 +8,9 @@
   align-items: center;
 }
 
-.name-card-button {
-  color: white;
+.profile-description .name-card-button {
   background-color: #E89A8A;
+  color: white;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
 }
