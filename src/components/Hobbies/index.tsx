@@ -25,11 +25,9 @@ function Hobbies(props: Props) {
           const { title, description } = hobby;
           return (
             <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
-              <div className="hobby-icon"><IconWrapper title={title.jp} /></div>
-              <div className="hobby-title"><p>{language === "jp" ? title.jp : title.en}</p></div>
-              <div className="hobby-description">
-                <p>{language === "jp" ? description.jp : description.en}</p>
-              </div>
+              <IconWrapper title={title.jp} />
+              <p className="hobby-title">{language === "jp" ? title.jp : title.en}</p>
+              <p className="hobby-description">{language === "jp" ? description.jp : description.en}</p>
             </Col>
           );
         })}
@@ -46,19 +44,24 @@ function IconWrapper(props: WrapperProps) {
 
   if (title === "マリオカート8DX") {
     return (
-      <GiConsoleController size="8em" />
+      <GiConsoleController size="8em" className="hobby-icon" />
     );
   } else if (title === "ポケモン") {
     return (
-      <GiBattleGear size="8em" />
+      <GiBattleGear size="8em" className="hobby-icon" />
     );
   } else if (title === "EUROBEAT") {
     return (
-      <MdLibraryMusic size="8em" />
+      <MdLibraryMusic size="8em" className="hobby-icon" />
+    );
+  } else if (title === "コーヒー") {
+    return (
+      <MdLocalCafe size="8em" className="hobby-icon" />
     );
   } else {
+    // どの趣味にも当てはまらなかった場合にはコーヒーアイコンを返す
     return (
-      <MdLocalCafe size="8em" />
+      <MdLocalCafe size="8em" className="hobby-icon" />
     );
   }
 }

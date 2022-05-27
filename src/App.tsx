@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'App.css';
 import 'antd/dist/antd.min.css';
 import { Row, Col, Layout } from 'antd';
-import TitleBar from 'components/TitleBar'
+import Title from 'components/Title'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
@@ -29,13 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <TitleBar
+      <Title
         hook={updateLanguageSetting}
         language={language}
       />
-      <Row justify="center">
-        <p className="profile-title">ABOUT ME</p>
-      </Row>
+      <p className="profile-title">ABOUT ME</p>
       <Row className="profiles">
         {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
         <Col xs={24} sm={24} md={11} lg={11} >

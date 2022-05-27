@@ -6,7 +6,7 @@ type Props = {
   language: string;
 }
 
-function TitleBar(props: Props) {
+function Title(props: Props) {
 
   const { hook, language } = props;
 
@@ -26,26 +26,24 @@ function TitleBar(props: Props) {
   return (
     <div className="title-bar">
       <div className="language-selection">
-        <div className="language-selection-button">
-          <button
-            type="button"
-            onClick={() => hook("jp")}
-            style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}
-            data-testid="jp-toggle"
-          >
-            JP
-          </button>
-        </div>
-        <div className="language-selection-button">
-          <button
-            type="button"
-            onClick={() => hook("en")}
-            style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}
-            data-testid="en-toggle"
-          >
-            EN
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => hook("jp")}
+          style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}
+          data-testid="jp-toggle"
+          className="language-selection-button"
+        >
+          JP
+        </button>
+        <button
+          type="button"
+          onClick={() => hook("en")}
+          style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}
+          data-testid="en-toggle"
+          className="language-selection-button"
+        >
+          EN
+        </button>
       </div>
       <picture>
         <source type="image/webp" srcSet={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.webp` : `${process.env.PUBLIC_URL}/assets/title_en.webp`} ></source>
@@ -58,4 +56,4 @@ function TitleBar(props: Props) {
   );
 }
 
-export default TitleBar;
+export default Title;

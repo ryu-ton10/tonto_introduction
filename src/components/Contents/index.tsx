@@ -14,7 +14,7 @@ function Contents(props: Props) {
 
   return (
     <div className="content">
-      <div className="content-title"><p>CONTENTS</p></div>
+      <p className="content-title">CONTENTS</p>
       {contents.map((content, index) => {
         const { image, title, description, url } = content;
         return (
