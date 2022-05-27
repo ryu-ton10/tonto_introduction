@@ -1,27 +1,7 @@
 import React from 'react';
 import './index.css';
 import { Row, Col } from 'antd';
-
-type Content = {
-
-  /* 成果物のイメージ画像( webp とそれ以外の拡張子画像) */
-  image: {
-    webp: string;
-    others: string;
-  },
-  /* 成果物のタイトル */
-  title: {
-    jp: string;
-    en: string;
-  }
-  /* 成果物の説明文 */
-  description: {
-    jp: string;
-    en: string;
-  },
-  /* 成果物のリンク */
-  url: string;
-}
+import { Content } from 'commonData';
 
 type Props = {
   contents: Content[]
