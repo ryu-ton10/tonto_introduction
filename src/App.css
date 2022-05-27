@@ -9,6 +9,8 @@
 .App .profile-title {
   border-bottom: solid 8px #E89A8A;
   color: #E89A8A;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========= スマホサイズ_1 =========== */
