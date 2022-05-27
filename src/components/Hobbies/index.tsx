@@ -3,18 +3,7 @@ import { GiConsoleController, GiBattleGear } from 'react-icons/gi';
 import { MdLibraryMusic, MdLocalCafe } from 'react-icons/md';
 import { Row, Col } from 'antd';
 import './index.css';
-
-type Hobby = {
-  id: string;
-  title: {
-    jp: string;
-    en: string;
-  },
-  description: {
-    jp: string;
-    en: string;
-  }
-};
+import { Hobby } from 'commonData';
 
 type Props = {
   hobbies: Hobby[];
