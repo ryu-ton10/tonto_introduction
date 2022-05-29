@@ -17,6 +17,10 @@
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .name-and-sns {
+    justify-content: center;
+  }
+
   .name-and-sns p {
     font-size: 24pt;
   }
