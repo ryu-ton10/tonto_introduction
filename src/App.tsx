@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'App.css';
 import 'antd/dist/antd.min.css';
-import { Row, Col, Layout } from 'antd';
+import { Layout } from 'antd';
 import Title from 'components/Title'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
@@ -34,21 +34,17 @@ function App() {
         language={language}
       />
       <p className="profile-title">ABOUT ME</p>
-      <Row className="profiles">
-        {/* TODO: タブレットサイズ以上の場合は横並びのレイアウトにする */}
-        <Col xs={24} sm={24} md={11} lg={11} >
-          <Thumbnail />
-        </Col>
-        <Col xs={24} sm={24} md={13} lg={13} >
-          <ProfileDescription
-            name={name}
-            twitter_url={twitter_url}
-            description={description}
-            switch_code={switch_code}
-            language={language}
-          />
-        </Col>
-      </Row>
+      {/* グリッドコンテナー */}
+      <div className="profile-descriptions">
+        <Thumbnail />
+        <ProfileDescription
+          name={name}
+          twitter_url={twitter_url}
+          description={description}
+          switch_code={switch_code}
+          language={language}
+        />
+      </div>
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Layout>
