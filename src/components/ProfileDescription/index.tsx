@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-import { Row } from 'antd';
 import { TwitterOutlined } from '@ant-design/icons';
 
 type Props = {
@@ -23,10 +22,10 @@ function ProfileDescription(props: Props) {
 
   return (
     <div className="profile-description">
-      <Row className="name-and-sns" justify="center">
+      <div className="name-and-sns">
         <p>{language === "jp" ? name.jp : name.en}</p>
         <a href={twitter_url} rel="noopener noreferrer" target="_blank"><TwitterOutlined /></a>
-      </Row>
+      </div>
       <div className="profile-details">
         <p>{language === "jp" ? description.jp : description.en}</p>
         <p>{switch_code}</p>
