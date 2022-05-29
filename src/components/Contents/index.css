@@ -1,19 +1,19 @@
-.content {
+.contents {
   background-color: #E89A8A;
 }
 
-.content p {
+.contents p {
   color: white;
 }
 
-.content .content-title {
+.contents .content-title {
   border-bottom: solid 8px white;
   color: white;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content .link-button {
+.contents .link-button {
   background-color: white;
   color: #E89A8A;
   padding: 10px 20px 10px 20px;
@@ -21,29 +21,38 @@
   font-weight: bold;
 }
 
+.contents .content picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
-  .content {
+  .contents {
     padding-bottom: 80px;
   }
 
-  .content .content-title {
+  .contents .content-title {
     padding: 80px 0 0 0;
     font-size: 24pt;
     max-width: 50%;
   }
 
-  .content .content-title p {
+  .contents .content-title p {
     border-bottom: solid 6px white;
     max-width: 40%;
     font-size: 24pt;
   }
 
-  .content-image {
+  .content img {
     padding: 30px 0 10px 0;
+    max-width: 180px;
+    max-height: 180px
   }
 
-  .content-image img {
+  .content source {
+    padding: 30px 0 10px 0;
     max-width: 180px;
     max-height: 180px
   }
@@ -69,29 +78,20 @@
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
-  .content {
+  .contents {
     padding-bottom: 100px;
   }
 
-  .content .content-title {
+  .contents .content-title {
     padding: 100px 0 0 0;
     font-size: 30pt;
     max-width: 40%;
   }
 
-  .content .content-title p {
+  .contents .content-title p {
     border-bottom: solid 6px white;
     max-width: 50%;
     font-size: 30pt;
-  }
-
-  .content-image {
-    padding: 30px 0 10px 0;
-  }
-
-  .content-image img {
-    max-width: 240px;
-    max-height: 240px
   }
 
   .content-description {
@@ -115,29 +115,30 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .content {
+  .contents {
     padding-bottom: 120px;
   }
 
-  .content .content-title {
+  .contents .content-title {
     padding: 120px 0 0 0;
     font-size: 36pt;
     max-width: 40%;
   }
 
-  .content .content-title p {
+  .contents .content-title p {
     border-bottom: solid 10px white;
     max-width: 50%;
     font-size: 36pt;
   }
 
-  .content-image {
-    display: flex;
-    padding: 50px 10px 50px 0;
-    justify-content: right;
+  .content img {
+    padding: 30px 0 10px 0;
+    max-width: 200px;
+    max-height: 200px
   }
 
-  .content-image img {
+  .content source {
+    padding: 30px 0 10px 0;
     max-width: 200px;
     max-height: 200px
   }
@@ -156,28 +157,37 @@
     padding: 10px 0 10px 0;
     font-size: 12pt;
   }
+
+  .contents .content {
+    display: grid;
+    grid-template-columns: 8fr 16fr;
+  }
 }
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
-  .content .content-title {
+  .contents .content-title {
     padding: 120px 0 0 0;
     font-size: 36pt;
   }
 
-  .content .content-title p {
+  .contents .content-title p {
     border-bottom: solid 10px white;
     max-width: 50%;
     font-size: 36pt;
   }
 
-  .content-image {
-    display: flex;
-    padding: 50px 20px 50px 0;
-    justify-content: right;
+  .contents .content {
+    display: grid;
+    grid-template-columns: 9fr 15fr;
   }
 
-  .content-image img {
+  .content img {
+    max-width: 240px;
+    max-height: 240px
+  }
+
+  .content source {
     max-width: 240px;
     max-height: 240px
   }
@@ -200,20 +210,19 @@
 
 /* ========= PCサイズ_2 =========== */
 @media (min-width: 1120px) {
-  .content-image {
-    display: flex;
-    padding: 50px 30px 50px 0;
-    justify-content: right;
+  .content img {
+    max-width: 300px;
+    max-height: 300px
   }
 
-  .content-image img {
-    max-width: 260px;
-    max-height: 260px
+  .content source {
+    max-width: 300px;
+    max-height: 300px
   }
 
   .content-description {
     text-align: left;
-    padding: 50px 350px 50px 10px;
+    padding: 50px 50px 50px 10px;
   }
 
 }
