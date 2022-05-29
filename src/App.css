@@ -38,6 +38,11 @@
     font-size: 36pt;
     max-width: 40%;
   }
+
+  .App .profile-descriptions {
+    display: grid;
+    grid-template-columns: 11fr 13fr;
+  }
 }
 
 /* ========= PCサイズ =========== */

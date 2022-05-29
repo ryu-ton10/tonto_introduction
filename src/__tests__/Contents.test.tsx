@@ -3,19 +3,6 @@ import { render, unmountComponentAtNode } from "react-dom";
 import renderer from "react-test-renderer";
 import Contents from "./../components/Contents";
 
-// Row と Col コンポーネントのモック
-jest.mock("antd", () => {
-  const antd = jest.requireActual("antd");
-
-  const Row = () => {
-    return <div data-testid="row">Row</div>
-  };
-  return {
-    ...antd,
-    Row
-  };
-});
-
 let container = null; // ダミーの DOM を格納するためのコンテナ
 const sample_content = [{
   image: {webp: "sample_webp_image.webp", others: "sample_png_image.png"},
@@ -52,6 +39,7 @@ it('Row と Col が表示されていること', () => {
 
   // NOTE: Row と Col がモック化されている以上、同じレイアウトを検証することは難しい。
   // そのため、Unit Test ではモックが呼ばれていることを担保することに留めている
-  const row = document.querySelector("[data-testid=row]");
-  expect(row.textContent).toBe('Row');
+  // TODO: antd を利用しないよう修正をしたため、テストも細かく書く
+  //const row = document.querySelector("[data-testid=row]");
+  //expect(row.textContent).toBe('Row');
 });
