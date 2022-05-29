@@ -1,7 +1,6 @@
 import React from 'react';
 import { GiConsoleController, GiBattleGear } from 'react-icons/gi';
 import { MdLibraryMusic, MdLocalCafe } from 'react-icons/md';
-import { Row, Col } from 'antd';
 import './index.css';
 import { Hobby } from 'commonData';
 
@@ -20,18 +19,18 @@ function Hobbies(props: Props) {
 
   return (
     <div className="hobbies">
-      <Row>
+      <div className="hobbies-wrapper">
         { hobbies.map( (hobby, index) => {
           const { title, description } = hobby;
           return (
-            <Col className="hobby" xs={24} sm={12} md={12} lg={12} >
+            <div className="hobby">
               <IconWrapper title={title.jp} />
               <p className="hobby-title">{language === "jp" ? title.jp : title.en}</p>
               <p className="hobby-description">{language === "jp" ? description.jp : description.en}</p>
-            </Col>
+            </div>
           );
         })}
-      </Row>
+      </div>
     </div>
   );
 };

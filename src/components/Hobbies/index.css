@@ -60,6 +60,14 @@
   }
 }
 
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .hobbies .hobbies-wrapper {
+    display: grid;
+    grid-template-columns: 12fr 12fr;
+  }
+}
+
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
   .hobby {
