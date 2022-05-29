@@ -13,20 +13,6 @@ const sample_hobbies = {jp: "サンプル趣味", en: "sample-hobbies"}
 const sample_sw_code = "0000-0000-0000-0000"
 const sample_discord_id = "sample#0000"
 
-// Row コンポーネントのモック
-jest.mock("antd", () => {
-  const antd = jest.requireActual("antd");
-
-  const Row = () => {
-    return <div data-testid="row"></div>
-  };
-
-  return {
-    ...antd,
-    Row
-  };
-});
-
 let container = null;
 beforeEach(() => {
   // container の定義
@@ -63,5 +49,5 @@ it('名前とプロフィール文が表示されていること', () => {
         language="jp"
       />, container);
   });
-  expect(container.textContent).toBe("サンプル説明文サンプル趣味0000-0000-0000-0000sample#0000");
+  expect(container.textContent).toBe("テスト名前サンプル説明文0000-0000-0000-0000名刺を表示");
 });
