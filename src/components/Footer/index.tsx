@@ -4,7 +4,7 @@ import './index.css';
 function Footer() {
 
   return (
-    <div className="footer">
+    <div className="footer" data-testid="footer">
       <p>©︎2022    <a href="https://twitter.com/27ma4_ton10" rel="noopener noreferrer" target="_blank">@27ma4_ton10</a></p>
     </div>
   );
