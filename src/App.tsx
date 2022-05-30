@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import 'App.css';
-import 'antd/dist/antd.min.css';
 import Title from 'components/Title'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
