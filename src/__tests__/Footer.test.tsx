@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer';
 import Footer from './../components/Footer';
 
 let container = null;
+const sample_twitter_url = "http://sample_twitter_url.hoge";
 
 beforeEach(() => {
   // container の定義
@@ -20,7 +21,7 @@ afterEach(() => {
 
 // =============== snapshot test =================
 it('Footer が表示されていること', () => {
-  const component = renderer.create(<Footer />);
+  const component = renderer.create(<Footer twittr_url={sample_twitter_url} />);
   let tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -29,7 +30,7 @@ it('Footer が表示されていること', () => {
 // ================ act tests ====================
 it('Footer に西暦と twitter id が表示されていること', () => {
   act(() => {
-    render(<Footer />, container);
+    render(<Footer twitter_url={sample_twitter_url} />, container);
   })
 
   const displayed = document.querySelector("[data-testid=footer]");

@@ -8,7 +8,6 @@ exports[`Footer が表示されていること 1`] = `
   <p>
     ©︎2022    
     <a
-      href="https://twitter.com/27ma4_ton10"
       rel="noopener noreferrer"
       target="_blank"
     >

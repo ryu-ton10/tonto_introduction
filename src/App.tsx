@@ -46,7 +46,7 @@ function App() {
       </div>
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
-      <Footer />
+      <Footer twitter_url={twitter_url} />
     </div>
   );
 }
