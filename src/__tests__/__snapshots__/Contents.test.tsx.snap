@@ -12,14 +12,16 @@ exports[`コンテンツ群が表示されていること 1`] = `
   <div
     className="content"
   >
-    <picture>
+    <picture
+      data-testid="content-thumbnail"
+    >
       <source
-        srcSet="sample_webp_image.webp"
+        srcSet="/test/sample_webp_image.webp"
         type="image/webp"
       />
       <img
         alt="thumbnail"
-        src="sample_png_image.png"
+        src="/test/sample_png_image.png"
       />
     </picture>
     <div
@@ -27,13 +29,15 @@ exports[`コンテンツ群が表示されていること 1`] = `
     >
       <p
         className="content-description-title"
+        data-testid="content-description-title"
       >
-        sample english title
+        サンプル日本語タイトル
       </p>
       <p
         className="content-description-detail"
+        data-testid="content-description-detail"
       >
-        sample english description
+        サンプル日本語説明文
       </p>
       <div
         className="link"
@@ -44,7 +48,7 @@ exports[`コンテンツ群が表示されていること 1`] = `
           rel="noopener noreferrer"
           target="_blank"
         >
-          Go website
+          Webサイトへ行ってみる
         </a>
       </div>
     </div>
