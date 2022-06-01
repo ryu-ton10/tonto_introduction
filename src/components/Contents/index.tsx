@@ -18,13 +18,13 @@ function Contents(props: Props) {
         const { image, title, description, url } = content;
         return (
           <div className="content">
-            <picture>
+            <picture data-testid="content-thumbnail">
               <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} ></source>
               <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
             </picture>
             <div className="content-description">
-              <p className="content-description-title">{language === "jp" ? title.jp : title.en}</p>
-              <p className="content-description-detail">{language === "jp" ? description.jp : description.en}</p>
+              <p className="content-description-title" data-testid="content-description-title">{language === "jp" ? title.jp : title.en}</p>
+              <p className="content-description-detail" data-testid="content-description-detail">{language === "jp" ? description.jp : description.en}</p>
               <div className="link">
                 <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
               </div>
