@@ -2,7 +2,7 @@ import { cleanup, fireEvent } from '@testing-library/react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
-import TitleBar from './../components/TitleBar';
+import Title from './../components/Title';
 
 let container = null;
 let prop_language:string = "";
@@ -28,7 +28,7 @@ it('タイトル画面が表示されていること', () => {
   const updateLanguageSetting = (language: string) => {
     prop_language = language;
   };
-  const component = renderer.create(<TitleBar hook={updateLanguageSetting("jp")} language={prop_language} />);
+  const component = renderer.create(<Title hook={updateLanguageSetting("jp")} language={prop_language} />);
   let tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -41,41 +41,33 @@ it('日本語を選択している時、日本語用タイトル画像が表示�
     prop_language = language;
   };
   act(() => {
-    render(<TitleBar hook={updateLanguageSetting("jp")} language={prop_language} />, container);
+    render(<Title hook={updateLanguageSetting("jp")} language={prop_language} />, container);
   })
   // img タグの存在検証
-  const displayedImgImage = document.querySelector("img");
-  expect(displayedImgImage.alt).toBe("background");
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("img").src
+  ).toBe("http://localhost/assets/title_jp.png");
   // source タグの存在検証
-  const displayedSourceImage = document.querySelector("source");
-  expect(displayedSourceImage.srcset).toBe("/assets/title_jp.webp");
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
+  ).toBe("/assets/title_jp.webp");
 });
 
-// TODO: 以下のテストが通るよう、言語切替の仕組みを state のみを利用するよう修正する
-//it('言語設定を英語に切り替えた時、英語用タイトル画像が表示されていること', async () => {
-//  // 言語切替用のダミー関数
-//  const updateLanguageSetting = (language: string) => {
-//    prop_language = language;
-//  };
-//  // ダミーの変更イベント
-//  const onChange = jest.fn( (props: string) => {
-//    updateLanguageSetting(props);
-//  });
-//
-//  act(() => {
-//    render(<TitleBar hook={onChange} language={prop_language} />, container);
-//  })
-//
-//  // ボタン押下イベントの発火
-//  const en_button = document.querySelector("[data-testid=en-toggle]");
-//  act(() => {
-//    en_button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-//  });
-//
-//  expect(onChange).toHaveBeenCalledTimes(1);
-//
-//  await new Promise(resolve => setTimeout(resolve, 300));
-//
-//  const displayedSourceImage = document.querySelector("source");
-//  expect(displayedSourceImage.srcset).toBe("/assets/title_en.webp");
-//});
+it('英語を選択している時、英語用タイトル画像が表示されていること', async () => {
+  // 言語切替用のダミー関数
+  const updateLanguageSetting = (language: string) => {
+    prop_language = language;
+  };
+  act(() => {
+    render(<Title hook={updateLanguageSetting("en")} language={prop_language} />, container);
+  })
+
+  // img タグの存在検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("img").src
+  ).toBe("http://localhost/assets/title_en.png");
+  // source タグの存在検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
+  ).toBe("/assets/title_en.webp");
+});

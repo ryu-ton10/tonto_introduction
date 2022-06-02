@@ -7,44 +7,38 @@ exports[`タイトル画面が表示されていること 1`] = `
   <div
     className="language-selection"
   >
-    <div
+    <button
       className="language-selection-button"
-    >
-      <button
-        data-testid="jp-toggle"
-        onClick={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#E8C1B8",
-            "borderColor": "white",
-            "color": "white",
-          }
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E8C1B8",
+          "borderColor": "white",
+          "color": "white",
         }
-        type="button"
-      >
-        JP
-      </button>
-    </div>
-    <div
+      }
+      type="button"
+    >
+      JP
+    </button>
+    <button
       className="language-selection-button"
-    >
-      <button
-        data-testid="en-toggle"
-        onClick={[Function]}
-        style={
-          Object {
-            "backgroundColor": "white",
-            "borderColor": "white",
-            "color": "#E89A8A",
-          }
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "white",
+          "color": "#E89A8A",
         }
-        type="button"
-      >
-        EN
-      </button>
-    </div>
+      }
+      type="button"
+    >
+      EN
+    </button>
   </div>
-  <picture>
+  <picture
+    data-testid="title-image"
+  >
     <source
       srcSet="/assets/title_jp.webp"
       type="image/webp"
