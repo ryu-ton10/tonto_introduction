@@ -30,7 +30,6 @@ function Title(props: Props) {
           type="button"
           onClick={() => hook("jp")}
           style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}
-          data-testid="jp-toggle"
           className="language-selection-button"
         >
           JP
@@ -39,13 +38,12 @@ function Title(props: Props) {
           type="button"
           onClick={() => hook("en")}
           style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}
-          data-testid="en-toggle"
           className="language-selection-button"
         >
           EN
         </button>
       </div>
-      <picture>
+      <picture data-testid="title-image">
         <source type="image/webp" srcSet={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.webp` : `${process.env.PUBLIC_URL}/assets/title_en.webp`} ></source>
         <img className="title-image" src={language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`} alt="background" />
       </picture>
