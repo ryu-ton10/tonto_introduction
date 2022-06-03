@@ -4,7 +4,7 @@ import './index.css';
 function Thumbnail() {
 
   return (
-    <div className="thumbnail-image" aria-role="thumbnail-wrapper">
+    <div className="thumbnail-image" aria-label="thumbnail-wrapper">
       <picture>
         <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/thumbnail.webp`} ></source>
         <img src={`${process.env.PUBLIC_URL}/thumbnail.jpeg`} alt="thumbnail" />
