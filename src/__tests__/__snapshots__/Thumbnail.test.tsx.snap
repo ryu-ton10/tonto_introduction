@@ -1,18 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`サムネイル画像が表示されていること 1`] = `
-<div
-  className="thumbnail-image"
->
-  <picture>
-    <source
-      srcSet="/thumbnail.webp"
-      type="image/webp"
-    />
-    <img
-      alt="thumbnail"
-      src="/thumbnail.jpeg"
-    />
-  </picture>
-</div>
+<picture>
+  <source
+    srcSet="/thumbnail.webp"
+    type="image/webp"
+  />
+  <img
+    alt="thumbnail"
+    src="/thumbnail.jpeg"
+  />
+</picture>
 `;
