@@ -8,3 +8,7 @@
 .footer p {
   font-size: 12pt;
 }
+
+.footer a {
+  color: blue;
+}

@@ -2,6 +2,7 @@
 
 exports[`サムネイル画像が表示されていること 1`] = `
 <div
+  aria-label="thumbnail-wrapper"
   className="thumbnail-image"
 >
   <picture>

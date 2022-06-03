@@ -32,8 +32,7 @@ function App() {
         language={language}
       />
       <p className="profile-title">ABOUT ME</p>
-      {/* グリッドコンテナー */}
-      <div className="profile-descriptions">
+      <div className="profile-descriptions" aria-label="grid-container">
         <Thumbnail />
         <ProfileDescription
           name={name}
