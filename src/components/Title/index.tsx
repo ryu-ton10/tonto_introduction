@@ -46,6 +46,7 @@ function Title(props: Props) {
         </button>
       </div>
       <picture data-testid="title-image">
+      {scrollDirection === "down" ?
         <source
           type="image/webp"
           srcSet={
@@ -53,13 +54,28 @@ function Title(props: Props) {
           }
         >
         </source>
-        <img
-          className="title-image"
-          src={
-            language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
-          }
-          alt="background"
-        />
+        :
+        <source
+          type="image/webp"
+          srcSet={`${process.env.PUBLIC_URL}/assets/title_hutaba.webp`}
+        >
+        </source>
+      }
+        {scrollDirection === "down" ?
+          <img
+            className="title-image"
+            src={
+              language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
+            }
+            alt="background"
+          />
+          :
+          <img
+            className="title-image"
+            src={`${process.env.PUBLIC_URL}/assets/title_hutaba.png`}
+            alt="background"
+          />
+        }
       </picture>
       <img
         className="background-image"
