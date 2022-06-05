@@ -8,18 +8,27 @@ type Props = {
 function SecretA(props: Props) {
 
   const { toggleScroll } = props;
+  const scrollToTop = () => {
+    window.scrollTo({
+      top:0,
+      behavior: "smooth",
+    });
+  }
+  const toggleEvents = () => {
+    toggleScroll("up");
+    scrollToTop();
+  }
 
   return (
     <div className="secret-a-background">
       <button
         className="secret-a-button"
         type="button"
-        onClick={() => toggleScroll("up")}
+        onClick={() => toggleEvents()}
       >
-      ｵ  ｽ?
+      ｴ  ﾝ ｹﾞ ｲﾌﾞ       ﾆ   ﾅﾙ?
       </button>
     </div>
   );
 }
-
 export default SecretA;
