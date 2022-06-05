@@ -95,13 +95,13 @@
   }
 }
 
-/* スクロールを促すアイコン */
-.scroll {
+/* スクロールを促すアイコン(下) */
+.scroll-down {
   padding-top: 50px;
   color: white;
 }
 
-.scroll span {
+.scroll-down span {
   position: absolute;
   left: 50%;
   width: 50px;
@@ -110,12 +110,31 @@
   border-left: 3px solid white;
   border-bottom: 3px solid white;
   transform: rotate(-45deg);
-  animation: go-scroll 2s infinite;
+  animation: go-scroll-down 2s infinite;
+  box-sizing: border-box;
+}
+
+/* スクロールを促すアイコン(上) */
+.scroll-up {
+  padding-top: 50px;
+  color: white;
+}
+
+.scroll-up span {
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -30px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(-45deg);
+  animation: go-scroll-up 2s infinite;
   box-sizing: border-box;
 }
 
 /* 矢印を下に動かすアニメーション */
-@keyframes go-scroll {
+@keyframes go-scroll-down {
   0% {
     transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
@@ -125,6 +144,20 @@
   }
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+/* 矢印を上に動かすアニメーション */
+@keyframes go-scroll-up {
+  0% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
   }
 }

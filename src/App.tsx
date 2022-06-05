@@ -21,21 +21,31 @@ function App() {
   // 言語設定を保持するためのトップに位置するフック
   // これを基に各子コンポーネントは言語表示を制御する
   // 切り替えトグルは、TitleBar コンポーネントに持つ
+  // jp:日本語 en:英語
   const [language, setLanguage] = useState("jp")
   const updateLanguageSetting = (langage: string) => {
     setLanguage(langage);
   }
 
+  // SecretA エリアの表示ステータスを保持する
   const [isShowSecretA, toggleSecretA] = useState(false);
   const toggleSecretAStatus = (status: boolean) => {
     toggleSecretA(status);
   };
+
+  // タイトルにある矢印の向きを表す
+  // down:下向き up:上向き
+  const [scrollDirection, toggleScrollDirection] = useState("down");
+  const toggleScroll = (direction: string) => {
+    toggleScrollDirection(direction);
+  }
 
   return (
     <div className="App">
       <Title
         hook={updateLanguageSetting}
         toggle={toggleSecretAStatus}
+        scrollDirection={scrollDirection}
         language={language}
       />
       <p className="profile-title">ABOUT ME</p>
@@ -53,7 +63,7 @@ function App() {
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} />
       {isShowSecretA &&
-        <SecretA />
+        <SecretA toggleScroll={toggleScroll} />
       }
     </div>
   );

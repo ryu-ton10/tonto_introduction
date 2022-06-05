@@ -1,17 +1,23 @@
 import React from 'react';
 import './index.css';
 
-function SecretA() {
+type Props = {
+  toggleScroll: Function;
+}
+
+function SecretA(props: Props) {
+
+  const { toggleScroll } = props;
+
   return (
     <div className="secret-a-background">
-      <a
+      <button
         className="secret-a-button"
-        href="https://www.youtube.com/channel/UC5nfcGkOAm3JwfPvJvzplHg"
-        rel="noopener noreferrer"
-        target="_blank"
+        type="button"
+        onClick={() => toggleScroll("up")}
       >
       ｵ  ｽ?
-      </a>
+      </button>
     </div>
   );
 }

@@ -4,12 +4,13 @@ import './index.css';
 type Props = {
   hook: Function;
   toggle: Function;
+  scrollDirection: string;
   language: string;
 }
 
 function Title(props: Props) {
 
-  const { hook, toggle, language } = props;
+  const { hook, toggle, scrollDirection, language } = props;
 
   // 言語切替ボタンで enabled な状態
   const languageSelectedStyle = {
@@ -67,7 +68,11 @@ function Title(props: Props) {
         onClick={() => toggle(true)}
       />
       {/* スクロールを促すアニメーション */}
-      <p className="scroll"><span></span></p>
+      {scrollDirection === "down" ?
+        <p className="scroll-down"><span></span></p>
+        :
+        <p className="scroll-up"><span></span></p>
+      }
     </div>
   );
 }
