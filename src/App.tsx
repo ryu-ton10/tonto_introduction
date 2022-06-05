@@ -6,6 +6,7 @@ import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
 import Hobbies from 'components/Hobbies';
 import Footer from 'components/Footer';
+import SecretA from 'components/SecretA';
 import {
   name,
   twitter_url,
@@ -45,6 +46,7 @@ function App() {
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} />
+      <SecretA />
     </div>
   );
 }
