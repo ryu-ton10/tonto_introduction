@@ -3,12 +3,14 @@ import './index.css';
 
 type Props = {
   hook: Function;
+  toggle: Function;
+  scrollDirection: string;
   language: string;
 }
 
 function Title(props: Props) {
 
-  const { hook, language } = props;
+  const { hook, toggle, scrollDirection, language } = props;
 
   // 言語切替ボタンで enabled な状態
   const languageSelectedStyle = {
@@ -44,6 +46,7 @@ function Title(props: Props) {
         </button>
       </div>
       <picture data-testid="title-image">
+      {scrollDirection === "down" ?
         <source
           type="image/webp"
           srcSet={
@@ -51,17 +54,41 @@ function Title(props: Props) {
           }
         >
         </source>
-        <img
-          className="title-image"
-          src={
-            language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
-          }
-          alt="background"
-        />
+        :
+        <source
+          type="image/webp"
+          srcSet={`${process.env.PUBLIC_URL}/assets/title_hutaba.webp`}
+        >
+        </source>
+      }
+        {scrollDirection === "down" ?
+          <img
+            className="title-image"
+            src={
+              language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
+            }
+            alt="background"
+          />
+          :
+          <img
+            className="title-image"
+            src={`${process.env.PUBLIC_URL}/assets/title_hutaba.png`}
+            alt="background"
+          />
+        }
       </picture>
-      <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
+      <img
+        className="background-image"
+        src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`}
+        alt="background"
+        onClick={() => toggle(true)}
+      />
       {/* スクロールを促すアニメーション */}
-      <p className="scroll"><span></span></p>
+      {scrollDirection === "down" ?
+        <p className="scroll-down"><span></span></p>
+        :
+        <p className="scroll-up"><span></span></p>
+      }
     </div>
   );
 }
