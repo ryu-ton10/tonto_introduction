@@ -3,12 +3,13 @@ import './index.css';
 
 type Props = {
   hook: Function;
+  toggle: Function;
   language: string;
 }
 
 function Title(props: Props) {
 
-  const { hook, language } = props;
+  const { hook, toggle, language } = props;
 
   // 言語切替ボタンで enabled な状態
   const languageSelectedStyle = {
@@ -59,7 +60,12 @@ function Title(props: Props) {
           alt="background"
         />
       </picture>
-      <img className="background-image" src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`} alt="background" />
+      <img
+        className="background-image"
+        src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`}
+        alt="background"
+        onClick={() => toggle(true)}
+      />
       {/* スクロールを促すアニメーション */}
       <p className="scroll"><span></span></p>
     </div>

@@ -26,10 +26,16 @@ function App() {
     setLanguage(langage);
   }
 
+  const [isShowSecretA, toggleSecretA] = useState(false);
+  const toggleSecretAStatus = (status: boolean) => {
+    toggleSecretA(status);
+  };
+
   return (
     <div className="App">
       <Title
         hook={updateLanguageSetting}
+        toggle={toggleSecretAStatus}
         language={language}
       />
       <p className="profile-title">ABOUT ME</p>
@@ -46,7 +52,9 @@ function App() {
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} />
-      <SecretA />
+      {isShowSecretA &&
+        <SecretA />
+      }
     </div>
   );
 }
