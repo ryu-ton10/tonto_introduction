@@ -21,9 +21,7 @@ afterEach(() => {
 // =============== snapshot test =================
 it('SecretA コンポーネントが表示されること', () => {
   // スクロール矢印の向きを制御するダミーの関数
-  const toggleScroll = (direction: string) => {
-    toggleScrollDirection(direction);
-  };
+  const toggleScroll = jest.fn();
   const component = renderer.create(<SecretA toggleScroll={toggleScroll} />);
   let tree = component.toJSON();
 
