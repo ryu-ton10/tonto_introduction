@@ -23,6 +23,7 @@ function SecretA(props: Props) {
     <div className="secret-a-background">
       <button
         className="secret-a-button"
+        data-testid="secret-a-button"
         type="button"
         onClick={() => toggleEvents()}
       >
