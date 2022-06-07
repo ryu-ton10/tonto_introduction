@@ -80,8 +80,22 @@ it('スクロール方向が上の時、タイトル画像がふーちゃんバ�
   expect(
     container.querySelector("[data-testid=title-image]").querySelector("source").srcset
   ).toBe("/assets/title_hutaba.webp");
+});
 
-})
+it('スクロール方向が上の時、英語の場合でもタイトル画像がふーちゃんバージョンになること', () => {
+  act(() => {
+    render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container);
+  });
+
+  // img タグの検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("img").src
+  ).toBe("http://localhost/assets/title_hutaba.png");
+  // source タグの検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
+  ).toBe("/assets/title_hutaba.webp");
+});
 
 it('scrollDirection が下の場合、スクロールを促すアニメーションが下になること', () => {
   act(() => {
