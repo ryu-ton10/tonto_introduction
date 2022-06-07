@@ -57,6 +57,7 @@ exports[`タイトル画面が表示されていること 1`] = `
   />
   <p
     className="scroll-down"
+    data-testid="scroll"
   >
     <span />
   </p>

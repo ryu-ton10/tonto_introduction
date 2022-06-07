@@ -7,6 +7,13 @@ import Title from './../components/Title';
 let container = null;
 let prop_language:string = "";
 
+// 言語切替用のダミー関数
+const updateLanguageSetting = (language: string) => {
+  prop_language = language;
+};
+// 隠し要素出現用のダミー関数
+const toggleSecret = jest.fn();
+
 beforeEach(() => {
   // conteiner の定義
   container = document.createElement("div");
@@ -24,11 +31,6 @@ afterEach(() => {
 
 // =============== snapshot test =================
 it('タイトル画面が表示されていること', () => {
-  // 言語切替用のダミー関数
-  const updateLanguageSetting = (language: string) => {
-    prop_language = language;
-  };
-  const toggleSecret = jest.fn();
   const component = renderer.create(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
   let tree = component.toJSON();
 
@@ -37,11 +39,6 @@ it('タイトル画面が表示されていること', () => {
 
 // ================ act tests ====================
 it('日本語を選択している時、日本語用タイトル画像が表示されていること', () => {
-  // 言語切替用のダミー関数
-  const updateLanguageSetting = (language: string) => {
-    prop_language = language;
-  };
-  const toggleSecret = jest.fn();
   act(() => {
     render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
   })
@@ -56,12 +53,6 @@ it('日本語を選択している時、日本語用タイトル画像が表示�
 });
 
 it('英語を選択している時、英語用タイトル画像が表示されていること', async () => {
-  // 言語切替用のダミー関数
-  const updateLanguageSetting = (language: string) => {
-    prop_language = language;
-  };
-  // 隠し要素出現用のダミー関数
-  const toggleSecret = jest.fn();
   act(() => {
     render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
   })
@@ -77,15 +68,8 @@ it('英語を選択している時、英語用タイトル画像が表示され�
 });
 
 it('スクロール方向が上の時、タイトル画像がふーちゃんバージョンになること', () => {
-  // 言語切替用のダミー関数
-  const updateLanguageSetting = (language: string) => {
-    prop_language = language;
-  };
-  // 隠し要素出現用のダミー関数
-  const toggleSecret = jest.fn();
-
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language="jp" />, container);
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container);
   });
 
   // img タグの検証
@@ -98,3 +82,23 @@ it('スクロール方向が上の時、タイトル画像がふーちゃんバ�
   ).toBe("/assets/title_hutaba.webp");
 
 })
+
+it('scrollDirection が下の場合、スクロールを促すアニメーションが下になること', () => {
+  act(() => {
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container)
+  });
+
+  expect(
+    container.querySelector("[data-testid=scroll]").className
+  ).toBe("scroll-down");
+});
+
+it('scrollDirection が上の場合、スクロールを促すアニメーションが上になること', () => {
+  act(() => {
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container)
+  });
+
+  expect(
+    container.querySelector("[data-testid=scroll]").className
+  ).toBe("scroll-up");
+});
