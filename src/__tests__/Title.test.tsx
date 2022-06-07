@@ -28,7 +28,8 @@ it('タイトル画面が表示されていること', () => {
   const updateLanguageSetting = (language: string) => {
     prop_language = language;
   };
-  const component = renderer.create(<Title hook={updateLanguageSetting("jp")} language={prop_language} />);
+  const toggleSecret = jest.fn();
+  const component = renderer.create(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
   let tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -40,8 +41,9 @@ it('日本語を選択している時、日本語用タイトル画像が表示�
   const updateLanguageSetting = (language: string) => {
     prop_language = language;
   };
+  const toggleSecret = jest.fn();
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} language={prop_language} />, container);
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
   })
   // img タグの存在検証
   expect(
@@ -58,8 +60,10 @@ it('英語を選択している時、英語用タイトル画像が表示され�
   const updateLanguageSetting = (language: string) => {
     prop_language = language;
   };
+  // 隠し要素出現用のダミー関数
+  const toggleSecret = jest.fn();
   act(() => {
-    render(<Title hook={updateLanguageSetting("en")} language={prop_language} />, container);
+    render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
   })
 
   // img タグの存在検証
@@ -71,3 +75,26 @@ it('英語を選択している時、英語用タイトル画像が表示され�
     container.querySelector("[data-testid=title-image]").querySelector("source").srcset
   ).toBe("/assets/title_en.webp");
 });
+
+it('スクロール方向が上の時、タイトル画像がふーちゃんバージョンになること', () => {
+  // 言語切替用のダミー関数
+  const updateLanguageSetting = (language: string) => {
+    prop_language = language;
+  };
+  // 隠し要素出現用のダミー関数
+  const toggleSecret = jest.fn();
+
+  act(() => {
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language="jp" />, container);
+  });
+
+  // img タグの検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("img").src
+  ).toBe("http://localhost/assets/title_hutaba.png");
+  // source タグの検証
+  expect(
+    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
+  ).toBe("/assets/title_hutaba.webp");
+
+})
