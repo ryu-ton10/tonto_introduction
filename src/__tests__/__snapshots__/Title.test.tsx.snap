@@ -52,10 +52,11 @@ exports[`タイトル画面が表示されていること 1`] = `
   <img
     alt="background"
     className="background-image"
+    onClick={[Function]}
     src="/hutaba_background.jpg"
   />
   <p
-    className="scroll"
+    className="scroll-down"
   >
     <span />
   </p>
