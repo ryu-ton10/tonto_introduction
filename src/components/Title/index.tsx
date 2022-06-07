@@ -85,9 +85,9 @@ function Title(props: Props) {
       />
       {/* スクロールを促すアニメーション */}
       {scrollDirection === "down" ?
-        <p className="scroll-down"><span></span></p>
+        <p className="scroll-down" data-testid="scroll"><span></span></p>
         :
-        <p className="scroll-up"><span></span></p>
+        <p className="scroll-up" data-testid="scroll"><span></span></p>
       }
     </div>
   );

@@ -85,7 +85,7 @@ it('スクロール方向が上の時、タイトル画像がふーちゃんバ�
   const toggleSecret = jest.fn();
 
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language="jp" />, container);
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container);
   });
 
   // img タグの検証
@@ -98,3 +98,37 @@ it('スクロール方向が上の時、タイトル画像がふーちゃんバ�
   ).toBe("/assets/title_hutaba.webp");
 
 })
+
+it('scrollDirection が下の場合、スクロールを促すアニメーションが下になること', () => {
+  // 言語切替用のダミー関数
+  const updateLanguageSetting = (language: string) => {
+    prop_language = language;
+  };
+  // 隠し要素出現用のダミー関数
+  const toggleSecret = jest.fn();
+
+  act(() => {
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container)
+  });
+
+  expect(
+    container.querySelector("[data-testid=scroll]").className
+  ).toBe("scroll-down");
+});
+
+it('scrollDirection が上の場合、スクロールを促すアニメーションが上になること', () => {
+  // 言語切替用のダミー関数
+  const updateLanguageSetting = (language: string) => {
+    prop_language = language;
+  };
+  // 隠し要素出現用のダミー関数
+  const toggleSecret = jest.fn();
+
+  act(() => {
+    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container)
+  });
+
+  expect(
+    container.querySelector("[data-testid=scroll]").className
+  ).toBe("scroll-up");
+});
