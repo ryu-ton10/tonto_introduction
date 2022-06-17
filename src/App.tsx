@@ -13,7 +13,8 @@ import {
   description,
   switch_code,
   hobbies,
-  contents
+  contents,
+  privacy_policy
 } from 'data/data';
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
       </div>
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
-      <Footer twitter_url={twitter_url} />
+      <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
       {isShowSecretA &&
         <SecretA toggleScroll={toggleScroll} />
       }
