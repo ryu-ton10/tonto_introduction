@@ -27,7 +27,7 @@ function SecretA(props: Props) {
         type="button"
         onClick={() => toggleEvents()}
       >
-      ｴ  ﾝ ｹﾞ ｲﾌﾞ       ﾆ   ﾅﾙ?
+      園芸部になりますか？
       </button>
     </div>
   );
