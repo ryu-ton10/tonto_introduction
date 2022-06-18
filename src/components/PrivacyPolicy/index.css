@@ -18,7 +18,15 @@
   max-width: 70%;
 }
 
+.overlay .modal p {
+  color: #808080;
+  margin: 10px 30px 20px 30px;
+}
+
 .overlay .modal button {
-  margin: 20px 0 10px 0;
+  padding: 5px 10px 5px 10px;
   font-size: 15pt;
+  color: white;
+  background-color: #E99A89;
+  border-color: white;
 }
