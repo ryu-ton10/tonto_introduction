@@ -32,4 +32,6 @@ $ npm install -g yarn
 $ yarn test
 ```
 
+## その他
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
