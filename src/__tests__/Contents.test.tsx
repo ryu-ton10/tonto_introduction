@@ -1,9 +1,11 @@
 import { act } from "react-dom/test-utils";
-import { render, unmountComponentAtNode } from "react-dom";
+import { render } from "react-dom";
+import { createRoot } from 'react-dom/client';
 import renderer from "react-test-renderer";
 import Contents from "./../components/Contents";
 
 let container = null; // ダミーの DOM を格納するためのコンテナ
+let root = null;
 const sample_content = [{
   image: {webp: "/test/sample_webp_image.webp", others: "/test/sample_png_image.png"},
   title: {jp: "サンプル日本語タイトル", en: "sample english title"},
@@ -14,11 +16,12 @@ const sample_content = [{
 beforeEach(() => {
   container = document.createElement("div");
   document.body.appendChild(container);
+  root = createRoot(container);
 });
 
 afterEach(() => {
   // 作成したダミーの DOM を除去する
-  unmountComponentAtNode(container);
+  root.unmount(container);
   container.remove();
   container = null;
 });
@@ -34,7 +37,7 @@ it('コンテンツ群が表示されていること', () => {
 // =============== tests with act =================
 it('コンテンツのサムネイルが表示されていること', () => {
   act(() => {
-    render(<Contents contents={sample_content} language="jp" />, container);
+    root.render(<Contents contents={sample_content} language="jp" />);
   });
 
   // webp
@@ -49,7 +52,7 @@ it('コンテンツのサムネイルが表示されていること', () => {
 
 it('コンテンツの説明が日本語で表示されていること', () => {
   act(() => {
-    render(<Contents contents={sample_content} language="jp" />, container);
+    root.render(<Contents contents={sample_content} language="jp" />);
   });
 
   // title
@@ -64,7 +67,7 @@ it('コンテンツの説明が日本語で表示されていること', () => {
 
 it('コンテンツの説明が英語で表示されていること', () => {
   act(() => {
-    render(<Contents contents={sample_content} language="en" />, container);
+    root.render(<Contents contents={sample_content} language="en" />);
   });
 
   // title

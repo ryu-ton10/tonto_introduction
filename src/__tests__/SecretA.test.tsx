@@ -1,22 +1,25 @@
-import { render, unmountComponentAtNode } from 'react-dom';
+import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import SecretA from './../components/SecretA';
 
 let container = null;
+let root = null;
 
 beforeEach(() => {
   // container の定義
   container = document.createElement("div");
   document.body.appendChild(container);
-})
+  root = createRoot(container);
+});
 
 afterEach(() => {
   // 定義した contaienr の除去
-  unmountComponentAtNode(container);
+  root.unmount(container);
   container.remove();
   container = null;
-})
+});
 
 // =============== snapshot test =================
 it('SecretA コンポーネントが表示されること', () => {
@@ -34,7 +37,7 @@ it('ボタンが 1 つ存在していること', () => {
   const toggleScroll = jest.fn();
 
   act(() => {
-    render(<SecretA toggleScroll={toggleScroll} />, container)
+    root.render(<SecretA toggleScroll={toggleScroll} />)
   });
 
   expect(document.querySelector("[data-testid=secret-a-button]")).toBeTruthy();
@@ -46,7 +49,7 @@ it('ボタンをクリックした時、スクロールの向きが切り替わ�
   const toggleScroll = jest.fn();
 
   act(() => {
-    render(<SecretA toggleScroll={toggleScroll} />, container)
+    root.render(<SecretA toggleScroll={toggleScroll} />)
   });
 
   expect(toggleScroll).toHaveBeenCalledTimes(0);

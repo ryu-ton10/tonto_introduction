@@ -1,10 +1,12 @@
 import { cleanup, fireEvent } from '@testing-library/react';
-import { render, unmountComponentAtNode } from 'react-dom';
+import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import Title from './../components/Title';
 
 let container = null;
+let root = null;
 let prop_language:string = "";
 
 // 言語切替用のダミー関数
@@ -18,11 +20,12 @@ beforeEach(() => {
   // conteiner の定義
   container = document.createElement("div");
   document.body.appendChild(container);
+  root = createRoot(container);
 });
 
 afterEach(() => {
   // 定義した container の除去
-  unmountComponentAtNode(container);
+  root.unmount(container);
   container.remove();
   container = null;
 
@@ -40,7 +43,7 @@ it('タイトル画面が表示されていること', () => {
 // ================ act tests ====================
 it('日本語を選択している時、日本語用タイトル画像が表示されていること', () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
+    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
   })
   // img タグの存在検証
   expect(
@@ -54,7 +57,7 @@ it('日本語を選択している時、日本語用タイトル画像が表示�
 
 it('英語を選択している時、英語用タイトル画像が表示されていること', async () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container);
+    root.render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
   })
 
   // img タグの存在検証
@@ -69,7 +72,7 @@ it('英語を選択している時、英語用タイトル画像が表示され�
 
 it('スクロール方向が上の時、タイトル画像がふーちゃんバージョンになること', () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container);
+    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
   });
 
   // img タグの検証
@@ -84,7 +87,7 @@ it('スクロール方向が上の時、タイトル画像がふーちゃんバ�
 
 it('スクロール方向が上の時、英語の場合でもタイトル画像がふーちゃんバージョンになること', () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container);
+    root.render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
   });
 
   // img タグの検証
@@ -99,7 +102,7 @@ it('スクロール方向が上の時、英語の場合でもタイトル画像�
 
 it('scrollDirection が下の場合、スクロールを促すアニメーションが下になること', () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />, container)
+    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />)
   });
 
   expect(
@@ -109,7 +112,7 @@ it('scrollDirection が下の場合、スクロールを促すアニメーショ
 
 it('scrollDirection が上の場合、スクロールを促すアニメーションが上になること', () => {
   act(() => {
-    render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />, container)
+    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
   });
 
   expect(

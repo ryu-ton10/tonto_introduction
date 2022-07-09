@@ -1,5 +1,6 @@
 import { cleanup } from '@testing-library/react';
-import { render, unmountComponentAtNode } from 'react-dom';
+import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import ProfileDescription from './../components/ProfileDescription';
@@ -12,15 +13,18 @@ const sample_hobbies = {jp: "サンプル趣味", en: "sample-hobbies"}
 const sample_sw_code = "0000-0000-0000-0000"
 
 let container = null;
+let root = null;
+
 beforeEach(() => {
   // container の定義
   container = document.createElement("div");
   document.body.appendChild(container);
+  root = createRoot(container);
 });
 
 afterEach(() => {
   // 定義した container の除去
-  unmountComponentAtNode(container);
+  root.unmount(container);
   container.remove();
   container = null;
   cleanup;
@@ -36,15 +40,16 @@ it('自己紹介文が表示されていること', () => {
 
 // =============== act tests =================
 it('名前とプロフィール文が表示されていること', () => {
+  const root = createRoot(container);
   act(() => {
-    render(<ProfileDescription
+    root.render(<ProfileDescription
         name={sample_name}
         twitter_url={sample_twitter_url}
         description={sample_description}
         hobbies={sample_hobbies}
         switch_code={sample_sw_code}
         language="jp"
-      />, container);
+      />);
   });
   expect(container.textContent).toBe("テスト名前サンプル説明文0000-0000-0000-0000名刺を表示");
 });
