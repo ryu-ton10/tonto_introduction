@@ -10,8 +10,8 @@ import SecretA from 'components/SecretA';
 import {
   name,
   twitter_url,
+  youtube_url,
   description,
-  switch_code,
   hobbies,
   contents,
   privacy_policy
@@ -55,8 +55,8 @@ function App() {
         <ProfileDescription
           name={name}
           twitter_url={twitter_url}
+          youtube_url={youtube_url}
           description={description}
-          switch_code={switch_code}
           language={language}
         />
       </div>
