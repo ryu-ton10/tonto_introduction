@@ -7,14 +7,13 @@ export const name = {
 }
 
 export const twitter_url = "https://twitter.com/27ma4_ton10"
+export const youtube_url = "https://youtube.com/user/MeiTonto06"
 
 export const description = {
   id: nanoid(),
-  jp: "石川県で Web エンジニアをやっております。",
-  en: "I'm a web application developer who live in Japan :)"
+  jp: "石川県で Web エンジニアをやっております。 趣味で動画投稿も行っており、主にマリオカートの動画をアップロードしています！",
+  en: "I'm a web application developer who live in Japan :)  My hobby is uploading MarioKart8DX video for YouTube. Please check it out!"
 }
-
-export const switch_code =  "SW: 0195-9221-0829"
 
 export const hobbies = [
   {
