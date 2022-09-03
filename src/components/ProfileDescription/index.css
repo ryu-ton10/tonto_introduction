@@ -24,6 +24,10 @@
   color: red;
 }
 
+.profile-details p {
+  white-space: pre-line
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .name-and-sns {

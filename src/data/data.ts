@@ -11,8 +11,8 @@ export const youtube_url = "https://youtube.com/user/MeiTonto06"
 
 export const description = {
   id: nanoid(),
-  jp: "石川県で Web エンジニアをやっております。 趣味で動画投稿も行っており、主にマリオカートの動画をアップロードしています！",
-  en: "I'm a web application developer who live in Japan :)  My hobby is uploading MarioKart8DX video for YouTube. Please check it out!"
+  jp: "石川県で Web エンジニアをやっております。\n趣味で動画投稿も行っており \n主にマリオカートの動画をアップロードしています！",
+  en: "I'm a web application developer who live in Japan :) \n My hobby is uploading MarioKart8DX video for YouTube.\nPlease check it out!"
 }
 
 export const hobbies = [
