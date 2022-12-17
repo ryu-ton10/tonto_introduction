@@ -95,6 +95,22 @@ export const contents = [
     },
     url: "https://keiso-kouga.netlify.app/",
   },
+  {
+    id: nanoid(),
+    image: {
+      webp: "/assets/kokon_website.webp",
+      others: "/assets/kokon_website.jpeg"
+    },
+    title: {
+      jp: "ここんのかくれが",
+      en: "Kokon's introduction page"
+    },
+    description: {
+      jp: "妖怪ケモノ系 VTuber 杞憂火 狐今の個人ページです。彼の魅力が存分に詰まったページです。",
+      en: "A website of Kiyubi Kokon. On the website, you can see not only his profile but also his charm point."
+    },
+    url: "https://kiyubi-kokon.netlify.app/",
+  },
 ]
 
 export const privacy_policy = {
