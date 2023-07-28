@@ -111,6 +111,22 @@ export const contents = [
     },
     url: "https://kiyubi-kokon.netlify.app/",
   },
+  {
+    id: nanoid(),
+    image: {
+      webp: "/assets/KayanoAU_1500.webp",
+      others: "/assets/KayanoAU_1500.png"
+    },
+    title: {
+      jp: "Kayano AU オフィシャルサイト",
+      en: "Kayano AU Official Website"
+    },
+    description: {
+      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。",
+      en: "A website of Kayano AU. On the website, you can know about them and activity."
+    },
+    url: "https://kayanoau.netlify.app/",
+  },
 ]
 
 export const privacy_policy = {
