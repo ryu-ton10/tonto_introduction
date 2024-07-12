@@ -3,14 +3,12 @@ import './index.css';
 
 type Props = {
   hook: Function;
-  toggle: Function;
-  scrollDirection: string;
   language: string;
 }
 
 function Title(props: Props) {
 
-  const { hook, toggle, scrollDirection, language } = props;
+  const { hook, language } = props;
 
   // 言語切替ボタンで enabled な状態
   const languageSelectedStyle = {
@@ -46,7 +44,6 @@ function Title(props: Props) {
         </button>
       </div>
       <picture data-testid="title-image">
-      {scrollDirection === "down" ?
         <source
           type="image/webp"
           srcSet={
@@ -54,41 +51,21 @@ function Title(props: Props) {
           }
         >
         </source>
-        :
-        <source
-          type="image/webp"
-          srcSet={`${process.env.PUBLIC_URL}/assets/title_hutaba.webp`}
-        >
-        </source>
-      }
-        {scrollDirection === "down" ?
-          <img
-            className="title-image"
-            src={
-              language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
-            }
-            alt="background"
-          />
-          :
-          <img
-            className="title-image"
-            src={`${process.env.PUBLIC_URL}/assets/title_hutaba.png`}
-            alt="background"
-          />
-        }
+        <img
+          className="title-image"
+          src={
+            language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
+          }
+          alt="background"
+        />
       </picture>
       <img
         className="background-image"
         src={`${process.env.PUBLIC_URL}/assets/kanon_tonto_white.png`}
         alt="background"
-        onClick={() => toggle(true)}
       />
       {/* スクロールを促すアニメーション */}
-      {scrollDirection === "down" ?
-        <p className="scroll-down" data-testid="scroll"><span></span></p>
-        :
-        <p className="scroll-up" data-testid="scroll"><span></span></p>
-      }
+      <p className="scroll-down" data-testid="scroll"><span></span></p>
     </div>
   );
 }

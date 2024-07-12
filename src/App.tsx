@@ -6,7 +6,6 @@ import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
 import Hobbies from 'components/Hobbies';
 import Footer from 'components/Footer';
-import SecretA from 'components/SecretA';
 import {
   name,
   twitter_url,
@@ -28,25 +27,10 @@ function App() {
     setLanguage(langage);
   }
 
-  // SecretA エリアの表示ステータスを保持する
-  const [isShowSecretA, toggleSecretA] = useState(false);
-  const toggleSecretAStatus = (status: boolean) => {
-    toggleSecretA(status);
-  };
-
-  // タイトルにある矢印の向きを表す
-  // down:下向き up:上向き
-  const [scrollDirection, toggleScrollDirection] = useState("down");
-  const toggleScroll = (direction: string) => {
-    toggleScrollDirection(direction);
-  }
-
   return (
     <div className="App">
       <Title
         hook={updateLanguageSetting}
-        toggle={toggleSecretAStatus}
-        scrollDirection={scrollDirection}
         language={language}
       />
       <p className="profile-title">ABOUT ME</p>
@@ -63,9 +47,6 @@ function App() {
       <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
-      {isShowSecretA &&
-        <SecretA toggleScroll={toggleScroll} />
-      }
     </div>
   );
 }
