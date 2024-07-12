@@ -31,6 +31,6 @@ it('Footer に西暦と twitter id が表示されていること', () => {
   })
 
   const displayed = document.querySelector("[data-testid=footer]");
-  expect(displayed.textContent).toBe("Privacy Policy©︎2022    @27ma4_ton10_v1");
+  expect(displayed.textContent).toBe("Privacy Policy©︎2024    @27ma4_ton10_v1");
   console.log(displayed.textContent);
 });
