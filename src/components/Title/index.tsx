@@ -79,7 +79,7 @@ function Title(props: Props) {
       </picture>
       <img
         className="background-image"
-        src={`${process.env.PUBLIC_URL}/hutaba_background.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/kanon_tonto_white.png`}
         alt="background"
         onClick={() => toggle(true)}
       />
