@@ -32,9 +32,6 @@ function ProfileDescription(props: Props) {
       <div className="profile-details">
         <p>{language === "jp" ? description.jp : description.en}</p>
       </div>
-      <div className="name-card-link">
-        <a className="name-card-button" href="/assets/name_card.jpg" rel="noopener noreferrer" target="_blank">{language === "jp" ? "名刺を表示" : "Show name card"}</a>
-      </div>
     </div>
   );
 }

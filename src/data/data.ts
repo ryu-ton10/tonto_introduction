@@ -43,7 +43,7 @@ export const contents = [
       en: "Si14 Picture website"
     },
     description: {
-      jp: "写真サークル 珪素光画の公式ホームページです。サークルメンバーが撮った写真や、メンバーのプロフィール、過去に作成した同人誌などを紹介しています。",
+      jp: "写真サークル 珪素光画の公式ホームページです。\nサークルメンバーが撮った写真や、メンバーのプロフィール、過去に作成した同人誌などを紹介しています。",
       en: "A website of Si14 Picture. On the website, you can see not only a photos which tooked by members but also members profile and books"
     },
     url: "https://keiso-kouga.netlify.app/",
@@ -59,7 +59,7 @@ export const contents = [
       en: "Kokon's introduction page"
     },
     description: {
-      jp: "妖怪ケモノ系 VTuber 杞憂火 狐今の個人ページです。彼の魅力が存分に詰まったページです。",
+      jp: "妖怪ケモノ系 VTuber 杞憂火 狐今の個人ページです。\nYouTube へのリンクや立ち絵など、彼の魅力が存分に詰まったページです。",
       en: "A website of Kiyubi Kokon. On the website, you can see not only his profile but also his charm point."
     },
     url: "https://kiyubi-kokon.netlify.app/",
@@ -75,7 +75,7 @@ export const contents = [
       en: "Kayano AU Official Website"
     },
     description: {
-      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。",
+      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。\nポップで可愛らしいページになっています。",
       en: "A website of Kayano AU. On the website, you can know about them and activity."
     },
     url: "https://kayanoau.netlify.app/",
@@ -91,7 +91,7 @@ export const contents = [
       en: "Toa's workspace"
     },
     description: {
-      jp: "イラストレーター 熊亥とあ のオフィシャルサイトです",
+      jp: "イラストレーター 熊亥とあ のオフィシャルサイトです。\nイラストや Skeb へのリンクを閲覧できます。",
       en: "A website of Toa Kumai. On the website, you can know about him and activity."
     },
     url: "https://kumaitoa.netlify.app/",

@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.content-description-detail {
+  white-space: pre-line
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .contents {
