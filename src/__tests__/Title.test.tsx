@@ -1,7 +1,6 @@
-import { cleanup, fireEvent } from '@testing-library/react';
-import { render } from 'react-dom';
+import { cleanup, act } from '@testing-library/react';
+import { screen } from '@testing-library/dom'
 import { createRoot } from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import Title from './../components/Title';
 
@@ -13,8 +12,6 @@ let prop_language:string = "";
 const updateLanguageSetting = (language: string) => {
   prop_language = language;
 };
-// 隠し要素出現用のダミー関数
-const toggleSecret = jest.fn();
 
 beforeEach(() => {
   // conteiner の定義
@@ -23,99 +20,41 @@ beforeEach(() => {
   root = createRoot(container);
 });
 
-afterEach(() => {
-  // 定義した container の除去
-  root.unmount(container);
-  container.remove();
-  container = null;
-
-  cleanup;
-});
+afterEach(cleanup);
 
 // =============== snapshot test =================
 it('タイトル画面が表示されていること', () => {
-  const component = renderer.create(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
+  const component = renderer.create(<Title hook={updateLanguageSetting("jp")} language={prop_language} />);
   let tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });
 
 // ================ act tests ====================
-it('日本語を選択している時、日本語用タイトル画像が表示されていること', () => {
+it('日本語を選択している時、日本語用タイトル画像が表示されていること', async () => {
   act(() => {
-    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
+    root.render(<Title hook={updateLanguageSetting("jp")} language={prop_language} />);
   })
+
+  const webpImg = container.querySelector("source")
+  const pngImg = container.querySelector("img")
+
   // img タグの存在検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("img").src
-  ).toBe("http://localhost/assets/title_jp.png");
+  expect(pngImg).toHaveAttribute("src", "/assets/title_jp.png");
   // source タグの存在検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
-  ).toBe("/assets/title_jp.webp");
+  expect(webpImg).toHaveAttribute("srcSet", "/assets/title_jp.webp");
 });
 
 it('英語を選択している時、英語用タイトル画像が表示されていること', async () => {
   act(() => {
-    root.render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />);
+    root.render(<Title hook={updateLanguageSetting("en")} language={prop_language} />);
   })
 
+  const webpImg = container.querySelector("source")
+  const pngImg = container.querySelector("img")
+
   // img タグの存在検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("img").src
-  ).toBe("http://localhost/assets/title_en.png");
+  expect(pngImg).toHaveAttribute("src", "/assets/title_en.png");
   // source タグの存在検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
-  ).toBe("/assets/title_en.webp");
-});
-
-it('スクロール方向が上の時、タイトル画像がふーちゃんバージョンになること', () => {
-  act(() => {
-    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
-  });
-
-  // img タグの検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("img").src
-  ).toBe("http://localhost/assets/title_hutaba.png");
-  // source タグの検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
-  ).toBe("/assets/title_hutaba.webp");
-});
-
-it('スクロール方向が上の時、英語の場合でもタイトル画像がふーちゃんバージョンになること', () => {
-  act(() => {
-    root.render(<Title hook={updateLanguageSetting("en")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
-  });
-
-  // img タグの検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("img").src
-  ).toBe("http://localhost/assets/title_hutaba.png");
-  // source タグの検証
-  expect(
-    container.querySelector("[data-testid=title-image]").querySelector("source").srcset
-  ).toBe("/assets/title_hutaba.webp");
-});
-
-it('scrollDirection が下の場合、スクロールを促すアニメーションが下になること', () => {
-  act(() => {
-    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="down" language={prop_language} />)
-  });
-
-  expect(
-    container.querySelector("[data-testid=scroll]").className
-  ).toBe("scroll-down");
-});
-
-it('scrollDirection が上の場合、スクロールを促すアニメーションが上になること', () => {
-  act(() => {
-    root.render(<Title hook={updateLanguageSetting("jp")} toggle={toggleSecret} scrollDirection="up" language={prop_language} />)
-  });
-
-  expect(
-    container.querySelector("[data-testid=scroll]").className
-  ).toBe("scroll-up");
+  expect(webpImg).toHaveAttribute("srcSet", "/assets/title_en.webp");
 });
