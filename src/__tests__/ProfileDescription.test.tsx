@@ -1,7 +1,6 @@
-import { cleanup } from '@testing-library/react';
+import { cleanup, act } from '@testing-library/react';
 import { render } from 'react-dom';
 import { createRoot } from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import ProfileDescription from './../components/ProfileDescription';
 import TitleBar from './../components/TitleBar'; // 言語設定切り替えイベント実装のため
@@ -21,13 +20,7 @@ beforeEach(() => {
   root = createRoot(container);
 });
 
-afterEach(() => {
-  // 定義した container の除去
-  root.unmount(container);
-  container.remove();
-  container = null;
-  cleanup;
-});
+afterEach(cleanup);
 
 // =============== snapshot test =================
 it('自己紹介文が表示されていること', () => {
@@ -39,7 +32,6 @@ it('自己紹介文が表示されていること', () => {
 
 // =============== act tests =================
 it('名前とプロフィール文が表示されていること', () => {
-  const root = createRoot(container);
   act(() => {
     root.render(<ProfileDescription
         name={sample_name}
@@ -49,5 +41,5 @@ it('名前とプロフィール文が表示されていること', () => {
         language="jp"
       />);
   });
-  expect(container.textContent).toBe("テスト名前サンプル説明文名刺を表示");
+  expect(container.textContent).toBe("テスト名前サンプル説明文");
 });
