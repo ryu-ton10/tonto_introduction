@@ -22,7 +22,7 @@ function Footer(props: Props) {
       {isShowModal &&
         <PrivacyPolicy setIsShowModal={setIsShowModal} privacy_policy={privacy_policy} language={language} />
       }
-      <p>©︎2022    <a href={twitter_url} rel="noopener noreferrer" target="_blank">@27ma4_ton10</a></p>
+      <p>©︎2024    <a href={twitter_url} rel="noopener noreferrer" target="_blank">@27ma4_ton10_v1</a></p>
     </div>
   );
 };

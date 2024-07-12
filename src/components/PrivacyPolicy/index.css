@@ -21,6 +21,7 @@
 .overlay .modal p {
   color: #808080;
   margin: 10px 30px 20px 30px;
+  white-space: pre-line
 }
 
 .overlay .modal button {

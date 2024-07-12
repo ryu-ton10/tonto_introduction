@@ -18,4 +18,5 @@
 .footer .privacy_policy {
   color: #808080;
   border-bottom: solid 2px #808080;
+  cursor: pointer;
 }

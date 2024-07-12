@@ -2,65 +2,18 @@ import { nanoid } from 'nanoid';
 
 export const name = {
   id: nanoid(),
-  jp: "とんと",
-  en: "Tonto"
+  jp: "嘉音 とんと",
+  en: "Kanon Tonto"
 }
 
-export const twitter_url = "https://twitter.com/27ma4_ton10"
+export const twitter_url = "https://twitter.com/27ma4_ton10_v1"
 export const youtube_url = "https://youtube.com/user/MeiTonto06"
 
 export const description = {
   id: nanoid(),
-  jp: "石川県で Web エンジニアをやっております。\n趣味で動画投稿も行っており \n主にマリオカートの動画をアップロードしています！",
-  en: "I'm a web application developer who live in Japan :) \n My hobby is uploading MarioKart8DX video for YouTube.\nPlease check it out!"
+  jp: "フェネックレーサー VTuber です！\n主にマリオカートの配信を行っています",
+  en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
-
-export const hobbies = [
-  {
-    id: nanoid(),
-    title: {
-      jp: "マリオカート8DX",
-      en: "MarioKart8DX"
-    },
-    description: {
-      jp: "主にデイジー姫を使って野良を走っております。ハイラルサーキット、ヨッシーサーキット、ねじれマンションなどが得意です。",
-      en: "I'm big fan of Daisy. I always run with Daisy. My favorite courses are Hyrule Circuit, GCN Yoshi Circuit and Twisted Mansion."
-    }
-  },
-  {
-    id: nanoid(),
-    title: {
-      jp: "ポケモン",
-      en: "Pokemon"
-    },
-    description: {
-      jp: "主に剣盾シリーズでオンラインマッチをやっております。好きなポケモンは サーナイト、ザングース、バクフーン です。",
-      en: "I'm often at online battle with Sword and Shield. My favorite pokemons are Sirnight, Zangoose and Typhiosion."
-    }
-  },
-  {
-    id: nanoid(),
-    title: {
-      jp: "EUROBEAT",
-      en: "Listening EUROBEAT"
-    },
-    description: {
-      jp: "作業をする時やドライブの BGM はいつもユーロビートを聴いています。学生の頃に何度もリピートしていたので、これを聴くとどこか懐かしい気分になれます。",
-      en: "I prefer to listen EUROBEAT when driving or programming. There is a goog memory from when I was a student because I often listen there."
-    }
-  },
-  {
-    id: nanoid(),
-    title: {
-      jp: "コーヒー",
-      en: "Dripping coffee"
-    },
-    description: {
-      jp: "ハンドドリップコーヒーが大好きです。特にブラジルやコスタリカ、ペルーやグアテマラから輸入された豆が好きで、家には必ず 300g ほどストックがあります。",
-      en: "I really love coffee. Especially, coffee beans of Brazil, Costa Rica, Peru and Guatemala are my favorite."
-    }
-  }
-]
 
 export const contents = [
   {
@@ -90,7 +43,7 @@ export const contents = [
       en: "Si14 Picture website"
     },
     description: {
-      jp: "写真サークル 珪素光画の公式ホームページです。サークルメンバーが撮った写真や、メンバーのプロフィール、過去に作成した同人誌などを紹介しています。",
+      jp: "写真サークル 珪素光画の公式ホームページです。\nサークルメンバーが撮った写真や、メンバーのプロフィール、過去に作成した同人誌などを紹介しています。",
       en: "A website of Si14 Picture. On the website, you can see not only a photos which tooked by members but also members profile and books"
     },
     url: "https://keiso-kouga.netlify.app/",
@@ -106,7 +59,7 @@ export const contents = [
       en: "Kokon's introduction page"
     },
     description: {
-      jp: "妖怪ケモノ系 VTuber 杞憂火 狐今の個人ページです。彼の魅力が存分に詰まったページです。",
+      jp: "妖怪ケモノ系 VTuber 杞憂火 狐今の個人ページです。\nYouTube へのリンクや立ち絵など、彼の魅力が存分に詰まったページです。",
       en: "A website of Kiyubi Kokon. On the website, you can see not only his profile but also his charm point."
     },
     url: "https://kiyubi-kokon.netlify.app/",
@@ -122,15 +75,31 @@ export const contents = [
       en: "Kayano AU Official Website"
     },
     description: {
-      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。",
+      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。\nポップで可愛らしいページになっています。",
       en: "A website of Kayano AU. On the website, you can know about them and activity."
     },
     url: "https://kayanoau.netlify.app/",
+  },
+  {
+    id: nanoid(),
+    image: {
+      webp: "/assets/toa_web.webp",
+      others: "/assets/toa_web.jpg"
+    },
+    title: {
+      jp: "とあのアトリエ",
+      en: "Toa's workspace"
+    },
+    description: {
+      jp: "イラストレーター 熊亥とあ のオフィシャルサイトです。\nイラストや Skeb へのリンクを閲覧できます。",
+      en: "A website of Toa Kumai. On the website, you can know about him and activity."
+    },
+    url: "https://kumaitoa.netlify.app/",
   },
 ]
 
 export const privacy_policy = {
   id: nanoid(),
-  jp: "当サイトでは、データ収集のために Google アナリティクスを利用しています。このデータは匿名で収集されるものであり、個人を特定するものではありません。また、この機能は Cookie を無効にすることで収集を拒否することが出来ます。",
-  en: "We collect a data such as a count of visit by using Google Analytics. These data are collected anonymously so we won't identify an individual. Also, you can reject the collection by disabling Cookie."
+  jp: "当サイトでは、データ収集のために Google アナリティクスを利用しています。\nこのデータは匿名で収集されるものであり、個人を特定するものではありません。\nまた、この機能は Cookie を無効にすることで収集を拒否することが出来ます。",
+  en: "We collect a data such as a count of visit by using Google Analytics.\nThese data are collected anonymously so we won't identify an individual.\nAlso, you can reject the collection by disabling Cookie."
 }

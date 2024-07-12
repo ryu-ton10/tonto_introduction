@@ -59,17 +59,5 @@ exports[`自己紹介文が表示されていること 1`] = `
       サンプル説明文
     </p>
   </div>
-  <div
-    className="name-card-link"
-  >
-    <a
-      className="name-card-button"
-      href="/assets/name_card.jpg"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      名刺を表示
-    </a>
-  </div>
 </div>
 `;

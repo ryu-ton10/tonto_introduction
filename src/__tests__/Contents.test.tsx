@@ -1,5 +1,4 @@
-import { act } from "react-dom/test-utils";
-import { render } from "react-dom";
+import { cleanup, act } from '@testing-library/react';
 import { createRoot } from 'react-dom/client';
 import renderer from "react-test-renderer";
 import Contents from "./../components/Contents";
@@ -19,12 +18,7 @@ beforeEach(() => {
   root = createRoot(container);
 });
 
-afterEach(() => {
-  // 作成したダミーの DOM を除去する
-  root.unmount(container);
-  container.remove();
-  container = null;
-});
+afterEach(cleanup);
 
 // =============== snapshot test =================
 it('コンテンツ群が表示されていること', () => {
