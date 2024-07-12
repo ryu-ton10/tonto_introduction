@@ -1,6 +1,5 @@
-import { render } from 'react-dom';
+import { cleanup, act } from '@testing-library/react';
 import { createRoot } from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import Footer from './../components/Footer';
 
@@ -15,12 +14,7 @@ beforeEach(() => {
   root = createRoot(container);
 });
 
-afterEach(() => {
-  // 定義した container の除去
-  root.unmount(container);
-  container.remove();
-  container = null;
-});
+afterEach(cleanup);
 
 // =============== snapshot test =================
 it('Footer が表示されていること', () => {
@@ -37,6 +31,6 @@ it('Footer に西暦と twitter id が表示されていること', () => {
   })
 
   const displayed = document.querySelector("[data-testid=footer]");
-  expect(displayed.textContent).toBe("Privacy Policy©︎2022    @27ma4_ton10");
+  expect(displayed.textContent).toBe("Privacy Policy©︎2022    @27ma4_ton10_v1");
   console.log(displayed.textContent);
 });
