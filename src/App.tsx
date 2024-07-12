@@ -4,14 +4,12 @@ import Title from 'components/Title'
 import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
-import Hobbies from 'components/Hobbies';
 import Footer from 'components/Footer';
 import {
   name,
   twitter_url,
   youtube_url,
   description,
-  hobbies,
   contents,
   privacy_policy
 } from 'data/data';
@@ -44,7 +42,6 @@ function App() {
           language={language}
         />
       </div>
-      <Hobbies hobbies={hobbies} language={language} />
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>
