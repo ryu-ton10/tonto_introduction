@@ -2,17 +2,17 @@ import { nanoid } from 'nanoid';
 
 export const name = {
   id: nanoid(),
-  jp: "とんと",
-  en: "Tonto"
+  jp: "嘉音 とんと",
+  en: "Kanon Tonto"
 }
 
-export const twitter_url = "https://twitter.com/27ma4_ton10"
+export const twitter_url = "https://twitter.com/27ma4_ton10_v1"
 export const youtube_url = "https://youtube.com/user/MeiTonto06"
 
 export const description = {
   id: nanoid(),
-  jp: "石川県で Web エンジニアをやっております。\n趣味で動画投稿も行っており \n主にマリオカートの動画をアップロードしています！",
-  en: "I'm a web application developer who live in Japan :) \n My hobby is uploading MarioKart8DX video for YouTube.\nPlease check it out!"
+  jp: "フェネックレーサー VTuber です！\n主にマリオカートの配信を行っています",
+  en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
 
 export const contents = [
