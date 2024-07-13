@@ -115,6 +115,10 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
+  .profile {
+    padding: 0 100px;
+  }
+
   .profile-title {
     margin-bottom: 48px;
     font-size: 40px;
@@ -169,6 +173,10 @@
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
+  .profile {
+    padding: 0 150px;
+  }
+
   .profile-title {
     margin-bottom: 48px;
     font-size: 48px;
@@ -206,5 +214,12 @@
 
   .youtube-icon {
     font-size: 40pt;
+  }
+}
+
+/* ========= PCサイズ2 =========== */
+@media (min-width: 1120px) {
+  .profile {
+    padding: 0 250px;
   }
 }
