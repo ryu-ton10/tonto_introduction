@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import 'App.css';
 import Title from 'components/Title'
 import ProfileDescription from 'components/ProfileDescription'
-import Contents from 'components/Contents'
+import Works from 'components/Works'
 import Footer from 'components/Footer';
 import {
   name,
   twitter_url,
   youtube_url,
   description,
-  contents,
+  works,
   privacy_policy
 } from 'data/data';
 
@@ -37,7 +37,7 @@ function App() {
         description={description}
         language={language}
       />
-      <Contents contents={contents} language={language} />
+      <Works works={works} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>
   );

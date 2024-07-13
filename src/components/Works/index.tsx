@@ -1,29 +1,29 @@
 import React from 'react';
 import './index.css';
-import { Content } from 'commonData';
+import { Work } from 'commonData';
 
 type Props = {
-  contents: Content[]
+  works: Work[]
   language: string;
 }
 
-function Contents(props: Props) {
+function Works(props: Props) {
 
-  const { contents, language } = props;
+  const { works, language } = props;
 
   return (
-    <div className="contents">
-      <p className="content-title">CONTENTS</p>
-      <div className="content-area">
-        {contents.map((content, index) => {
-          const { image, title, url } = content;
+    <div className="works">
+      <p className="work-title">WORKS</p>
+      <div className="work-area">
+        {works.map((work, index) => {
+          const { image, title, url } = work;
           return (
-            <div className="content">
-              <picture data-testid="content-thumbnail">
+            <div className="work">
+              <picture className="work-thumbnail" data-testid="work-thumbnail">
                 <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} ></source>
                 <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
               </picture>
-              <p data-testid="content-description-title">{language === "jp" ? title.jp : title.en}</p>
+              <p data-testid="work-description-title">{language === "jp" ? title.jp : title.en}</p>
               <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
             </div>
           );
@@ -33,4 +33,4 @@ function Contents(props: Props) {
   );
 }
 
-export default Contents;
+export default Works;
