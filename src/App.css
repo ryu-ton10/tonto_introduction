@@ -10,3 +10,23 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@keyframes animationToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animationToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

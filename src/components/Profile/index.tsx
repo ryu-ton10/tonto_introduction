@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiFillYoutube } from 'react-icons/ai';
 import './index.css';
 
@@ -19,6 +19,26 @@ type Props = {
 function Profile(props: Props) {
 
   const { name, twitter_url, youtube_url, description, language } = props;
+
+  const toggleFadeIn = () => {
+    let currentScrollY = window.scrollY;
+    const thumbnailImage = document.getElementsByClassName('thumbnail-image')[0] as HTMLElement;
+    const thumbnailImageTop = thumbnailImage.getBoundingClientRect().top;
+    const profileDescription = document.getElementsByClassName('profile-description')[0] as HTMLElement;
+    const profileDescriptionTop = profileDescription.getBoundingClientRect().top;
+
+    if (currentScrollY > thumbnailImageTop) {
+      thumbnailImage.style.animation = "animationToRight 2s forwards";
+    }
+    if (currentScrollY > profileDescriptionTop) {
+      profileDescription.style.animation = "animationToLeft 2s forwards";
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleFadeIn)
+    return () => window.addEventListener('scroll', toggleFadeIn)
+  })
 
   return (
     <div className="profile">
