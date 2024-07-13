@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import { Work } from 'commonData';
 
@@ -10,6 +10,23 @@ type Props = {
 function Works(props: Props) {
 
   const { works, language } = props;
+
+  const toggleFadeIn = () => {
+    let currentScrollY = window.scrollY;
+    const works = document.querySelectorAll('.work') as NodeListOf<HTMLElement>;
+    works.forEach((work) => {
+      const workTop = work.getBoundingClientRect().top;
+
+      if (currentScrollY > workTop) {
+        work.style.animation = "animationToRight 2s forwards";
+      }
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleFadeIn)
+    return () => window.addEventListener('scroll', toggleFadeIn)
+  })
 
   return (
     <div className="works">
