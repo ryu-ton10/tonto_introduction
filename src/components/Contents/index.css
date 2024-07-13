@@ -1,0 +1,94 @@
+.contents {
+  background-color: #FEACAE;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+
+.contents p {
+  color: white;
+}
+
+.contents-title {
+  border-bottom: solid 8px white;
+  color: white;
+}
+
+.contents .youtube-link-button {
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.contents .youtube-link-button a {
+  color: #FEACAE;
+  font-weight: bold;
+}
+
+/* ========= スマホサイズ_1 =========== */
+@media (min-width: 280px) {
+  .contents-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 36px;
+    max-width: 50%;
+  }
+
+  .contents .video {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .contents .youtube-link-button {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* ========= スマホサイズ_2 =========== */
+@media (min-width: 576px) {
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .contents-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 40px;
+    max-width: 30%;
+  }
+
+  .contents .video:nth-child(even) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .contents .video:nth-child(odd) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .contents {
+    padding: 0 10%;
+  }
+
+  .contents-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 48px;
+    max-width: 30%;
+  }
+}
+
+/* ========= PCサイズ2 =========== */
+@media (min-width: 1120px) {
+  .contents {
+    padding: 0 20%;
+  }
+}

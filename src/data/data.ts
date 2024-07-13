@@ -15,6 +15,60 @@ export const description = {
   en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
 
+export const contents = [
+  {
+    id: nanoid(),
+    video_id: "YzXLvdGJNiY",
+    title: "【マリオカート8DX】視聴者参加型マリオカート！",
+    thumbnail_url: "https://i.ytimg.com/vi/YzXLvdGJNiY/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "zFVWr9lzxu8",
+    title: "【マリオカート8DX】ビッグブルー NITA ランカーを目指す配信",
+    thumbnail_url: "https://i.ytimg.com/vi/zFVWr9lzxu8/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "BR6SSeMNAHA",
+    title: "【雑談】華金じゃい！お酒飲みながら雑談しようね！",
+    thumbnail_url: "https://i.ytimg.com/vi/BR6SSeMNAHA/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "t2UVgeNZkd4",
+    title: "【太鼓の達人】気ままにドンドコ",
+    thumbnail_url: "https://i.ytimg.com/vi/t2UVgeNZkd4/mqdefault.jpg"
+  },
+]
+
+export const collabos = [
+  {
+    id: nanoid(),
+    video_id: "fXqITjMOjI8",
+    title: "【マリオカート8DX】ケモV vs ヒトV 対抗戦！",
+    thumbnail_url: "https://i.ytimg.com/vi/fXqITjMOjI8/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "WfHaePJAE3g",
+    title: "【コラボ】ここんくんと年末雑談忘年会！",
+    thumbnail_url: "https://i.ytimg.com/vi/WfHaePJAE3g/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "rSPw25TypJk",
+    title: "【コラボ】悶絶！！シチュエーションボイスに耐えろ！！！！",
+    thumbnail_url: "https://i.ytimg.com/vi/rSPw25TypJk/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "aFh6PJieNcs",
+    title: "【マリオカート8DX】EKVマリカに参戦！",
+    thumbnail_url: "https://i.ytimg.com/vi/aFh6PJieNcs/mqdefault.jpg"
+  },
+]
+
 export const works = [
   {
     id: nanoid(),

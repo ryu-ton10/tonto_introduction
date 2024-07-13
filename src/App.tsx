@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import 'App.css';
 import Title from 'components/Title';
 import Profile from 'components/Profile';
+import Contents from 'components/Contents';
+import Collabo from 'components/Collabo';
 import Works from 'components/Works';
 import Footer from 'components/Footer';
 import {
   name,
   twitter_url,
   youtube_url,
+  contents,
+  collabos,
   description,
   works,
   privacy_policy
@@ -37,6 +41,8 @@ function App() {
         description={description}
         language={language}
       />
+      <Contents contents={contents} />
+      <Collabo collabos={collabos} />
       <Works works={works} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>

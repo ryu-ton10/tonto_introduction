@@ -1,0 +1,94 @@
+.collabos {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+
+.collabos p {
+  color: #FEACAE;
+}
+
+.collabos-title {
+  border-bottom: solid 8px #FEACAE;
+  color: #FEACAE;
+}
+
+.collabos .youtube-link-button {
+  background-color: #FEACAE;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.collabos .youtube-link-button a {
+  color: white;
+  font-weight: bold;
+}
+
+/* ========= スマホサイズ_1 =========== */
+@media (min-width: 280px) {
+  .collabos-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 36px;
+    max-width: 50%;
+  }
+
+  .collabos .video {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .collabos .youtube-link-button {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* ========= スマホサイズ_2 =========== */
+@media (min-width: 576px) {
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .collabos-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 40px;
+    max-width: 30%;
+  }
+
+  .collabos .video:nth-child(even) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .collabos .video:nth-child(odd) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .collabos {
+    padding: 0 10%;
+  }
+
+  .collabos-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 48px;
+    max-width: 30%;
+  }
+}
+
+/* ========= PCサイズ2 =========== */
+@media (min-width: 1120px) {
+  .collabos {
+    padding: 0 20%;
+  }
+}
