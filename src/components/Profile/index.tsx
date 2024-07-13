@@ -16,7 +16,7 @@ type Props = {
   language: string;
 }
 
-function ProfileDescription(props: Props) {
+function Profile(props: Props) {
 
   const { name, twitter_url, youtube_url, description, language } = props;
 
@@ -47,4 +47,4 @@ function ProfileDescription(props: Props) {
   );
 }
 
-export default ProfileDescription;
+export default Profile;

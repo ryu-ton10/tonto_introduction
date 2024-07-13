@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import 'App.css';
-import Title from 'components/Title'
-import ProfileDescription from 'components/ProfileDescription'
-import Works from 'components/Works'
+import Title from 'components/Title';
+import Profile from 'components/Profile';
+import Works from 'components/Works';
 import Footer from 'components/Footer';
 import {
   name,
@@ -30,7 +30,7 @@ function App() {
         hook={updateLanguageSetting}
         language={language}
       />
-      <ProfileDescription
+      <Profile
         name={name}
         twitter_url={twitter_url}
         youtube_url={youtube_url}
