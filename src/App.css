@@ -2,57 +2,11 @@
   text-align: center;
 }
 
-.App p {
-  margin: 0 0 0 0;
-}
-
 .App a {
   text-decoration: none;
 }
 
-.App .profile-title {
-  border-bottom: solid 8px #E89A8A;
-  color: #E89A8A;
+.App p {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* ========= スマホサイズ_1 =========== */
-@media (min-width: 280px) {
-  .App .profile-title {
-    padding: 80px 0 0 0;
-    font-size: 24pt;
-    max-width: 50%;
-  }
-}
-
-/* ========= スマホサイズ_2 =========== */
-@media (min-width: 576px) {
-  .App .profile-title {
-    padding: 100px 0 0 0;
-    font-size: 30pt;
-    max-width: 40%;
-  }
-}
-
-/* ========= タブレットサイズ =========== */
-@media (min-width: 768px) {
-  .App .profile-title {
-    padding: 120px 0 0 0;
-    font-size: 36pt;
-    max-width: 40%;
-  }
-
-  .App .profile-descriptions {
-    display: grid;
-    grid-template-columns: 11fr 13fr;
-  }
-}
-
-/* ========= PCサイズ =========== */
-@media (min-width: 992px) {
-  .App .profile-title {
-    padding: 120px 0 0 0;
-    font-size: 36pt;
-  }
 }

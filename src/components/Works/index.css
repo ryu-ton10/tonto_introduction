@@ -1,0 +1,146 @@
+.works {
+  background-color: #E89A8A;
+}
+
+.works p {
+  color: white;
+}
+
+.works .work-title {
+  border-bottom: solid 8px white;
+  color: white;
+}
+
+.works .link-button {
+  background-color: white;
+  color: #E89A8A;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.work-thubmnail {
+  display: flex;
+  justify-work: center;
+  align-items: center;
+}
+
+/* ========= スマホサイズ_1 =========== */
+@media (min-width: 280px) {
+  .work-title {
+    padding-top: 32px;
+    font-size: 36px;
+    max-width: 50%;
+  }
+
+  .work {
+    padding-bottom: 100px;
+  }
+
+  .work img {
+    padding: 30px 0 10px 0;
+    max-width: 180px;
+    max-height: 180px
+  }
+
+  .work source {
+    padding: 30px 0 10px 0;
+    max-width: 180px;
+    max-height: 180px
+  }
+
+  .work p {
+    font-size: 24px;
+  }
+
+  .work a {
+    font-size: 20px;
+    padding: 20px 0 20px 0;
+  }
+}
+
+/* ========= スマホサイズ_2 =========== */
+@media (min-width: 576px) {
+  .work {
+    padding-bottom: 100px;
+  }
+
+  .work p {
+    font-size: 30px;
+  }
+
+  .work a {
+    font-size: 24px;
+  }
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .works {
+    padding-bottom: 120px;
+  }
+
+  .work-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 40px;
+    max-width: 30%;
+  }
+
+  .work-title p {
+    border-bottom: solid 10px white;
+    max-width: 50%;
+  }
+
+  .work-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work img {
+    max-width: 200px;
+    max-height: 200px
+  }
+
+  .work source {
+    max-width: 200px;
+    max-height: 200px
+  }
+
+  .work-description {
+    text-align: center;
+    padding: 50px 30px 50px 10px;
+  }
+
+  .work-description p {
+    font-size: 24pt;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .work-title {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    font-size: 48px;
+    max-width: 30%;
+  }
+
+  .work img {
+    max-width: 300px;
+    max-height: 300px
+  }
+
+  .work source {
+    max-width: 300px;
+    max-height: 300px
+  }
+
+}
+
+/* ========= PCサイズ2 =========== */
+@media (min-width: 1120px) {
+  .work-area {
+    padding: 0 200px;
+  }
+}

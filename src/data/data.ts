@@ -15,7 +15,7 @@ export const description = {
   en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
 
-export const contents = [
+export const works = [
   {
     id: nanoid(),
     image: {

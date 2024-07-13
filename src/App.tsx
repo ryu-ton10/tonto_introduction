@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import 'App.css';
-import Title from 'components/Title'
-import Thumbnail from 'components/Thumbnail'
-import ProfileDescription from 'components/ProfileDescription'
-import Contents from 'components/Contents'
+import Title from 'components/Title';
+import Profile from 'components/Profile';
+import Works from 'components/Works';
 import Footer from 'components/Footer';
 import {
   name,
   twitter_url,
   youtube_url,
   description,
-  contents,
+  works,
   privacy_policy
 } from 'data/data';
 
@@ -31,18 +30,14 @@ function App() {
         hook={updateLanguageSetting}
         language={language}
       />
-      <p className="profile-title">ABOUT ME</p>
-      <div className="profile-descriptions" aria-label="grid-container">
-        <Thumbnail />
-        <ProfileDescription
-          name={name}
-          twitter_url={twitter_url}
-          youtube_url={youtube_url}
-          description={description}
-          language={language}
-        />
-      </div>
-      <Contents contents={contents} language={language} />
+      <Profile
+        name={name}
+        twitter_url={twitter_url}
+        youtube_url={youtube_url}
+        description={description}
+        language={language}
+      />
+      <Works works={works} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>
   );
