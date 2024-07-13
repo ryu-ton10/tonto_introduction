@@ -14,24 +14,21 @@ function Contents(props: Props) {
   return (
     <div className="contents">
       <p className="content-title">CONTENTS</p>
-      {contents.map((content, index) => {
-        const { image, title, description, url } = content;
-        return (
-          <div className="content">
-            <picture data-testid="content-thumbnail">
-              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} ></source>
-              <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
-            </picture>
-            <div className="content-description">
-              <p className="content-description-title" data-testid="content-description-title">{language === "jp" ? title.jp : title.en}</p>
-              <p className="content-description-detail" data-testid="content-description-detail">{language === "jp" ? description.jp : description.en}</p>
-              <div className="link">
-                <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
-              </div>
+      <div className="content-area">
+        {contents.map((content, index) => {
+          const { image, title, url } = content;
+          return (
+            <div className="content">
+              <picture data-testid="content-thumbnail">
+                <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} ></source>
+                <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
+              </picture>
+              <p data-testid="content-description-title">{language === "jp" ? title.jp : title.en}</p>
+              <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

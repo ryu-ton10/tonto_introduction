@@ -2,19 +2,18 @@
   text-align: center;
 }
 
-.App p {
-  margin: 0 0 0 0;
-}
-
 .App a {
   text-decoration: none;
+}
+
+.App p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App .profile-title {
   border-bottom: solid 8px #E89A8A;
   color: #E89A8A;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ========= スマホサイズ_1 =========== */
