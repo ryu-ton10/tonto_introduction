@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'App.css';
 import Title from 'components/Title'
-import Thumbnail from 'components/Thumbnail'
 import ProfileDescription from 'components/ProfileDescription'
 import Contents from 'components/Contents'
 import Footer from 'components/Footer';
@@ -31,17 +30,13 @@ function App() {
         hook={updateLanguageSetting}
         language={language}
       />
-      <p className="profile-title">ABOUT ME</p>
-      <div className="profile-descriptions" aria-label="grid-container">
-        <Thumbnail />
-        <ProfileDescription
-          name={name}
-          twitter_url={twitter_url}
-          youtube_url={youtube_url}
-          description={description}
-          language={language}
-        />
-      </div>
+      <ProfileDescription
+        name={name}
+        twitter_url={twitter_url}
+        youtube_url={youtube_url}
+        description={description}
+        language={language}
+      />
       <Contents contents={contents} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>
