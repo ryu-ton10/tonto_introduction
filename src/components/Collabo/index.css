@@ -34,7 +34,7 @@
     max-width: 50%;
   }
 
-  .collabos .video {
+  .collabos .collabo-video {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 70px;
@@ -61,12 +61,12 @@
     max-width: 30%;
   }
 
-  .collabos .video:nth-child(even) {
+  .collabos .collabo-video:nth-child(even) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .collabos .video:nth-child(odd) {
+  .collabos .collabo-video:nth-child(odd) {
     grid-column-start: 3;
     grid-column-end: 5;
   }
