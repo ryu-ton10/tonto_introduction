@@ -31,7 +31,7 @@ function Profile(props: Props) {
       thumbnailImage.style.animation = "animationToRight 2s forwards";
     }
     if (currentScrollY > profileDescriptionTop) {
-      profileDescription.style.animation = "animationToLeft 2s forwards";
+      profileDescription.style.animation = "animationToRight 2s forwards";
     }
   }
 

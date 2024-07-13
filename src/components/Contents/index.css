@@ -34,7 +34,7 @@
     max-width: 50%;
   }
 
-  .contents .video {
+  .contents .content-video {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 70px;
@@ -61,12 +61,12 @@
     max-width: 30%;
   }
 
-  .contents .video:nth-child(even) {
+  .contents .content-video:nth-child(even) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .contents .video:nth-child(odd) {
+  .contents .content-video:nth-child(odd) {
     grid-column-start: 3;
     grid-column-end: 5;
   }
