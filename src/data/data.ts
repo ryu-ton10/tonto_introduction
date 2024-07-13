@@ -22,6 +22,24 @@ export const contents = [
     title: "【マリオカート8DX】視聴者参加型マリオカート！",
     thumbnail_url: "https://i.ytimg.com/vi/YzXLvdGJNiY/mqdefault.jpg"
   },
+  {
+    id: nanoid(),
+    video_id: "zFVWr9lzxu8",
+    title: "【マリオカート8DX】ビッグブルー NITA ランカーを目指す配信",
+    thumbnail_url: "https://i.ytimg.com/vi/zFVWr9lzxu8/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "BR6SSeMNAHA",
+    title: "【雑談】華金じゃい！お酒飲みながら雑談しようね！",
+    thumbnail_url: "https://i.ytimg.com/vi/BR6SSeMNAHA/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "t2UVgeNZkd4",
+    title: "【太鼓の達人】気ままにドンドコ",
+    thumbnail_url: "https://i.ytimg.com/vi/t2UVgeNZkd4/mqdefault.jpg"
+  },
 ]
 
 export const works = [

@@ -15,8 +15,8 @@ function Contents(props: Props) {
   }
 
   return (
-    <>
-      <p className="content-title">CONTENTS</p>
+    <div className="contents">
+      <p className="contents-title">CONTENTS</p>
       {contents.map((content, index) => {
         const { video_id, title, thumbnail_url } = content;
         return (
@@ -33,7 +33,7 @@ function Contents(props: Props) {
           </div>
         )
       })}
-    </>
+    </div>
   );
 }
 
