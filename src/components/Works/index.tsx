@@ -3,7 +3,7 @@ import './index.css';
 import { Work } from 'commonData';
 
 type Props = {
-  works: Work[]
+  works: Work[];
   language: string;
 }
 

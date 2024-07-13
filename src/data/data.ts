@@ -15,6 +15,15 @@ export const description = {
   en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
 
+export const contents = [
+  {
+    id: nanoid(),
+    video_id: "YzXLvdGJNiY",
+    title: "【マリオカート8DX】視聴者参加型マリオカート！",
+    thumbnail_url: "https://i.ytimg.com/vi/YzXLvdGJNiY/mqdefault.jpg"
+  },
+]
+
 export const works = [
   {
     id: nanoid(),

@@ -12,6 +12,13 @@ declare module "commonData" {
     }
   }
 
+  export type Content = {
+    id: string;
+    video_id: string;
+    title: string;
+    thumbnail_url: string;
+  }
+
   /* 成果物の説明や URL などを表示するための型定義 */
   export type Work = {
     /* 成果物のイメージ画像( webp とそれ以外の拡張子画像) */
