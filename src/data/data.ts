@@ -42,6 +42,33 @@ export const contents = [
   },
 ]
 
+export const collabos = [
+  {
+    id: nanoid(),
+    video_id: "fXqITjMOjI8",
+    title: "【マリオカート8DX】ケモV vs ヒトV 対抗戦！",
+    thumbnail_url: "https://i.ytimg.com/vi/fXqITjMOjI8/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "WfHaePJAE3g",
+    title: "【コラボ】ここんくんと年末雑談忘年会！",
+    thumbnail_url: "https://i.ytimg.com/vi/WfHaePJAE3g/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "rSPw25TypJk",
+    title: "【コラボ】悶絶！！シチュエーションボイスに耐えろ！！！！",
+    thumbnail_url: "https://i.ytimg.com/vi/rSPw25TypJk/mqdefault.jpg"
+  },
+  {
+    id: nanoid(),
+    video_id: "aFh6PJieNcs",
+    title: "【マリオカート8DX】EKVマリカに参戦！",
+    thumbnail_url: "https://i.ytimg.com/vi/aFh6PJieNcs/mqdefault.jpg"
+  },
+]
+
 export const works = [
   {
     id: nanoid(),

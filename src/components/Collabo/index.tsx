@@ -3,22 +3,22 @@ import { Video } from 'commonData';
 import './index.css';
 
 type Props = {
-  contents: Video[];
+  collabos: Video[];
 }
 
-function Contents(props: Props) {
+function Collabos(props: Props) {
 
-  const { contents } = props;
+  const { collabos } = props;
 
   function getYouTubeLink(video_id: string) {
     return "https://www.youtube.com/watch?v=" + video_id + "&ab_channel=%E5%98%89%E9%9F%B3%E3%81%A8%E3%82%93%E3%81%A8-KanonTonto-"
   }
 
   return (
-    <div className="contents">
-      <p className="contents-title">CONTENTS</p>
-      {contents.map((content, index) => {
-        const { video_id, title, thumbnail_url } = content;
+    <div className="collabos">
+      <p className="collabos-title">COLLABOS</p>
+      {collabos.map((collabo, index) => {
+        const { video_id, title, thumbnail_url } = collabo;
         return (
           <div className="video">
             <img src={thumbnail_url} alt="video-thumbnail" />
@@ -37,4 +37,4 @@ function Contents(props: Props) {
   );
 }
 
-export default Contents;
+export default Collabos;

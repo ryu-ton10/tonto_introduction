@@ -12,7 +12,7 @@ declare module "commonData" {
     }
   }
 
-  export type Content = {
+  export type Video = {
     id: string;
     video_id: string;
     title: string;
