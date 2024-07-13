@@ -74,6 +74,10 @@
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
+  .collabos {
+    padding: 0 10%;
+  }
+
   .collabos-title {
     padding-top: 48px;
     margin-bottom: 48px;
@@ -84,4 +88,7 @@
 
 /* ========= PCサイズ2 =========== */
 @media (min-width: 1120px) {
+  .collabos {
+    padding: 0 20%;
+  }
 }
