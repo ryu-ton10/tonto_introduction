@@ -1,5 +1,12 @@
+.profile {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+
 .profile-description {
-  padding: 0 10px 30px 20px;
+  padding-bottom: 50px;
   color: #FEACAE;
 }
 
@@ -10,6 +17,7 @@
 .sns {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -30,36 +38,34 @@
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .profile-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
     font-size: 36px;
     max-width: 50%;
   }
 
   .thumbnail-image {
-    padding: 30px 0 10px 0;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .profile-description {
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
 
   .thumbnail-image source {
-    max-width: 180px;
-    max-height: 180px
+    max-width: 400px;
+    max-height: auto;
   }
 
   .thumbnail-image img {
-    max-width: 180px;
-    max-height: 180px
+    max-width: 400px;
+    max-height: auto;
   }
 
-  .name-and-sns {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .name-and-sns p {
-    font-size: 24pt;
-    padding-right: 6px;
-  }
-
-  .name-and-sns {
-    flex-direction: column;
+  .name {
+    font-size: 36px;
   }
 
   .profile-details p {
@@ -69,157 +75,105 @@
   .sns img {
     display: flex;
     align-items: center;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 40px;
+    max-height: 40px;
     padding: 20px;
   }
 
   .youtube-icon {
     padding: 20px;
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
   .thumbnail-image source {
-    max-width: 240px;
-    max-height: 240px
+    max-width: 450px;
+    max-height: auto;
   }
 
   .thumbnail-image img {
-    max-width: 240px;
-    max-height: 240px
+    max-width: 450px;
+    max-height: auto;
   }
 
-  .name-and-sns p {
-    font-size: 30pt;
-    padding-right: 8px;
+  .name {
+    font-size: 40px;
   }
 
   .profile-details p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sns img {
-    max-width: 60px;
-    max-height: 60px;
-    padding: 30px;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .youtube-icon {
-    font-size: 60px;
-    padding: 30px;
+    font-size: 50px;
   }
 }
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .profile {
-    padding: 0 100px;
-  }
-
   .profile-title {
-    margin-bottom: 48px;
+    grid-column-start: 1;
+    grid-column-end: 5;
     font-size: 40px;
     max-width: 30%;
   }
 
-  .profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
   .thumbnail-image {
-    display: flex;
-    padding: 50px 10px 50px 0;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .thumbnail-image source {
-    max-width: 280px;
-    max-height: 280px
-  }
-
-  .thumbnail-image img {
-    max-width: 280px;
-    max-height: 280px
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .profile-description {
-    padding: 50px 10px 50px 20px;
-    text-align: left;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .name-and-sns {
-    align-items: center;
+  .name {
+    font-size: 40px;
   }
 
-  .name-and-sns p {
-    font-size: 36pt;
-    padding-right: 10px;
+  .profile-details p {
+    font-size: 18px;
   }
 
   .sns img {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .youtube-icon {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
   .profile {
-    padding: 0 150px;
+    padding: 0 5%;
   }
 
-  .profile-title {
-    margin-bottom: 48px;
-    font-size: 48px;
-    max-width: 30%;
+  .name {
+    font-size: 52px;
   }
 
-  .thumbnail-image source {
-    max-width: 320px;
-    max-height: 320px
-  }
-
-  .thumbnail-image img {
-    max-width: 320px;
-    max-height: 320px
-  }
-
-  .profile-description {
-    padding: 50px 10px 50px 20px;
-  }
-
-  .name-and-sns {
-    padding: 0 0 20px 0;
-  }
-
-  .name-and-sns p {
-    font-size: 36pt;
-  }
-
-  .sns img {
-    display: flex;
-    align-items: center;
-    max-width: 50px;
-    max-height: 50px;
-  }
-
-  .youtube-icon {
-    font-size: 40pt;
+  .profile-details p {
+    font-size: 20px;
   }
 }
 
 /* ========= PCサイズ2 =========== */
 @media (min-width: 1120px) {
   .profile {
-    padding: 0 250px;
+    padding: 0 15%;
   }
 }
