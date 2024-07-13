@@ -7,13 +7,6 @@
   display: flex;
 }
 
-.profile-description .name-card-button {
-  background-color: #E89A8A;
-  color: white;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-}
-
 .sns {
   display: flex;
   flex-direction: row;
@@ -25,7 +18,8 @@
 }
 
 .profile-details p {
-  white-space: pre-line
+  white-space: pre-line;
+  text-align: center;
 }
 
 /* ========= スマホサイズ_1 =========== */
@@ -40,32 +34,25 @@
     padding-right: 6px;
   }
 
-  .name-and-sns img {
-    display: flex;
-    align-items: center;
-    max-width: 30px;
-    max-height: 30px;
-  }
-
   .name-and-sns {
     flex-direction: column;
   }
 
-  .profile-description .profile-details p {
-    font-size: 12pt;
+  .profile-details p {
+    font-size: 18px;
+  }
+
+  .sns img {
+    display: flex;
+    align-items: center;
+    max-width: 50px;
+    max-height: 50px;
+    padding: 20px;
   }
 
   .youtube-icon {
-    padding: 5px 10px 0 10px;
-    font-size: 22pt;
-  }
-
-  .name-card-link {
-    padding: 20px 0 20px 0;
-  }
-
-  .name-card-button {
-    font-size: 16pt;
+    padding: 20px;
+    font-size: 50px;
   }
 }
 
@@ -76,21 +63,19 @@
     padding-right: 8px;
   }
 
-  .name-and-sns img {
-    display: flex;
-    align-items: center;
-    max-width: 40px;
-    max-height: 40px;
-    padding: 0 20px 0 20px;
+  .profile-details p {
+    font-size: 20px;
   }
 
-  .profile-description .profile-details p {
-    font-size: 16pt;
+  .sns img {
+    max-width: 60px;
+    max-height: 60px;
+    padding: 30px;
   }
 
   .youtube-icon {
-    padding: 5px 20px 0 20px;
-    font-size: 30pt;
+    font-size: 60px;
+    padding: 30px;
   }
 }
 
@@ -113,22 +98,12 @@
   }
 
   .sns img {
-    padding-left: 10px;
+    max-width: 70px;
+    max-height: 70px;
   }
 
-  .name-and-sns img {
-    display: flex;
-    align-items: center;
-    max-width: 45px;
-    max-height: 45px;
-  }
-
-  .profile-description .profile-details {
-    text-align: left;
-  }
-
-  .profile-description .profile-details p {
-    font-size: 12pt;
+  .youtube-icon {
+    font-size: 70px;
   }
 }
 
@@ -146,7 +121,7 @@
     font-size: 36pt;
   }
 
-  .name-and-sns img {
+  .sns img {
     display: flex;
     align-items: center;
     max-width: 50px;
@@ -155,13 +130,5 @@
 
   .youtube-icon {
     font-size: 40pt;
-  }
-
-  .profile-description .profile-details {
-    text-align: left;
-  }
-
-  .profile-description .profile-details p {
-    font-size: 15pt;
   }
 }
