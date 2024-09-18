@@ -51,15 +51,15 @@ export const collabos = [
   },
   {
     id: nanoid(),
-    video_id: "WfHaePJAE3g",
-    title: "【コラボ】ここんくんと年末雑談忘年会！",
-    thumbnail_url: "https://i.ytimg.com/vi/WfHaePJAE3g/mqdefault.jpg"
+    video_id: "BR31wZVvOsA",
+    title: "【マリオカート8DX】ヒトVとケモVの交流大会！【第2回】",
+    thumbnail_url: "https://i.ytimg.com/vi/BR31wZVvOsA/mqdefault.jpg"
   },
   {
     id: nanoid(),
-    video_id: "rSPw25TypJk",
-    title: "【コラボ】悶絶！！シチュエーションボイスに耐えろ！！！！",
-    thumbnail_url: "https://i.ytimg.com/vi/rSPw25TypJk/mqdefault.jpg"
+    video_id: "WfHaePJAE3g",
+    title: "【コラボ】ここんくんと年末雑談忘年会！",
+    thumbnail_url: "https://i.ytimg.com/vi/WfHaePJAE3g/mqdefault.jpg"
   },
   {
     id: nanoid(),
