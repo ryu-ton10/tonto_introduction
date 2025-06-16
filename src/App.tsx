@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import 'App.css';
-import Title from 'components/Title';
-import Profile from 'components/Profile';
-import Contents from 'components/Contents';
-import Collabo from 'components/Collabo';
-import Works from 'components/Works';
-import Footer from 'components/Footer';
+import Title from 'pages/Title';
+import Profile from 'pages/Profile';
+import Contents from 'pages/Contents';
+import Collabo from 'pages/Collabo';
+import Works from 'pages/Works';
+import Footer from 'pages/Footer';
 import {
   name,
   twitter_url,
