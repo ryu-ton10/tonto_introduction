@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './index.css';
 import PrivacyPolicy from 'components/PrivacyPolicy';
 
@@ -18,7 +18,9 @@ function Footer(props: Props) {
 
   return (
     <div className="footer" data-testid="footer">
-      <p className="privacy_policy" onClick={() => setIsShowModal(true)}>{language === "jp" ? "プライバシーポリシー" : "Privacy Policy"}</p>
+      <p className="privacy_policy" onClick={() => setIsShowModal(true)} onKeyUp={ () => setIsShowModal(false) }>
+        {language === "jp" ? "プライバシーポリシー" : "Privacy Policy"}
+        </p>
       {isShowModal &&
         <PrivacyPolicy setIsShowModal={setIsShowModal} privacy_policy={privacy_policy} language={language} />
       }

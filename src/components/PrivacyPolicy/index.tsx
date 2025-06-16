@@ -1,8 +1,7 @@
-import React from 'react';
 import './index.css';
 
 type Props = {
-  setIsShowModal: Function;
+  setIsShowModal: (args: boolean) => void;
   privacy_policy: {
     jp: string;
     en: string;
@@ -18,7 +17,7 @@ function PrivacyPolicy(props: Props) {
     <div className="overlay">
       <div className="modal">
         <p>{language === "jp" ? privacy_policy.jp : privacy_policy.en }</p>
-        <button onClick={() => setIsShowModal(false)}>OK</button>
+        <button type="button" onClick={() => setIsShowModal(false)}>OK</button>
       </div>
     </div>
   );

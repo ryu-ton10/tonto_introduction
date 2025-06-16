@@ -1,8 +1,7 @@
-import React from 'react';
 import './index.css';
 
 type Props = {
-  hook: Function;
+  hook: (args: string) => void;
   language: string;
 }
 
@@ -48,9 +47,8 @@ function Title(props: Props) {
           type="image/webp"
           srcSet={
             language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.webp` : `${process.env.PUBLIC_URL}/assets/title_en.webp`
-          }
+          }/
         >
-        </source>
         <img
           className="title-image"
           src={
@@ -65,7 +63,7 @@ function Title(props: Props) {
         alt="background"
       />
       {/* スクロールを促すアニメーション */}
-      <p className="scroll-down" data-testid="scroll"><span></span></p>
+      <p className="scroll-down" data-testid="scroll"><span /></p>
     </div>
   );
 }
