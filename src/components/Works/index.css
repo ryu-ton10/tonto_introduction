@@ -21,7 +21,7 @@
 
 .work-thubmnail {
   display: flex;
-  justify-work: center;
+  justify-content: center;
   align-items: center;
 }
 
