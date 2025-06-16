@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.css';
-import PrivacyPolicy from 'components/PrivacyPolicy';
+import PrivacyPolicy from 'pages/PrivacyPolicy';
 
 type Props = {
   twitter_url: string;
