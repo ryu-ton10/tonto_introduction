@@ -14,14 +14,11 @@
   color: #FEACAE;
 }
 
-.youtube-link-button {
+.collabo-youtube-link-button {
   background-color: #FEACAE;
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-
-.youtube-link-button a {
   color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
   font-weight: bold;
 }
 

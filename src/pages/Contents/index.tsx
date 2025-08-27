@@ -41,11 +41,9 @@ function Contents(props: Props) {
             <img src={thumbnail_url} alt="video-thumbnail" />
             <div className="video-title-and-youtube-link">
               <p>{title}</p>
-              <div className="youtube-link-button">
-                <a href={getYouTubeLink(video_id)} rel="noopener noreferrer" target="_blank">
-                  YouTubeで見る
-                </a>
-              </div>
+              <a className="contents-youtube-link-button" href={getYouTubeLink(video_id)} rel="noopener noreferrer" target="_blank">
+                YouTubeで見る
+              </a>
             </div>
           </div>
         )
