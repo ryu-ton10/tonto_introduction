@@ -14,13 +14,13 @@
   color: #FEACAE;
 }
 
-.collabos .youtube-link-button {
+.youtube-link-button {
   background-color: #FEACAE;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   border-radius: 20px;
 }
 
-.collabos .youtube-link-button a {
+.youtube-link-button a {
   color: white;
   font-weight: bold;
 }
@@ -34,7 +34,7 @@
     max-width: 50%;
   }
 
-  .collabos .collabo-video {
+  .collabo-video {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 70px;
@@ -42,7 +42,7 @@
     grid-column-end: 5;
   }
 
-  .collabos .youtube-link-button {
+  .youtube-link-button {
     width: 50%;
     margin: 0 auto;
   }
@@ -57,12 +57,12 @@
     max-width: 30%;
   }
 
-  .collabos .collabo-video:nth-child(even) {
+  .collabo-video:nth-child(even) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .collabos .collabo-video:nth-child(odd) {
+  .collabo-video:nth-child(odd) {
     grid-column-start: 3;
     grid-column-end: 5;
   }

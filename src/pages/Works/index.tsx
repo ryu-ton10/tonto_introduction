@@ -31,21 +31,19 @@ function Works(props: Props) {
   return (
     <div className="works">
       <p className="work-title">WORKS</p>
-      <div className="work-area">
-        {works.map((work, index) => {
-          const { id, image, title, url } = work;
-          return (
-            <div key={id} className="work">
-              <picture className="work-thumbnail" data-testid="work-thumbnail">
-                <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} />
-                <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
-              </picture>
-              <p data-testid="work-description-title">{language === "jp" ? title.jp : title.en}</p>
-              <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
-            </div>
-          );
-        })}
-      </div>
+      {works.map((work, index) => {
+        const { id, image, title, url } = work;
+        return (
+          <div key={id} className="work">
+            <picture className="work-thumbnail" data-testid="work-thumbnail">
+              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} />
+              <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
+            </picture>
+            <p data-testid="work-description-title">{language === "jp" ? title.jp : title.en}</p>
+            <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
+          </div>
+        );
+      })}
     </div>
   );
 }
