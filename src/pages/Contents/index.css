@@ -14,14 +14,11 @@
   color: white;
 }
 
-.contents .youtube-link-button {
+.contents-youtube-link-button {
   background-color: white;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-}
-
-.contents .youtube-link-button a {
   color: #FEACAE;
+  padding: 10px 30px;
+  border-radius: 20px;
   font-weight: bold;
 }
 
@@ -34,7 +31,7 @@
     max-width: 50%;
   }
 
-  .contents .content-video {
+  .content-video {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 70px;
@@ -42,7 +39,7 @@
     grid-column-end: 5;
   }
 
-  .contents .youtube-link-button {
+  .youtube-link-button {
     width: 50%;
     margin: 0 auto;
   }

@@ -18,7 +18,7 @@ function Footer(props: Props) {
 
   return (
     <div className="footer" data-testid="footer">
-      <p className="privacy_policy" onClick={() => setIsShowModal(true)} onKeyUp={ () => setIsShowModal(false) }>
+      <p className="privacy-policy" onClick={() => setIsShowModal(true)} onKeyUp={ () => setIsShowModal(false) }>
         {language === "jp" ? "プライバシーポリシー" : "Privacy Policy"}
         </p>
       {isShowModal &&

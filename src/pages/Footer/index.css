@@ -1,5 +1,4 @@
 .footer {
-  height: 5em;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -8,14 +7,13 @@
 
 .footer p {
   font-size: 12pt;
-  margin-bottom: 10px;
 }
 
 .footer a {
   color: blue;
 }
 
-.footer .privacy_policy {
+.privacy-policy {
   color: #808080;
   border-bottom: solid 2px #808080;
   cursor: pointer;

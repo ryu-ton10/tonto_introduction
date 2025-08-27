@@ -55,12 +55,12 @@
   }
 
   .thumbnail-image source {
-    max-width: 400px;
+    max-width: 300px;
     max-height: auto;
   }
 
   .thumbnail-image img {
-    max-width: 400px;
+    max-width: 300px;
     max-height: auto;
   }
 
