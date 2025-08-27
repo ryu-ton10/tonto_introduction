@@ -134,22 +134,6 @@ export const works = [
     },
     url: "https://kayanoau.netlify.app/",
   },
-  {
-    id: nanoid(),
-    image: {
-      webp: "/assets/toa_web.webp",
-      others: "/assets/toa_web.jpg"
-    },
-    title: {
-      jp: "とあのアトリエ",
-      en: "Toa's workspace"
-    },
-    description: {
-      jp: "イラストレーター 熊亥とあ のオフィシャルサイトです。\nイラストや Skeb へのリンクを閲覧できます。",
-      en: "A website of Toa Kumai. On the website, you can know about him and activity."
-    },
-    url: "https://kumaitoa.netlify.app/",
-  },
 ]
 
 export const privacy_policy = {
