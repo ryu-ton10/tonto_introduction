@@ -1,179 +1,223 @@
 .profile {
   background-color: white;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
+  padding: 50px 0;
 }
 
-.profile-description {
-  padding-bottom: 50px;
-  color: #FEACAE;
-}
-
-.name-and-sns {
-  display: flex;
-}
-
-.sns {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.youtube-icon {
-  color: red;
-}
-
-.profile-details p {
-  white-space: pre-line;
-  text-align: center;
-}
-
-.profile-title {
+.profile_title {
   border-bottom: solid 8px #FEACAE;
   color: #FEACAE;
+  margin: 0 auto;
+}
+
+.profile_content {
+  display: grid;
+}
+
+.profile_content-thumbnail-image img, .profile_content-thumbnail-image source {
+  filter: drop-shadow(0 0 3rem #FEACAE);
 }
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
-  .profile-title {
-    grid-column-start: 1;
-    grid-column-end: 5;
+  .profile_title {
     font-size: 36px;
     max-width: 50%;
+    margin-bottom: 30px;
   }
 
-  .thumbnail-image {
-    grid-column-start: 1;
-    grid-column-end: 5;
+  .profile_content {
+    grid-template-columns: 1fr;
   }
 
-  .profile-description {
-    grid-column-start: 1;
-    grid-column-end: 5;
-  }
-
-  .thumbnail-image source {
-    max-width: 300px;
-    max-height: auto;
-  }
-
-  .thumbnail-image img {
-    max-width: 300px;
-    max-height: auto;
-  }
-
-  .name {
-    font-size: 36px;
-  }
-
-  .profile-details p {
-    font-size: 18px;
-  }
-
-  .sns img {
+  .profile_content-thumbnail {
     display: flex;
-    align-items: center;
-    max-width: 40px;
-    max-height: 40px;
-    padding: 20px;
+    flex-direction: column;
   }
 
-  .youtube-icon {
-    padding: 20px;
-    font-size: 40px;
+  .profile_content-thumbnail img, .profile_content-thumbnail source {
+    border-radius: 50%;
+    max-width: 70%;
+    height: auto;
+  }
+
+  .profile_content-name {
+    margin: 0 auto;
+  }
+
+  .profile_content-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .profile_content-gallery-standing {
+    max-width: 100%;
+  }
+  .profile_content-gallery img, .profile_content-gallery source {
+    max-width: 40%;
+    height: auto;
+  }
+
+  .profile_content-gallery-illust {
+    padding-top: 20px;
+    max-width: 100%;
+  }
+
+  .profile_content-gallery-illust img, .profile_content-gallery source {
+    max-width: 80%;
+    height: auto;
   }
 }
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
-  .thumbnail-image source {
-    max-width: 450px;
-    max-height: auto;
+  .profile_title {
+    font-size: 42px;
+    max-width: 40%;
+    margin-bottom: 40px;
   }
 
-  .thumbnail-image img {
-    max-width: 450px;
-    max-height: auto;
+  .profile_content {
+    grid-template-columns: 1fr;
   }
 
-  .name {
-    font-size: 40px;
+  .profile_content-thumbnail {
+    display: flex;
+    flex-direction: column;
   }
 
-  .profile-details p {
-    font-size: 18px;
+  .profile_content-thumbnail img, .profile_content-thumbnail source {
+    border-radius: 50%;
+    max-width: 50%;
+    height: auto;
   }
 
-  .sns img {
-    max-width: 50px;
-    max-height: 50px;
+  .profile_content-name {
+    margin: 0 auto;
   }
 
-  .youtube-icon {
-    font-size: 50px;
+  .profile_content-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .profile_content-gallery-standing {
+    max-width: 100%;
+  }
+  .profile_content-gallery img, .profile_content-gallery source {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .profile_content-gallery-illust {
+    padding-top: 30px;
+    max-width: 100%;
+  }
+
+  .profile_content-gallery-illust img, .profile_content-gallery source {
+    max-width: 90%;
+    height: auto;
   }
 }
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
-  .profile-title {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    font-size: 40px;
+  .profile_title {
+    font-size: 48px;
     max-width: 30%;
+    margin-bottom: 50px;
   }
 
-  .thumbnail-image {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  .profile_content {
+    grid-template-columns: 1fr;
   }
 
-  .profile-description {
-    grid-column-start: 3;
-    grid-column-end: 5;
+  .profile_content-thumbnail {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-bottom: 50px;
   }
 
-  .name {
-    font-size: 40px;
+  .profile_content-thumbnail img, .profile_content-thumbnail source {
+    border-radius: 50%;
+    max-width: 40%;
+    height: auto;
   }
 
-  .profile-details p {
-    font-size: 18px;
+  .profile_content-name {
+    margin: 0 auto;
   }
 
-  .sns img {
-    max-width: 50px;
-    max-height: 50px;
+  .profile_content-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
 
-  .youtube-icon {
-    font-size: 50px;
+  .profile_content-gallery-standing {
+    max-width: 100%;
+  }
+  .profile_content-gallery img, .profile_content-gallery source {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .profile_content-gallery-illust {
+    padding-top: 30px;
+    max-width: 100%;
+  }
+
+  .profile_content-gallery-illust img, .profile_content-gallery source {
+    max-width: 90%;
+    height: auto;
   }
 }
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
-  .profile {
-    padding: 0 5%;
+  .profile_title {
+    font-size: 48px;
+    max-width: 30%;
+    margin-bottom: 70px;
   }
 
-  .name {
-    font-size: 52px;
+  .profile_content {
+    grid-template-columns: 1fr 2fr;
   }
 
-  .profile-details p {
-    font-size: 20px;
+  .profile_content-thumbnail {
+    position: sticky;
+    top: 0;
+    height: 300px;
   }
-}
 
-/* ========= PCサイズ2 =========== */
-@media (min-width: 1120px) {
-  .profile {
-    padding: 0 15%;
+  .profile_content-thumbnail img, .profile_content-thumbnail source {
+    border-radius: 50%;
+    max-width: 70%;
+    height: auto;
+  }
+
+  .profile_content-name {
+    margin: 0 auto;
+  }
+
+  .profile_content-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .profile_content-gallery-standing {
+    max-width: 100%;
+  }
+  .profile_content-gallery img, .profile_content-gallery source {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .profile_content-gallery-illust {
+    max-width: 100%;
+  }
+
+  .profile_content-gallery-illust img, .profile_content-gallery source {
+    max-width: 80%;
+    height: auto;
   }
 }

@@ -1,30 +1,13 @@
 import { useEffect } from 'react';
-import { AiFillYoutube } from 'react-icons/ai';
 import './index.css';
 
-type Props = {
-  name: {
-    jp: string;
-    en: string;
-  }
-  twitter_url: string;
-  youtube_url: string;
-  description: {
-    jp: string;
-    en: string;
-  }
-  language: string;
-}
-
-function Profile(props: Props) {
-
-  const { name, twitter_url, youtube_url, description, language } = props;
+function Profile() {
 
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
-    const thumbnailImage = document.getElementsByClassName('thumbnail-image')[0] as HTMLElement;
+    const thumbnailImage = document.getElementsByClassName('profile_content-thumbnail')[0] as HTMLElement;
     const thumbnailImageTop = thumbnailImage.getBoundingClientRect().top;
-    const profileDescription = document.getElementsByClassName('profile-description')[0] as HTMLElement;
+    const profileDescription = document.getElementsByClassName('profile_content-gallery')[0] as HTMLElement;
     const profileDescriptionTop = profileDescription.getBoundingClientRect().top;
 
     if (currentScrollY > thumbnailImageTop) {
@@ -42,21 +25,35 @@ function Profile(props: Props) {
 
   return (
     <div className="profile">
-      <p className="profile-title">ABOUT ME</p>
-      <div className="thumbnail-image" aria-label="thumbnail-wrapper">
-        <picture>
-          <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/toa_tonto.webp`} />
-          <img src={`${process.env.PUBLIC_URL}/assets/toa_tonto.jpeg`} alt="thumbnail" />
-        </picture>
-      </div>
-      <div className="profile-description">
-        <p className="name">{language === "jp" ? name.jp : name.en}</p>
-        <div className="sns">
-          <a href={twitter_url} rel="noopener noreferrer" target="_blank"><img src="assets/twitter_logo_blue.png" alt="twitter-icon" /></a>
-          <a href={youtube_url} rel="noopener noreferrer" target="_blank"><div className="youtube-icon"><AiFillYoutube /></div></a>
+      <p className="profile_title">PROFILE</p>
+      <div className="profile_content">
+        <div className="profile_content-thumbnail" aria-label="thumbnail-wrapper">
+          <picture className="profile_content-thumbnail-image">
+            <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/about_me/thumbnail.webp`} />
+            <img src={`${process.env.PUBLIC_URL}/assets/about_me/thumbnail.png`} alt="thumbnail" />
+          </picture>
+          <picture className="profile_content-name">
+            <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/about_me/name.webp`} />
+            <img src={`${process.env.PUBLIC_URL}/assets/about_me/name.png`} alt="thumbnail" />
+          </picture>
         </div>
-        <div className="profile-details">
-          <p>{language === "jp" ? description.jp : description.en}</p>
+        <div className="profile_content-gallery">
+          <div className="profile_content-gallery-standing">
+            <picture>
+              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/about_me/standing_paka.webp`} />
+              <img src={`${process.env.PUBLIC_URL}/assets/about_me/standing_paka.png`} alt="thumbnail" />
+            </picture>
+            <picture>
+              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/about_me/standing_pakaboushi.webp`} />
+              <img src={`${process.env.PUBLIC_URL}/assets/about_me/standing_pakaboushi.png`} alt="thumbnail" />
+            </picture>
+          </div>
+          <div className="profile_content-gallery-illust">
+            <picture>
+              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL}/assets/about_me/gallery_illust.webp`} />
+              <img src={`${process.env.PUBLIC_URL}/assets/about_me/gallery_illust.png`} alt="thumbnail" />
+            </picture>
+          </div>
         </div>
       </div>
     </div>

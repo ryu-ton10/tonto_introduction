@@ -7,12 +7,9 @@ import Collabo from 'pages/Collabo';
 import Works from 'pages/Works';
 import Footer from 'pages/Footer';
 import {
-  name,
   twitter_url,
-  youtube_url,
   contents,
   collabos,
-  description,
   works,
   privacy_policy
 } from 'data/data';
@@ -34,13 +31,7 @@ function App() {
         hook={updateLanguageSetting}
         language={language}
       />
-      <Profile
-        name={name}
-        twitter_url={twitter_url}
-        youtube_url={youtube_url}
-        description={description}
-        language={language}
-      />
+      <Profile />
       <Contents contents={contents} />
       <Collabo collabos={collabos} />
       <Works works={works} language={language} />
