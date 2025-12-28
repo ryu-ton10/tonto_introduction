@@ -29,17 +29,17 @@ function Works(props: Props) {
 
   return (
     <div className="works">
-      <p className="work-title">WORKS</p>
-      {works.map((work, index) => {
+      <p className="works_title">WORKS</p>
+      {works.map((work, _) => {
         const { id, image, title, url } = work;
         return (
-          <div key={id} className="work">
-            <picture className="work-thumbnail" data-testid="work-thumbnail">
-              <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} />
+          <div key={id} className="works_content">
+            <a href={url} rel="noopener noreferrer" target="_blank">
               <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
-            </picture>
-            <p data-testid="work-description-title">{title.jp}</p>
-            <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{"Webサイトへ行ってみる"}</a>
+              <div>
+                <p>{title.jp}</p>
+              </div>
+            </a>
           </div>
         );
       })}

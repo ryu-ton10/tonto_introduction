@@ -15,66 +15,12 @@ export const description = {
   en: "I'm fennex fox VTuber!\n I mainly play MK8DX at broadcast.\nPlease check it out!"
 }
 
-export const contents = [
-  {
-    id: nanoid(),
-    video_id: "nDmWZd3ub6o",
-    title: "【ざつだん】こんとんトーク #5",
-    thumbnail_url: "https://i.ytimg.com/vi/nDmWZd3ub6o/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "zus8jcJ_VNs",
-    title: "【魂これ】何も分からん初心者だけど頑張る！ #1",
-    thumbnail_url: "https://i.ytimg.com/vi/zus8jcJ_VNs/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "ejLb3T6Viik",
-    title: "【朝枠】皆に「おはよう」を言う配信！【朝活】",
-    thumbnail_url: "https://i.ytimg.com/vi/ejLb3T6Viik/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "-Mm4JtHlGjQ",
-    title: "【マリオカート8DX】60分タイムアタックチャレンジ",
-    thumbnail_url: "https://i.ytimg.com/vi/-Mm4JtHlGjQ/mqdefault.jpg"
-  },
-]
-
-export const collabos = [
-  {
-    id: nanoid(),
-    video_id: "fXqITjMOjI8",
-    title: "【マリオカート8DX】ケモV vs ヒトV 対抗戦！",
-    thumbnail_url: "https://i.ytimg.com/vi/fXqITjMOjI8/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "BR31wZVvOsA",
-    title: "【マリオカート8DX】ヒトVとケモVの交流大会！【第2回】",
-    thumbnail_url: "https://i.ytimg.com/vi/BR31wZVvOsA/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "WfHaePJAE3g",
-    title: "【コラボ】ここんくんと年末雑談忘年会！",
-    thumbnail_url: "https://i.ytimg.com/vi/WfHaePJAE3g/mqdefault.jpg"
-  },
-  {
-    id: nanoid(),
-    video_id: "c4DppehyWnE",
-    title: "【マリオカート8DX】EKV マリカに参戦！ #85",
-    thumbnail_url: "https://i.ytimg.com/vi/c4DppehyWnE/mqdefault.jpg"
-  },
-]
-
 export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/pt_logo.webp",
-      others: "/assets/pt_logo.png"
+      webp: "/assets/works/pt_logo.webp",
+      others: "/assets/works/pt_logo.png"
     },
     title: {
       jp: "ポケモン種族値サーチ",
@@ -89,8 +35,8 @@ export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/si14_logo.webp",
-      others: "/assets/si14_logo.png"
+      webp: "/assets/works/si14_logo.webp",
+      others: "/assets/works/si14_logo.png"
     },
     title: {
       jp: "珪素光画ホームページ",
@@ -105,8 +51,8 @@ export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/kokon_website.webp",
-      others: "/assets/kokon_website.jpeg"
+      webp: "/assets/works/kokon_website.webp",
+      others: "/assets/works/kokon_website.jpeg"
     },
     title: {
       jp: "ここんのかくれが",
@@ -121,8 +67,8 @@ export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/KayanoAU_1500.webp",
-      others: "/assets/KayanoAU_1500.png"
+      webp: "/assets/works/kayano_au.webp",
+      others: "/assets/works/kayano_au.png"
     },
     title: {
       jp: "Kayano AU オフィシャルサイト",
