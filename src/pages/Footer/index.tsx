@@ -8,21 +8,20 @@ type Props = {
     jp: string;
     en: string
   };
-  language: string;
 };
 
 function Footer(props: Props) {
 
-  const { twitter_url, privacy_policy, language } = props;
+  const { twitter_url, privacy_policy } = props;
   const [isShowModal, setIsShowModal] = useState(false);
 
   return (
     <div className="footer" data-testid="footer">
       <p className="privacy-policy" onClick={() => setIsShowModal(true)} onKeyUp={ () => setIsShowModal(false) }>
-        {language === "jp" ? "プライバシーポリシー" : "Privacy Policy"}
-        </p>
+        プライバシーポリシー
+      </p>
       {isShowModal &&
-        <PrivacyPolicy setIsShowModal={setIsShowModal} privacy_policy={privacy_policy} language={language} />
+        <PrivacyPolicy setIsShowModal={setIsShowModal} privacy_policy={privacy_policy} />
       }
       <p>©︎2024    <a href={twitter_url} rel="noopener noreferrer" target="_blank">@27ma4_ton10_v1</a></p>
     </div>

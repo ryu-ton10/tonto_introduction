@@ -1,59 +1,16 @@
 import './index.css';
 
-type Props = {
-  hook: (args: string) => void;
-  language: string;
-}
+function Title() {
 
-function Title(props: Props) {
-
-  const { hook, language } = props;
-
-  // 言語切替ボタンで enabled な状態
-  const languageSelectedStyle = {
-    backgroundColor: '#E8C1B8',
-    color: 'white',
-    borderColor: 'white'
-  }
-
-  // 言語切替ボタンで disabled な状態
-  const languageNotSelectedStyle = {
-    backgroundColor: 'white',
-    color: '#E89A8A',
-    borderColor: 'white'
-  };
   return (
     <div className="title-bar">
-      <div className="language-selection">
-        <button
-          type="button"
-          onClick={() => hook("jp")}
-          style={language === "jp" ? languageSelectedStyle : languageNotSelectedStyle}
-          className="language-selection-button"
-        >
-          JP
-        </button>
-        <button
-          type="button"
-          onClick={() => hook("en")}
-          style={language === "en" ? languageSelectedStyle : languageNotSelectedStyle}
-          className="language-selection-button"
-        >
-          EN
-        </button>
-      </div>
       <picture data-testid="title-image">
         <source
           type="image/webp"
-          srcSet={
-            language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.webp` : `${process.env.PUBLIC_URL}/assets/title_en.webp`
-          }/
-        >
+          srcSet={`${process.env.PUBLIC_URL}/assets/title_jp.webp`}/>
         <img
           className="title-image"
-          src={
-            language === "jp" ? `${process.env.PUBLIC_URL}/assets/title_jp.png` : `${process.env.PUBLIC_URL}/assets/title_en.png`
-          }
+          src={`${process.env.PUBLIC_URL}/assets/title_jp.png`}
           alt="background"
         />
       </picture>

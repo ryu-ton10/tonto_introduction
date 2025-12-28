@@ -11,25 +11,12 @@ import {
 } from 'data/data';
 
 function App() {
-
-  // 言語設定を保持するためのトップに位置するフック
-  // これを基に各子コンポーネントは言語表示を制御する
-  // 切り替えトグルは、TitleBar コンポーネントに持つ
-  // jp:日本語 en:英語
-  const [language, setLanguage] = useState("jp")
-  const updateLanguageSetting = (langage: string) => {
-    setLanguage(langage);
-  }
-
   return (
     <div className="App">
-      <Title
-        hook={updateLanguageSetting}
-        language={language}
-      />
+      <Title />
       <Profile />
-      <Works works={works} language={language} />
-      <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
+      <Works works={works} />
+      <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} />
     </div>
   );
 }

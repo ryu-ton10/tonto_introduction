@@ -4,12 +4,11 @@ import type { Work } from 'commonData';
 
 type Props = {
   works: Work[];
-  language: string;
 }
 
 function Works(props: Props) {
 
-  const { works, language } = props;
+  const { works } = props;
 
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
@@ -39,8 +38,8 @@ function Works(props: Props) {
               <source type="image/webp" srcSet={`${process.env.PUBLIC_URL + image.webp}`} />
               <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
             </picture>
-            <p data-testid="work-description-title">{language === "jp" ? title.jp : title.en}</p>
-            <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{language === "jp" ? "Webサイトへ行ってみる" : "Go website"}</a>
+            <p data-testid="work-description-title">{title.jp}</p>
+            <a className="link-button" href={url} rel="noopener noreferrer" target="_blank">{"Webサイトへ行ってみる"}</a>
           </div>
         );
       })}
