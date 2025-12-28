@@ -13,6 +13,16 @@
   margin: 0 auto;
 }
 
+.works_content:hover {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.works_content:hover p {
+  color: #FEACAE;
+  transition: color 0.3s ease-in-out;
+}
+
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .works_title {
