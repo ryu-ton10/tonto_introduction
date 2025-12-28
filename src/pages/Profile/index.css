@@ -13,8 +13,29 @@
   display: grid;
 }
 
+.profile_content-gallery-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-icon {
+  color: red;
+  display: flex;
+  align-items: center;
+}
+
 .profile_content-thumbnail-image img, .profile_content-thumbnail-image source {
   filter: drop-shadow(0 0 3rem #FEACAE);
+}
+
+.profile_content-gallery-links-name {
+  color: rgb(85, 85, 85);
+}
+
+.profile_content-gallery-links-id {
+  color: rgb(146, 146, 146);
 }
 
 /* ========= スマホサイズ_1 =========== */
@@ -66,6 +87,96 @@
     max-width: 80%;
     height: auto;
   }
+
+  .profile_content-gallery-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile_content-gallery-links-account {
+    padding: 20px;
+    margin: 20px;
+    height: 100%;
+    width: 80%;
+    border: 0.1rem solid rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-account a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-account img {
+    padding-left: 10px;
+    max-width: 15%;
+  }
+
+  .profile_content-gallery-links-account p {
+    text-align: left;
+  }
+
+  .profile_content-gallery-links-name {
+    font-size: 18px;
+  }
+
+  .profile_content-gallery-links-id {
+    font-size: 14px;
+  }
+
+  .profile_content-gallery-links-youtube {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    margin: 20px;
+    background-color: #f7d2d2;
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .profile_content-gallery-links-youtube-button a:nth-child(2) {
+    background-color: red;
+    border-radius: 30px;
+    padding: 1px 15px;
+  }
+
+  .profile_content-gallery-links-youtube-button p {
+    color: white;
+    font-size: 16px;
+  }
+
+  .youtube-icon {
+    font-size: 80px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 90%;
+    border-radius: 10px;
+  }
 }
 
 /* ========= スマホサイズ_2 =========== */
@@ -116,6 +227,95 @@
   .profile_content-gallery-illust img, .profile_content-gallery source {
     max-width: 90%;
     height: auto;
+  }
+
+  .profile_content-gallery-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile_content-gallery-links-account {
+    padding: 20px;
+    margin: 20px;
+    height: 100%;
+    width: 80%;
+    border: 0.1rem solid rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-account a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-account img {
+    padding-left: 10px;
+    max-width: 15%;
+  }
+
+  .profile_content-gallery-links-account p {
+    text-align: left;
+  }
+
+  .profile_content-gallery-links-name {
+    font-size: 18px;
+  }
+
+  .profile_content-gallery-links-id {
+    font-size: 14px;
+  }
+
+  .profile_content-gallery-links-youtube {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    margin: 20px;
+    background-color: #f7d2d2;
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .profile_content-gallery-links-youtube-button a:nth-child(2) {
+    background-color: red;
+    border-radius: 30px;
+    padding: 1px 15px;
+  }
+
+  .profile_content-gallery-links-youtube-button p {
+    color: white;
+  }
+
+  .youtube-icon {
+    font-size: 100px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 90%;
+    border-radius: 10px;
   }
 }
 
@@ -169,6 +369,97 @@
     max-width: 90%;
     height: auto;
   }
+
+  .profile_content-gallery-links {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap: 1.5rem;
+  }
+
+  .profile_content-gallery-links-account {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 50%;
+    border: 0.1rem solid rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-account a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-account img {
+    padding-left: 10px;
+    max-width: 15%;
+  }
+
+  .profile_content-gallery-links-account p {
+    text-align: left;
+  }
+
+  .profile_content-gallery-links-name {
+    font-size: 18px;
+  }
+
+  .profile_content-gallery-links-id {
+    font-size: 14px;
+  }
+
+  .profile_content-gallery-links-youtube {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 80%;
+    background-color: #f7d2d2;
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button a:nth-child(2) {
+    background-color: red;
+    border-radius: 30px;
+    padding: 1px 15px;
+  }
+
+  .profile_content-gallery-links-youtube-button p {
+    color: white;
+  }
+
+  .youtube-icon {
+    font-size: 140px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 90%;
+    border-radius: 10px;
+  }
 }
 
 /* ========= PCサイズ =========== */
@@ -219,5 +510,238 @@
   .profile_content-gallery-illust img, .profile_content-gallery source {
     max-width: 80%;
     height: auto;
+  }
+
+  .profile_content-gallery-links {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap: 1.5rem;
+  }
+
+  .profile_content-gallery-links-account {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 50%;
+    border: 0.1rem solid rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-account a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-account img {
+    padding-left: 10px;
+    max-width: 15%;
+  }
+
+  .profile_content-gallery-links-account p {
+    text-align: left;
+  }
+
+  .profile_content-gallery-links-name {
+    font-size: 18px;
+  }
+
+  .profile_content-gallery-links-id {
+    font-size: 14px;
+  }
+
+  .profile_content-gallery-links-youtube {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 80%;
+    background-color: #f7d2d2;
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button a:nth-child(2) {
+    background-color: red;
+    border-radius: 30px;
+    padding: 1px 15px;
+  }
+
+  .profile_content-gallery-links-youtube-button p {
+    color: white;
+  }
+
+  .youtube-icon {
+    font-size: 120px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 90%;
+    border-radius: 10px;
+  }
+}
+
+/* ========= PCサイズ2 =========== */
+@media (min-width: 1120px) {
+  .profile_title {
+    font-size: 48px;
+    max-width: 30%;
+    margin-bottom: 70px;
+  }
+
+  .profile_content {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .profile_content-thumbnail {
+    position: sticky;
+    top: 0;
+    height: 300px;
+  }
+
+  .profile_content-thumbnail img, .profile_content-thumbnail source {
+    border-radius: 50%;
+    max-width: 70%;
+    height: auto;
+  }
+
+  .profile_content-name {
+    margin: 0 auto;
+  }
+
+  .profile_content-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .profile_content-gallery-standing {
+    max-width: 100%;
+  }
+  .profile_content-gallery img, .profile_content-gallery source {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .profile_content-gallery-illust {
+    max-width: 100%;
+  }
+
+  .profile_content-gallery-illust img, .profile_content-gallery source {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .profile_content-gallery-links {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap: 1.5rem;
+  }
+
+  .profile_content-gallery-links-account {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 50%;
+    border: 0.1rem solid rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-account a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-account img {
+    padding-left: 10px;
+    max-width: 15%;
+  }
+
+  .profile_content-gallery-links-account p {
+    text-align: left;
+  }
+
+  .profile_content-gallery-links-name {
+    font-size: 18px;
+  }
+
+  .profile_content-gallery-links-id {
+    font-size: 14px;
+  }
+
+  .profile_content-gallery-links-youtube {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+    background-color: #f7d2d2;
+    border-radius: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .profile_content-gallery-links-youtube-button a:nth-child(2) {
+    background-color: red;
+    border-radius: 30px;
+    padding: 1px 15px;
+  }
+
+  .profile_content-gallery-links-youtube-button p {
+    color: white;
+  }
+
+  .youtube-icon {
+    font-size: 120px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 80%;
+    border-radius: 10px;
   }
 }
