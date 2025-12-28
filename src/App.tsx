@@ -2,14 +2,10 @@ import { useState } from 'react';
 import 'App.css';
 import Title from 'pages/Title';
 import Profile from 'pages/Profile';
-import Contents from 'pages/Contents';
-import Collabo from 'pages/Collabo';
 import Works from 'pages/Works';
 import Footer from 'pages/Footer';
 import {
   twitter_url,
-  contents,
-  collabos,
   works,
   privacy_policy
 } from 'data/data';
@@ -32,8 +28,6 @@ function App() {
         language={language}
       />
       <Profile />
-      <Contents contents={contents} />
-      <Collabo collabos={collabos} />
       <Works works={works} language={language} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} language={language} />
     </div>
