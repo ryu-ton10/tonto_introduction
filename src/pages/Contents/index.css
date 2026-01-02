@@ -20,7 +20,7 @@
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
   .content_block {
-    padding: 20px 0;
+    padding: 50px 0;
   }
 
   .content_block img, .content_block source {
@@ -46,7 +46,7 @@
 
   .content_block-bubble-and-button div {
     padding: 20px 40px;
-    margin: 30px 0;
+    margin: 10px 0;
     width: 40%;
   }
 
