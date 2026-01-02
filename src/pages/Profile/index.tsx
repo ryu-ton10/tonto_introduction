@@ -6,8 +6,6 @@ function Profile() {
 
   const twitterUrl = "https://x.com/27ma4_ton10_v1"
   const blueskyUrl = "https://bsky.app/profile/ton10.bsky.social"
-  const noteUrl = "https://note.com/kanon_tonto"
-  const githubUrl = "https://github.com/ryu-ton10"
   const youtubeUrl = "https://www.youtube.com/@kanon_tonto"
   const youtubeSubscribeUrl = "https://www.youtube.com/@kanon_tonto?sub_confirmation=1"
 
