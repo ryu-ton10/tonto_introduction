@@ -97,10 +97,10 @@ function Profile() {
             </div>
             <div className="profile_content-gallery-links-account">
               <a href={githubUrl} rel="noopener noreferrer" target="_blank">
-                <img src="assets/about_me/github_logo.png" alt="github-icon" />
+                <img src="assets/about_me/marshmallow_logo.png" alt="marshmallow-icon" />
                 <div>
-                  <p className="profile_content-gallery-links-name">tonto | Github</p>
-                  <p className="profile_content-gallery-links-id">github.com</p>
+                  <p className="profile_content-gallery-links-name">マシュマロ</p>
+                  <p className="profile_content-gallery-links-id">marshmallow-qa.com</p>
                 </div>
               </a>
             </div>
