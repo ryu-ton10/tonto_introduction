@@ -86,24 +86,6 @@ function Profile() {
                 </div>
               </a>
             </div>
-            <div className="profile_content-gallery-links-account">
-              <a href={noteUrl} rel="noopener noreferrer" target="_blank">
-                <img src="assets/about_me/note_logo.png" alt="note-icon" />
-                <div>
-                  <p className="profile_content-gallery-links-name">嘉音 とんと | note</p>
-                  <p className="profile_content-gallery-links-id">note.com</p>
-                </div>
-              </a>
-            </div>
-            <div className="profile_content-gallery-links-account">
-              <a href={githubUrl} rel="noopener noreferrer" target="_blank">
-                <img src="assets/about_me/marshmallow_logo.png" alt="marshmallow-icon" />
-                <div>
-                  <p className="profile_content-gallery-links-name">マシュマロ</p>
-                  <p className="profile_content-gallery-links-id">marshmallow-qa.com</p>
-                </div>
-              </a>
-            </div>
             <div className="profile_content-gallery-links-youtube">
               <div className="profile_content-gallery-links-youtube-button">
                 <a href={youtubeUrl} rel="noopener noreferrer" target="_blank">
