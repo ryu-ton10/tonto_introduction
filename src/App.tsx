@@ -1,6 +1,7 @@
 import 'App.css';
 import Title from 'pages/Title';
 import Profile from 'pages/Profile';
+import Contents from 'pages/Contents';
 import Works from 'pages/Works';
 import Footer from 'pages/Footer';
 import {
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Title />
       <Profile />
+      <Contents />
       <Works works={works} />
       <Footer twitter_url={twitter_url} privacy_policy={privacy_policy} />
     </div>

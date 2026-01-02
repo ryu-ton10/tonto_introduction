@@ -1,0 +1,180 @@
+.content_block-bubble-and-button div {
+  border: 0.1rem solid #FEACAE;
+  border-radius: 30px;
+}
+
+.content_block-bubble-and-button div:hover {
+  background-color: #FEACAE;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.content_block-bubble-and-button p {
+  color: #FEACAE;
+  text-align: center;
+}
+
+.content_block-bubble-and-button p:hover {
+  color: white;
+}
+
+/* ========= スマホサイズ_1 =========== */
+@media (min-width: 280px) {
+  .content_block {
+    padding: 20px 0;
+  }
+
+  .content_block img, .content_block source {
+    max-width: 100%;
+  }
+
+  .content_block-bubble-and-button img, .content_block-bubble-and-button source {
+    max-width: 90%;
+  }
+
+  .content_block-bubble-and-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block picture:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block-bubble-and-button div {
+    padding: 20px 40px;
+    margin: 30px 0;
+    width: 40%;
+  }
+
+  .content_block-bubble-and-button p {
+    font-size: 16px;
+  }
+}
+
+/* ========= スマホサイズ_2 =========== */
+@media (min-width: 576px) {
+  .content_block {
+    padding: 50px 30px;
+  }
+
+  .content_block img, .content_block source {
+    max-width: 100%;
+  }
+
+  .content_block-bubble-and-button img, .content_block-bubble-and-button source {
+    max-width: 90%;
+  }
+
+  .content_block-bubble-and-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block picture:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block-bubble-and-button div {
+    padding: 20px 40px;
+    margin: 20px 0;
+    width: 40%;
+  }
+
+  .content_block-bubble-and-button p {
+    font-size: 20px;
+  }
+}
+
+/* ========= タブレットサイズ =========== */
+@media (min-width: 768px) {
+  .content_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .content_block img, .content_block source {
+    max-width: 100%;
+  }
+
+  .content_block-bubble-and-button img, .content_block-bubble-and-button source {
+    max-width: 90%;
+  }
+
+  .content_block-bubble-and-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block picture:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block-bubble-and-button div {
+    padding: 20px 40px;
+    width: 40%;
+  }
+
+  .content_block-bubble-and-button p {
+    font-size: 17px;
+  }
+}
+
+/* ========= PCサイズ =========== */
+@media (min-width: 992px) {
+  .content {
+    padding: 100px 0;
+  }
+
+  .content_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .content_block img, .content_block source {
+    max-width: 100%;
+  }
+
+  .content_block-bubble-and-button img, .content_block-bubble-and-button source {
+    max-width: 80%;
+  }
+
+  .content_block-bubble-and-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block picture:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_block-bubble-and-button div {
+    padding: 20px 40px;
+    width: 40%;
+  }
+
+  .content_block-bubble-and-button p {
+    font-size: 20px;
+  }
+}
