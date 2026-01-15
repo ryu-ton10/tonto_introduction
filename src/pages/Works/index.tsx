@@ -38,6 +38,7 @@ function Works(props: Props) {
               <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
               <div>
                 <p>{title}</p>
+                <p>{url}</p>
               </div>
             </a>
           </div>
