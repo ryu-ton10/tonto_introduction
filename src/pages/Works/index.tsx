@@ -37,7 +37,7 @@ function Works(props: Props) {
             <a href={url} rel="noopener noreferrer" target="_blank">
               <img src={`${process.env.PUBLIC_URL + image.others}`} alt="thumbnail" />
               <div>
-                <p>{title.jp}</p>
+                <p>{title}</p>
               </div>
             </a>
           </div>
