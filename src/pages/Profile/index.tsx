@@ -70,8 +70,7 @@ function Profile() {
               <a href={twitterUrl} rel="noopener noreferrer" target="_blank">
                 <img src="assets/about_me/x_logo.png" alt="x-icon" />
                 <div>
-                  <p className="profile_content-gallery-links-name">嘉音 とんと@ものづくり系VTuber</p>
-                  <p className="profile_content-gallery-links-id">@27ma4_ton10_v1</p>
+                  <p>@27ma4_ton10_v1</p>
                 </div>
               </a>
             </div>
@@ -79,8 +78,7 @@ function Profile() {
               <a href={blueskyUrl} rel="noopener noreferrer" target="_blank">
                 <img src="assets/about_me/bluesky_logo.png" alt="bluesky-icon" />
                 <div>
-                  <p className="profile_content-gallery-links-name">嘉音 とんと@ものづくり系VTuber</p>
-                  <p className="profile_content-gallery-links-id">@ton10.bsky.social</p>
+                  <p>@ton10.bsky.social</p>
                 </div>
               </a>
             </div>

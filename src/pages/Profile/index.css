@@ -1,6 +1,5 @@
 .profile {
   background-color: white;
-  padding: 50px 0;
 }
 
 .profile_title {
@@ -69,12 +68,16 @@
   color: rgb(85, 85, 85);
 }
 
-.profile_content-gallery-links-id {
+.profile_content-gallery-links-account p {
   color: rgb(146, 146, 146);
 }
 
 /* ========= スマホサイズ_1 =========== */
 @media (min-width: 280px) {
+  .profile {
+    padding: 50px 10px;
+  }
+
   .profile_title {
     font-size: 36px;
     max-width: 50%;
@@ -130,8 +133,8 @@
 
   .profile_content-gallery-links-account {
     padding: 20px;
-    margin: 20px;
     height: 100%;
+    margin: 20px 0;
     width: 70%;
   }
 
@@ -148,14 +151,7 @@
 
   .profile_content-gallery-links-account p {
     text-align: left;
-  }
-
-  .profile_content-gallery-links-name {
-    font-size: 16px;
-  }
-
-  .profile_content-gallery-links-id {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .profile_content-gallery-links-youtube {
@@ -211,6 +207,10 @@
 
 /* ========= スマホサイズ_2 =========== */
 @media (min-width: 576px) {
+  .profile {
+    padding: 50px 30px;
+  }
+
   .profile_title {
     font-size: 42px;
     max-width: 40%;
@@ -284,14 +284,7 @@
 
   .profile_content-gallery-links-account p {
     text-align: left;
-  }
-
-  .profile_content-gallery-links-name {
-    font-size: 18px;
-  }
-
-  .profile_content-gallery-links-id {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .profile_content-gallery-links-youtube {
@@ -303,6 +296,7 @@
     margin: 20px;
     background-color: #f7d2d2;
     border-radius: 30px;
+    padding: 30px 0;
   }
 
   .profile_content-gallery-links-youtube-button {
@@ -343,6 +337,10 @@
 
 /* ========= タブレットサイズ =========== */
 @media (min-width: 768px) {
+  .profile {
+    padding: 50px 50px;
+  }
+
   .profile_title {
     font-size: 48px;
     max-width: 30%;
@@ -421,14 +419,7 @@
 
   .profile_content-gallery-links-account p {
     text-align: left;
-  }
-
-  .profile_content-gallery-links-name {
-    font-size: 18px;
-  }
-
-  .profile_content-gallery-links-id {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   .profile_content-gallery-links-youtube {
@@ -479,6 +470,10 @@
 
 /* ========= PCサイズ =========== */
 @media (min-width: 992px) {
+  .profile {
+    padding: 50px 50px;
+  }
+
   .profile_title {
     font-size: 48px;
     max-width: 30%;
@@ -533,13 +528,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .profile_content-gallery-links-account {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 0 auto;
     width: 80%;
     height: 50%;
   }
@@ -557,14 +552,7 @@
 
   .profile_content-gallery-links-account p {
     text-align: left;
-  }
-
-  .profile_content-gallery-links-name {
     font-size: 18px;
-  }
-
-  .profile_content-gallery-links-id {
-    font-size: 14px;
   }
 
   .profile_content-gallery-links-youtube {
@@ -575,6 +563,7 @@
     height: 80%;
     background-color: #f7d2d2;
     border-radius: 30px;
+    margin: 0 auto;
   }
 
   .profile_content-gallery-links-youtube-button {
@@ -619,6 +608,10 @@
 
 /* ========= PCサイズ2 =========== */
 @media (min-width: 1120px) {
+  .profile {
+    padding: 50px 80px;
+  }
+
   .profile_title {
     font-size: 48px;
     max-width: 30%;
@@ -679,7 +672,7 @@
   .profile_content-gallery-links-account {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 0 auto;
     height: 50%;
   }
 
@@ -696,62 +689,6 @@
 
   .profile_content-gallery-links-account p {
     text-align: left;
-  }
-
-  .profile_content-gallery-links-name {
-    font-size: 18px;
-  }
-
-  .profile_content-gallery-links-id {
-    font-size: 14px;
-  }
-
-  .profile_content-gallery-links-youtube {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    height: 100%;
-    background-color: #f7d2d2;
-    border-radius: 30px;
-  }
-
-  .profile_content-gallery-links-youtube-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .profile_content-gallery-links-youtube-button a:nth-child(2) {
-    padding: 1px 15px;
-  }
-
-  .profile_content-gallery-links-youtube-button p {
-    font-size: 18px;
-  }
-
-  .youtube-icon {
-    font-size: 120px;
-  }
-
-  .profile_content-gallery-links-youtube-thumbnail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    margin: 15px;
-  }
-
-  .profile_content-gallery-links-youtube-thumbnail > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .profile_content-gallery-links-youtube-thumbnail > div > img {
-    max-width: 80%;
-    border-radius: 10px;
+    font-size: 20px;
   }
 }
