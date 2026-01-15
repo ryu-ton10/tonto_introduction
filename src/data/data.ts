@@ -80,6 +80,22 @@ export const works = [
     },
     url: "https://kayanoau.netlify.app/",
   },
+  {
+    id: nanoid(),
+    image: {
+      webp: "/assets/works/bar_momo.webp",
+      others: "/assets/works/bar_momo.png"
+    },
+    title: {
+      jp: "BAR MOMO オフィシャルサイト",
+      en: "BAR MOMO Official Website"
+    },
+    description: {
+      jp: "ペンギンと女の子のコンビで活動する KanayoA と茅野ユウを紹介する Web ページです。\nポップで可愛らしいページになっています。",
+      en: "A website of Kayano AU. On the website, you can know about them and activity."
+    },
+    url: "https://whisky-bar-momo.netlify.app/",
+  },
 ]
 
 export const privacy_policy = {
