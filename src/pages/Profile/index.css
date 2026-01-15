@@ -691,4 +691,13 @@
     text-align: left;
     font-size: 20px;
   }
+
+  .profile_content-gallery-links-youtube-button p {
+    font-size: 20px;
+  }
+
+  .profile_content-gallery-links-youtube-thumbnail > div > img {
+    max-width: 70%;
+    border-radius: 10px;
+  }
 }
