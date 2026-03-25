@@ -1,17 +1,17 @@
 import { nanoid } from 'nanoid';
 
 export const twitter_url = "https://twitter.com/27ma4_ton10_v1"
-export const youtube_url = "https://youtube.com/user/MeiTonto06"
+export const youtube_url = "https://youtube.com/channel/UCaCeBzr2zfXYFkGEQkb7jpw"
 
 export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/works/pt_logo.webp",
-      others: "/assets/works/pt_logo.png"
+      webp: "/assets/works/bar_momo.webp",
+      others: "/assets/works/bar_momo.png"
     },
-    title: "ポケモン種族値サーチ",
-    url: "https://pokemon-tribe-rate-searcher.netlify.app/",
+    title: "BAR MOMO オフィシャルサイト",
+    url: "https://whisky-bar-momo.com/",
   },
   {
     id: nanoid(),
@@ -43,11 +43,11 @@ export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/works/bar_momo.webp",
-      others: "/assets/works/bar_momo.png"
+      webp: "/assets/works/pt_logo.webp",
+      others: "/assets/works/pt_logo.png"
     },
-    title: "BAR MOMO オフィシャルサイト",
-    url: "https://whisky-bar-momo.netlify.app/",
+    title: "ポケモン種族値サーチ",
+    url: "https://pokemon-tribe-rate-searcher.netlify.app/",
   },
 ]
 
