@@ -7,15 +7,6 @@ export const works = [
   {
     id: nanoid(),
     image: {
-      webp: "/assets/works/bar_momo.webp",
-      others: "/assets/works/bar_momo.png"
-    },
-    title: "BAR MOMO オフィシャルサイト",
-    url: "https://whisky-bar-momo.com/",
-  },
-  {
-    id: nanoid(),
-    image: {
       webp: "/assets/works/si14_logo.webp",
       others: "/assets/works/si14_logo.png"
     },
@@ -39,6 +30,15 @@ export const works = [
     },
     title: "Kayano AU オフィシャルサイト",
     url: "https://kayanoau.netlify.app/",
+  },
+  {
+    id: nanoid(),
+    image: {
+      webp: "/assets/works/boka_asa_logo.webp",
+      others: "/assets/works/boka_asa_logo.png"
+    },
+    title: "ボカロ曲！朝までそれ正解",
+    url: "https://boka-asa.netlify.app/",
   },
   {
     id: nanoid(),
