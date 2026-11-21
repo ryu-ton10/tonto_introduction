@@ -3,7 +3,7 @@ import './index.css';
 function Contents() {
 
   const marshmallowUrl = "https://marshmallow-qa.com/pttp733qamn4v32"
-  const noteUrl = "https://note.com/kanon_tonto"
+  const noteUrl = "https://note.com/27ma4_ton10"
   const podcastUrl = "https://www.youtube.com/playlist?list=PLMvdQ3-WJSOqUpEt3EOAnNBNk70g6DpHP"
 
   return (
